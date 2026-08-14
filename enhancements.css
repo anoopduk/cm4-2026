@@ -1,0 +1,186 @@
+/* CM4 2026 visual refinement layer — loaded by theme.js */
+
+/* Subtle computational-chemistry texture behind About, without reducing readability */
+.about{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+.about::before{
+  content:"";
+  position:absolute;
+  inset:2rem 0 auto 0;
+  height:min(760px,95%);
+  background:url("assets/cm4-molecular-field.svg") center 12% / min(1500px,125vw) auto no-repeat;
+  opacity:.62;
+  pointer-events:none;
+  z-index:-1;
+}
+.about::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,var(--paper) 0%,rgba(244,241,232,.82) 42%,rgba(244,241,232,.94) 100%);
+  pointer-events:none;
+  z-index:-1;
+}
+html[data-theme="dark"] .about::after{
+  background:linear-gradient(90deg,var(--paper) 0%,rgba(8,22,23,.78) 42%,rgba(8,22,23,.94) 100%);
+}
+html[data-theme="dark"] .about::before{opacity:.8}
+
+/* Larger portraits and a more consistent upper-centre crop */
+.person-card{
+  grid-template-columns:94px 1fr auto;
+  gap:1.15rem;
+  min-height:118px;
+  transition:background-color .18s ease,transform .18s ease;
+}
+.person-card:hover{transform:translateY(-1px)}
+.portrait,.person-photo,.person-mark{
+  width:78px;
+  height:98px;
+  border-radius:14px;
+}
+.person-photo{
+  object-fit:cover;
+  object-position:50% 28%;
+}
+.person-mark{font-size:.72rem}
+.person-card h3{font-size:1.02rem;line-height:1.2}
+.person-card p{font-size:.8rem}
+.featured .person-card{padding-top:1.25rem;padding-bottom:1.25rem}
+
+/* Organisers retain the same visual language, slightly more compact than participants */
+.organisers .person-card{
+  grid-template-columns:88px 1fr auto;
+  min-height:108px;
+}
+.organisers .portrait,
+.organisers .person-photo,
+.organisers .person-mark{
+  width:72px;
+  height:90px;
+  border-radius:13px;
+}
+
+/* Academic committee cards are now linkable like participant cards */
+.compact-list .person-card{
+  grid-template-columns:76px 1fr auto;
+  min-height:96px;
+}
+.compact-list .portrait,
+.compact-list .person-photo,
+.compact-list .person-mark{
+  width:62px;
+  height:78px;
+  border-radius:11px;
+}
+.compact-list .profile-arrow{display:inline-block}
+
+/* Poovar visual block */
+.poovar-gallery{
+  margin:clamp(2.5rem,5vw,4.5rem) 0 0;
+  display:grid;
+  grid-template-columns:minmax(0,1.55fr) minmax(260px,.75fr);
+  gap:1rem;
+}
+.poovar-photo{
+  position:relative;
+  margin:0;
+  overflow:hidden;
+  border-radius:1.35rem;
+  min-height:300px;
+  background:var(--deep);
+  box-shadow:var(--shadow,0 18px 50px rgba(8,63,64,.09));
+}
+.poovar-photo:first-child{min-height:460px}
+.poovar-photo img{
+  width:100%;
+  height:100%;
+  position:absolute;
+  inset:0;
+  object-fit:cover;
+  display:block;
+  transition:transform .7s cubic-bezier(.2,.65,.25,1);
+}
+.poovar-photo:first-child img{object-position:center 52%}
+.poovar-photo:nth-child(2) img{object-position:50% 52%}
+.poovar-photo:hover img{transform:scale(1.025)}
+.poovar-photo::after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0;
+  height:42%;
+  background:linear-gradient(transparent,rgba(2,31,32,.7));
+  pointer-events:none;
+}
+.poovar-photo figcaption{
+  position:absolute;
+  z-index:2;
+  left:1.25rem;
+  right:1.25rem;
+  bottom:1.15rem;
+  color:#fff;
+  font-family:"Newsreader",Georgia,serif;
+  font-size:clamp(1.2rem,2vw,1.75rem);
+  line-height:1.05;
+  text-shadow:0 2px 18px rgba(0,0,0,.28);
+}
+.photo-credit{
+  grid-column:1/-1;
+  margin:.15rem 0 0;
+  color:var(--muted);
+  font-size:.68rem;
+  line-height:1.55;
+}
+.photo-credit a{color:inherit;text-underline-offset:2px}
+
+/* A little more separation around venue content */
+.venue-simple{
+  max-width:none;
+  min-height:300px;
+  padding-right:min(18vw,260px);
+}
+.travel-block{margin-top:3.25rem}
+
+/* Slightly more polished card hover/focus behaviour */
+a.person-card:focus-visible{
+  outline:3px solid var(--focus);
+  outline-offset:5px;
+  border-radius:.6rem;
+}
+.featured a.person-card:hover{background:rgba(255,255,255,.025)}
+.committees a.person-card:hover{background:rgba(13,102,101,.035)}
+
+@media(max-width:1050px){
+  .person-card{grid-template-columns:88px 1fr auto}
+  .portrait,.person-photo,.person-mark{width:72px;height:90px}
+}
+@media(max-width:900px){
+  .poovar-gallery{grid-template-columns:1fr 1fr}
+  .poovar-photo,.poovar-photo:first-child{min-height:330px}
+  .venue-simple{padding-right:0}
+}
+@media(max-width:620px){
+  .person-card,
+  .organisers .person-card,
+  .compact-list .person-card{
+    grid-template-columns:76px 1fr auto;
+    min-height:96px;
+    gap:.9rem;
+  }
+  .portrait,.person-photo,.person-mark,
+  .organisers .portrait,.organisers .person-photo,.organisers .person-mark,
+  .compact-list .portrait,.compact-list .person-photo,.compact-list .person-mark{
+    width:64px;
+    height:80px;
+    border-radius:11px;
+  }
+  .poovar-gallery{grid-template-columns:1fr}
+  .poovar-photo,.poovar-photo:first-child{min-height:270px}
+  .about::before{background-size:180vw auto;opacity:.48}
+}
+@media(prefers-reduced-motion:reduce){
+  .person-card,.poovar-photo img{transition:none!important}
+}

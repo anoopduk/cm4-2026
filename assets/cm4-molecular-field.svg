@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-label="Abstract molecular network">
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d6665" stop-opacity=".16"/>
+      <stop offset=".55" stop-color="#0d6665" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#0d6665" stop-opacity=".02"/>
+    </linearGradient>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation=".35"/>
+    </filter>
+  </defs>
+  <g fill="none" stroke="url(#fade)" stroke-width="2" filter="url(#soft)">
+    <path d="M80 220 240 130 410 225 570 135 735 225 905 130 1070 225 1255 140"/>
+    <path d="M165 520 335 420 500 515 670 410 845 505 1010 410 1190 505 1340 420"/>
+    <path d="M300 735 465 640 635 735 805 635 980 730 1150 630"/>
+    <path d="M240 130 335 420M410 225 500 515M570 135 670 410M735 225 845 505M905 130 1010 410M1070 225 1190 505"/>
+    <path d="M335 420 465 640M500 515 635 735M670 410 805 635M845 505 980 730M1010 410 1150 630"/>
+    <path d="M80 220 45 395 165 520M1255 140 1360 285 1340 420"/>
+  </g>
+  <g fill="#0d6665" fill-opacity=".10">
+    <circle cx="80" cy="220" r="9"/><circle cx="240" cy="130" r="13"/><circle cx="410" cy="225" r="8"/>
+    <circle cx="570" cy="135" r="12"/><circle cx="735" cy="225" r="10"/><circle cx="905" cy="130" r="14"/>
+    <circle cx="1070" cy="225" r="9"/><circle cx="1255" cy="140" r="12"/><circle cx="165" cy="520" r="11"/>
+    <circle cx="335" cy="420" r="8"/><circle cx="500" cy="515" r="13"/><circle cx="670" cy="410" r="9"/>
+    <circle cx="845" cy="505" r="14"/><circle cx="1010" cy="410" r="8"/><circle cx="1190" cy="505" r="12"/>
+    <circle cx="1340" cy="420" r="9"/><circle cx="300" cy="735" r="10"/><circle cx="465" cy="640" r="13"/>
+    <circle cx="635" cy="735" r="8"/><circle cx="805" cy="635" r="12"/><circle cx="980" cy="730" r="9"/>
+    <circle cx="1150" cy="630" r="13"/>
+  </g>
+  <g fill="none" stroke="#0d6665" stroke-opacity=".055" stroke-width="1.5">
+    <ellipse cx="480" cy="300" rx="230" ry="88" transform="rotate(-18 480 300)"/>
+    <ellipse cx="930" cy="555" rx="270" ry="105" transform="rotate(14 930 555)"/>
+    <ellipse cx="760" cy="345" rx="420" ry="145" transform="rotate(4 760 345)"/>
+  </g>
+</svg>
