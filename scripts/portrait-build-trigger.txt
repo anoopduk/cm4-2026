@@ -1,0 +1,1 @@
+Trigger the CM4 portrait QA workflow after workflow installation.

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Registration payment options for CM4 2026.">
+<title>CM4 2026 | Payment</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+.payment-shell{min-height:100vh;padding:clamp(1.25rem,4vw,3rem);background:var(--paper)}
+.payment-wrap{width:min(980px,100%);margin:0 auto}
+.payment-logo{display:block;width:112px;margin:0 0 clamp(2rem,5vw,4rem)}
+.payment-logo img{display:block;width:100%;mix-blend-mode:multiply}
+.payment-intro{max-width:680px;margin-bottom:2rem}
+.payment-intro .eyebrow{color:var(--teal);margin:0 0 .8rem}
+.payment-intro h1{font-size:clamp(2.8rem,8vw,5.4rem);line-height:.95;margin:0 0 1rem}
+.payment-intro p{color:var(--muted);line-height:1.7}
+.payment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.payment-option{display:flex;flex-direction:column;justify-content:space-between;min-height:170px;padding:1.5rem;background:#fff;border:1px solid var(--line);border-radius:1.25rem;box-shadow:0 18px 50px rgba(8,63,64,.07)}
+.payment-option h2{font-size:clamp(1.15rem,2.5vw,1.45rem);line-height:1.25;margin:0 0 1.5rem}
+.payment-option form{min-height:42px}
+.payment-note{margin:2rem 0 0;padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.84rem}
+@media(max-width:680px){.payment-grid{grid-template-columns:1fr}.payment-option{min-height:150px}}
+</style>
+</head>
+<body>
+<main class="payment-shell">
+  <div class="payment-wrap">
+    <a class="payment-logo" href="../" aria-label="CM4 2026 home"><img src="../logo.webp" alt="CM4 2026"></a>
+    <header class="payment-intro">
+      <p class="eyebrow">CM4 2026 · Registered participants</p>
+      <h1>Payment</h1>
+      <p>Select the applicable registration and accommodation option below.</p>
+    </header>
+    <section class="payment-grid" aria-label="Payment options">
+      <article class="payment-option"><h2>Single Occupancy Room</h2><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyGObA2bFTy0QF" async></script></form></article>
+      <article class="payment-option"><h2>Twin Sharing Room</h2><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyGbAxWOyYOonG" async></script></form></article>
+      <article class="payment-option"><h2>Triple Sharing Room</h2><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyH7hOOfh3OZkM" async></script></form></article>
+      <article class="payment-option"><h2>Participant + 1 Accompanying Person</h2><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyH9aWRLfioO2q" async></script></form></article>
+      <article class="payment-option"><h2>Participant + 2 Accompanying Persons</h2><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyHCFZUK7vVBG7" async></script></form></article>
+      <article class="payment-option"><h2>International Single Occupancy</h2><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyHEzTL55Dghz8" async></script></form></article>
+      <article class="payment-option"><h2>International Double Occupancy</h2><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyHH3eVNteTCYF" async></script></form></article>
+    </section>
+    <p class="payment-note">3–6 December 2026 · Club Mahindra Poovar, Thiruvananthapuram, Kerala, India</p>
+  </div>
+</main>
+</body>
+</html>
