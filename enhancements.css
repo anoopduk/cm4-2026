@@ -1,4 +1,4 @@
-/* CM4 2026 visual refinement layer — loaded by theme.js */
+/* CM4 2026 visual refinement layer */
 
 /* Subtle computational-chemistry texture behind About, without reducing readability */
 .about{
@@ -36,7 +36,7 @@ html[data-theme="dark"] .about::before{opacity:.8}
   min-height:118px;
   transition:background-color .18s ease,transform .18s ease;
 }
-.person-card:hover{transform:translateY(-1px)}
+a.person-card:hover{transform:translateY(-1px)}
 .portrait,.person-photo,.person-mark{
   width:78px;
   height:98px;
@@ -64,7 +64,7 @@ html[data-theme="dark"] .about::before{opacity:.8}
   border-radius:13px;
 }
 
-/* Academic committee cards are now linkable like participant cards */
+/* Academic committee cards use the same visual language as participant cards */
 .compact-list .person-card{
   grid-template-columns:76px 1fr auto;
   min-height:96px;

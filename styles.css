@@ -21,8 +21,6 @@ footer{background:#052f30;color:white;padding:3rem clamp(1rem,7vw,7.5rem);displa
 
 .travel-block{margin-top:4rem;border-top:1px solid var(--line);padding-top:2.5rem}.travel-intro{display:grid;grid-template-columns:.65fr 1.35fr;gap:5vw;align-items:start;margin-bottom:2.5rem}.travel-intro h3{margin:0;font-size:clamp(1.8rem,3vw,3rem);font-weight:500;letter-spacing:-.035em}.travel-intro>p:last-child{grid-column:2;color:var(--muted);line-height:1.7;margin:.8rem 0 0}.travel-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.travel-card{padding:1.5rem;min-height:190px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.travel-label{text-transform:uppercase;letter-spacing:.15em;font-size:.7rem;font-weight:600;color:var(--teal);margin:0 0 2rem}.travel-card h4{font-size:1.05rem;margin:0 0 .75rem}.travel-card p:last-child{color:var(--muted);font-size:.9rem;line-height:1.65;margin:0}.venue-links{display:flex;gap:2rem;flex-wrap:wrap;margin-top:2rem}.venue-links .text-link{font-size:.9rem}
 @media(max-width:900px){.travel-intro{grid-template-columns:1fr}.travel-intro>p:last-child{grid-column:auto}.travel-grid{grid-template-columns:1fr}}
-\
-
     /* CM4 design refinement: theme, typography, accessibility */
     :root{
       --header-bg:rgba(244,241,232,.93);
