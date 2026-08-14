@@ -1,0 +1,43 @@
+name: Migrate CM4 site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out target repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Copy final CM4 site from anoopduk.github.io
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet https://github.com/anoopduk/anoopduk.github.io.git /tmp/cm4-source
+          git -C /tmp/cm4-source checkout --quiet 684a87da2a2eba87072001f2bd42e4c865673168
+          rsync -a --delete --exclude='.git' /tmp/cm4-source/cm4-2026/ ./
+          rm -rf scripts
+          printf '%s\n' 'www.cm4-2026.org' > CNAME
+          touch .nojekyll
+
+      - name: Commit migrated site
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Migrate CM4 2026 site to dedicated repository'
+          git push origin HEAD:main
