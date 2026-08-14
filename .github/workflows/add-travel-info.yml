@@ -1,0 +1,61 @@
+name: Add CM4 travel information
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update-travel:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add travel information to venue section
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          index_path = Path('index.html')
+          index = index_path.read_text()
+          old = '''<section class="section venue" id="venue">
+  <div class="section-kicker"><span>03</span><p>Venue</p></div>
+  <div class="venue-simple"><p class="location-label">Poovar · Kerala</p><h2>Club Mahindra Poovar</h2><p>Thiruvananthapuram, Kerala, India</p><p>3–6 December 2026</p></div>
+</section>'''
+          new = '''<section class="section venue" id="venue">
+  <div class="section-kicker"><span>03</span><p>Venue</p></div>
+  <div class="venue-simple"><p class="location-label">Poovar · Kerala</p><h2>Club Mahindra Poovar</h2><p>Thiruvananthapuram, Kerala, India</p><p>3–6 December 2026</p></div>
+  <div class="travel-block" aria-labelledby="travel-heading">
+    <div class="travel-intro"><p class="location-label">Travel</p><h3 id="travel-heading">Getting to the venue</h3><p>Club Mahindra Poovar is reached through Thiruvananthapuram. The resort recommends taxi or cab travel for the final journey to Poovar.</p></div>
+    <div class="travel-grid">
+      <article class="travel-card"><p class="travel-label">By air</p><h4>Thiruvananthapuram International Airport</h4><p>Approximately 30 km from the resort. The drive by taxi or cab is about one hour.</p></article>
+      <article class="travel-card"><p class="travel-label">By train</p><h4>Thiruvananthapuram Central</h4><p>Approximately 35 km from the resort. Continue to Poovar by taxi or cab.</p></article>
+      <article class="travel-card"><p class="travel-label">Airport transfer</p><h4>Resort pick-up and drop</h4><p>Club Mahindra states that paid airport pick-up and drop can be arranged on request.</p></article>
+    </div>
+    <div class="venue-links"><a class="text-link" href="https://www.clubmahindra.com/resort-escapes/resort/club-mahindra-poovar-resort-in-kerala" target="_blank" rel="noreferrer">Venue and travel information <span aria-hidden="true">↗</span></a><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Club+Mahindra+Poovar" target="_blank" rel="noreferrer">Open in Google Maps <span aria-hidden="true">↗</span></a></div>
+  </div>
+</section>'''
+          if old not in index:
+              raise SystemExit('Expected venue section not found; refusing to modify index.html')
+          index_path.write_text(index.replace(old, new, 1))
+
+          css_path = Path('styles.css')
+          css = css_path.read_text()
+          if '.travel-block{' not in css:
+              css += '''\n.travel-block{margin-top:4rem;border-top:1px solid var(--line);padding-top:2.5rem}.travel-intro{display:grid;grid-template-columns:.65fr 1.35fr;gap:5vw;align-items:start;margin-bottom:2.5rem}.travel-intro h3{margin:0;font-size:clamp(1.8rem,3vw,3rem);font-weight:500;letter-spacing:-.035em}.travel-intro>p:last-child{grid-column:2;color:var(--muted);line-height:1.7;margin:.8rem 0 0}.travel-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.travel-card{padding:1.5rem;min-height:190px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.travel-label{text-transform:uppercase;letter-spacing:.15em;font-size:.7rem;font-weight:600;color:var(--teal);margin:0 0 2rem}.travel-card h4{font-size:1.05rem;margin:0 0 .75rem}.travel-card p:last-child{color:var(--muted);font-size:.9rem;line-height:1.65;margin:0}.venue-links{display:flex;gap:2rem;flex-wrap:wrap;margin-top:2rem}.venue-links .text-link{font-size:.9rem}\n@media(max-width:900px){.travel-intro{grid-template-columns:1fr}.travel-intro>p:last-child{grid-column:auto}.travel-grid{grid-template-columns:1fr}}\n'''
+              css_path.write_text(css)
+          PY
+
+      - name: Commit update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -f .github/workflows/add-travel-info.yml
+          git add index.html styles.css .github/workflows/add-travel-info.yml
+          git commit -m "Add travel information for CM4 venue"
+          git push
