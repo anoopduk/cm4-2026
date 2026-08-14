@@ -1,4 +1,3 @@
-\
 (() => {
   const root = document.documentElement;
   const toggle = document.querySelector('[data-theme-toggle]');
@@ -25,13 +24,17 @@
 
   apply(root.dataset.theme || (system.matches ? 'dark' : 'light'));
 
-  toggle?.addEventListener('click', () => {
-    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    store(next);
-    apply(next);
-  });
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      store(next);
+      apply(next);
+    });
+  }
 
-  system.addEventListener?.('change', (event) => {
-    if (!getStored()) apply(event.matches ? 'dark' : 'light');
-  });
+  if (system.addEventListener) {
+    system.addEventListener('change', (event) => {
+      if (!getStored()) apply(event.matches ? 'dark' : 'light');
+    });
+  }
 })();
