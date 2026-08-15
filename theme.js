@@ -192,6 +192,12 @@
     }
   });
 
+  /* Registration inclusions */
+  const registrationSummary = document.querySelector('.registration-head > p');
+  if (registrationSummary) {
+    registrationSummary.textContent = 'Registration is for invited participants and includes accommodation, conference materials, conference dinner, the local visit / sightseeing programme, and local transfers.';
+  }
+
   document.querySelectorAll('a[target="_blank"]').forEach((link) => {
     link.setAttribute('rel', 'noopener noreferrer');
   });
