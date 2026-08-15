@@ -83,6 +83,42 @@
     if(participantNav&&!document.querySelector('nav a[href="#programme"]')) participantNav.insertAdjacentHTML('afterend','<a href="#programme">Programme</a>');
   }
 
+  const participantList = document.querySelector('#participants .person-list.featured');
+  if (participantList) {
+    const additions = [
+      {
+        name: 'Deepa Janardanan', affiliation: 'Central University of Kerala', initials: 'DJ',
+        href: 'https://schools.cukerala.ac.in/Dept/Faculty_Preview?Id=53',
+        photo: 'https://faculty.cukerala.ac.in/Uploads/Faculty/Profiles/394365Deepa-pic2.jpg'
+      },
+      {
+        name: 'Radhika Gupta', affiliation: 'Aix-Marseille Université, France', initials: 'RG',
+        href: 'https://ism2.univ-amu.fr/en/directory/gupta-radhika',
+        photo: 'https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Xcg4HSwAAAAJ&citpid=1'
+      },
+      {
+        name: 'D. Sravanakumar Perumalla', affiliation: 'Sasi Institute of Technology & Engineering', initials: 'SP',
+        href: 'https://sasi.ac.in/applied-sciences-humanities/',
+        photo: 'https://scholar.googleusercontent.com/citations?view_op=view_photo&user=QzBlgRgAAAAJ&citpid=1'
+      },
+      {
+        name: 'Upakarasamy Lourderaj', affiliation: 'NISER Bhubaneswar', initials: 'UL',
+        href: 'https://www.niser.ac.in/profile/u.lourderaj',
+        photo: 'https://www.niser.ac.in/assets/img/profile/u.lourderaj.jpg'
+      }
+    ];
+    const existingNames = new Set([...participantList.querySelectorAll('.person-card h3')].map((h) => h.textContent.trim().toLocaleLowerCase()));
+    additions.forEach((person) => {
+      if (existingNames.has(person.name.toLocaleLowerCase())) return;
+      participantList.insertAdjacentHTML('beforeend', `<a class="person-card" href="${person.href}" target="_blank" rel="noopener noreferrer"><span class="portrait"><span class="person-mark">${person.initials}</span><img class="person-photo" src="${person.photo}" alt="${person.name}" loading="lazy" decoding="async" width="480" height="600"></span><span class="person-copy"><h3>${person.name}</h3><p>${person.affiliation}</p></span><span class="profile-arrow">↗</span></a>`);
+    });
+    [...participantList.children].sort((a,b) => {
+      const an=(a.querySelector('h3')?.textContent||'').trim();
+      const bn=(b.querySelector('h3')?.textContent||'').trim();
+      return an.localeCompare(bn, 'en', {sensitivity:'base'});
+    }).forEach((card)=>participantList.appendChild(card));
+  }
+
   const profileLinks = {
     'odile-eisenstein.webp':'https://www.icgm.fr/odile-eisenstein/',
     'milan-kumar-jena.webp':'https://www.iitbhilai.ac.in/index.php/index.php?pid=profile_milanjena',
