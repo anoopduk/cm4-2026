@@ -38,6 +38,110 @@
     });
   }
 
+  if (!document.querySelector('link[href="programme.css"]')) {
+    const programmeStyles = document.createElement('link');
+    programmeStyles.rel = 'stylesheet';
+    programmeStyles.href = 'programme.css';
+    document.head.appendChild(programmeStyles);
+  }
+
+  /* Public programme. The CM4 calendar remains the internal planning source;
+     this website view is intentionally compact and participant-facing. */
+  const programme = [
+    {
+      date: '3 December',
+      day: 'Thursday',
+      note: 'Arrival day',
+      items: [
+        ['13:00–14:00', 'Lunch', 'meal'],
+        ['14:15–15:30', 'Inauguration and Session 1', 'session'],
+        ['15:30–16:00', 'Tea Break', 'break'],
+        ['16:00–18:30', 'Session 2', 'session'],
+        ['19:00–21:00', 'Dinner', 'meal']
+      ]
+    },
+    {
+      date: '4 December',
+      day: 'Friday',
+      note: 'Scientific sessions',
+      items: [
+        ['09:00–10:30', 'Session 3', 'session'],
+        ['10:30–11:00', 'Tea Break', 'break'],
+        ['11:00–13:00', 'Session 4', 'session'],
+        ['13:00–14:00', 'Lunch', 'meal'],
+        ['14:00–15:30', 'Session 5', 'session'],
+        ['15:30–16:00', 'Tea Break', 'break'],
+        ['16:00–18:30', 'Session 6', 'session'],
+        ['19:00–21:00', 'Dinner', 'meal']
+      ]
+    },
+    {
+      date: '5 December',
+      day: 'Saturday',
+      note: 'Science and local programme',
+      items: [
+        ['09:00–10:30', 'Session 7', 'session'],
+        ['10:30–11:00', 'Tea Break', 'break'],
+        ['11:00–13:00', 'Session 8', 'session'],
+        ['13:00–14:00', 'Lunch', 'meal'],
+        ['14:00–18:00', 'Local Visit', 'special'],
+        ['18:30–20:00', 'Felicitation Session', 'special'],
+        ['20:00–22:00', 'Conference Dinner', 'special']
+      ]
+    },
+    {
+      date: '6 December',
+      day: 'Sunday',
+      note: 'Closing day',
+      items: [
+        ['09:00–10:30', 'Session 9', 'session'],
+        ['10:30–11:00', 'Tea Break', 'break'],
+        ['11:00–12:30', 'Session 10', 'session'],
+        ['12:30–13:00', 'Valedictory Session', 'special'],
+        ['13:00 onwards', 'Lunch and Departure', 'meal']
+      ]
+    }
+  ];
+
+  const participants = document.querySelector('#participants');
+  if (participants && !document.querySelector('#programme')) {
+    const days = programme.map((entry) => `
+      <article class="programme-day">
+        <header class="programme-day-head">
+          <div><p>${entry.day}</p><h3>${entry.date}</h3></div>
+          <span>${entry.note}</span>
+        </header>
+        <div class="programme-items">
+          ${entry.items.map(([time, label, type]) => `
+            <div class="programme-item programme-${type}">
+              <time>${time}</time><strong>${label}</strong>
+            </div>`).join('')}
+        </div>
+      </article>`).join('');
+
+    participants.insertAdjacentHTML('afterend', `
+      <section class="section programme" id="programme">
+        <div class="section-kicker"><span>03</span><p>Programme</p></div>
+        <div class="programme-head">
+          <div><h2>Four days at CM4</h2></div>
+          <div class="programme-intro"><p>Ten scientific sessions are planned across the meeting. The detailed talk schedule will be added as speaker assignments are finalised.</p><p>All times are in Indian Standard Time (IST).</p></div>
+        </div>
+        <div class="programme-grid" aria-label="CM4 2026 programme outline">${days}</div>
+      </section>`);
+
+    const venueNumber = document.querySelector('#venue .section-kicker span');
+    const registrationNumber = document.querySelector('#registration .section-kicker span');
+    const committeeNumber = document.querySelector('#committees .section-kicker span');
+    if (venueNumber) venueNumber.textContent = '04';
+    if (registrationNumber) registrationNumber.textContent = '05';
+    if (committeeNumber) committeeNumber.textContent = '06';
+
+    const participantNav = document.querySelector('nav a[href="#participants"]');
+    if (participantNav && !document.querySelector('nav a[href="#programme"]')) {
+      participantNav.insertAdjacentHTML('afterend', '<a href="#programme">Programme</a>');
+    }
+  }
+
   /* Keep public profile links on current official/institutional pages.
      The image filename is the stable local identifier for each card. */
   const profileLinks = {
