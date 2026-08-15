@@ -15,6 +15,12 @@
   const apply = (theme) => {
     root.dataset.theme = theme;
     if (metaTheme) metaTheme.setAttribute('content', theme === 'dark' ? '#081617' : '#f4f1e8');
+    document.querySelectorAll('.site-header .brand img, footer img').forEach((logo) => {
+      logo.setAttribute('src', theme === 'dark' ? 'logo-dark.svg' : 'logo.webp');
+      logo.style.filter = 'none';
+      logo.style.mixBlendMode = 'normal';
+      logo.style.background = 'transparent';
+    });
     if (toggle) {
       const next = theme === 'dark' ? 'light' : 'dark';
       toggle.setAttribute('aria-label', `Switch to ${next} theme`);
