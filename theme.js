@@ -131,5 +131,8 @@
       </div>`);
   }
 
+  const photoCredit=document.querySelector('.photo-credit');
+  if(photoCredit) photoCredit.innerHTML='Images: <a href="https://commons.wikimedia.org/wiki/File:Poovar_Kerala.jpg" target="_blank">Midhun Subhash</a> (CC0) · <a href="https://commons.wikimedia.org/wiki/File:Poovar_Backwater.jpg" target="_blank">Deepsikder</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>).';
+
   document.querySelectorAll('a[target="_blank"]').forEach((link)=>link.setAttribute('rel','noopener noreferrer'));
 })();
