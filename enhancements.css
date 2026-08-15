@@ -180,6 +180,21 @@ a.person-card:hover{transform:translateY(-1px)}
 }
 .travel-block{margin-top:3.25rem}
 
+/* Registration logistics note */
+.stay-note{
+  margin-top:1.35rem;
+  padding:1.25rem 1.4rem;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:1rem;
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:1.25rem;
+  align-items:start;
+}
+.stay-note strong{color:var(--lime);font-size:.82rem;text-transform:uppercase;letter-spacing:.12em}
+.stay-note p{margin:0;color:rgba(255,255,255,.72);line-height:1.7;max-width:78ch}
+.stay-note a{color:white;text-underline-offset:3px}
+
 /* Polished hover/focus behaviour */
 a.person-card:focus-visible{
   outline:3px solid var(--focus);
@@ -197,6 +212,11 @@ a.person-card:focus-visible{
   .poovar-gallery{grid-template-columns:1fr 1fr}
   .poovar-photo,.poovar-photo:first-child{min-height:330px}
   .venue-simple{padding-right:0}
+  .site-header{padding-left:.8rem;padding-right:.8rem}
+  .site-header nav{min-width:0;overflow-x:auto;scrollbar-width:none;gap:.9rem}
+  .site-header nav::-webkit-scrollbar{display:none}
+  .site-header nav a{display:inline-flex!important;flex:0 0 auto}
+  .theme-toggle-label{display:none}
 }
 @media(max-width:620px){
   .person-card,
@@ -223,6 +243,10 @@ a.person-card:focus-visible{
   .poovar-gallery{grid-template-columns:1fr}
   .poovar-photo,.poovar-photo:first-child{min-height:270px}
   .about::before{background-size:180vw auto;opacity:.48}
+  .stay-note{grid-template-columns:1fr;gap:.55rem;padding:1rem}
+  .site-header{gap:.55rem}
+  .site-header .brand{flex:0 0 58px;width:58px}
+  .site-header nav{font-size:.82rem}
 }
 @media(prefers-reduced-motion:reduce){
   .person-card,.poovar-photo img{transition:none!important}
