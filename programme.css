@@ -1,4 +1,15 @@
 /* CM4 2026 programme — compact participant-facing timetable */
+
+/* The source logo has a white canvas. In dark mode, convert the artwork to a
+   clean white mark and let the blackened canvas disappear into the background. */
+html[data-theme="dark"] .site-header .brand img,
+html[data-theme="dark"] footer img{
+  background:transparent!important;
+  border-radius:0!important;
+  filter:brightness(0) invert(1);
+  mix-blend-mode:screen;
+}
+
 .programme{
   background:var(--paper);
   position:relative;
