@@ -175,6 +175,23 @@
     }
   });
 
+  /* Participant transfer information */
+  const travelIntro = document.querySelector('.travel-intro > p:last-child');
+  if (travelIntro) {
+    travelIntro.textContent = 'Conference organisers will arrange pick-up and drop-off for participants from Thiruvananthapuram International Airport and Thiruvananthapuram Central railway station.';
+  }
+
+  document.querySelectorAll('.travel-card').forEach((card) => {
+    const label = card.querySelector('.travel-label');
+    if (label?.textContent.trim() === 'Airport transfer') {
+      label.textContent = 'Conference transfer';
+      const heading = card.querySelector('h4');
+      const detail = card.querySelector('p:last-child');
+      if (heading) heading.textContent = 'Airport and railway station pick-up / drop-off';
+      if (detail) detail.textContent = 'Transfer arrangements will be coordinated by the conference organisers. Participants will be asked to share their arrival and departure details.';
+    }
+  });
+
   document.querySelectorAll('a[target="_blank"]').forEach((link) => {
     link.setAttribute('rel', 'noopener noreferrer');
   });
