@@ -82,6 +82,38 @@ a.person-card:hover{transform:translateY(-1px)}
 }
 .compact-list .profile-arrow{display:inline-block}
 
+/* Patron is an honorary role: keep it elegant but visually secondary. */
+.committees .patron{
+  display:grid;
+  grid-template-columns:120px minmax(0,1fr);
+  align-items:center;
+  gap:.35rem 1.2rem;
+  margin:1.5rem 0 2.4rem;
+  padding:1rem 1.25rem;
+  border:1px solid rgba(13,102,101,.15);
+  border-radius:1rem;
+  background:rgba(13,102,101,.035);
+}
+.committees .patron p{
+  grid-row:1/3;
+  margin:0;
+  font-size:.7rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.committees .patron h2{
+  margin:0;
+  font-family:inherit;
+  font-size:1.05rem;
+  line-height:1.2;
+  font-weight:650;
+}
+.committees .patron span{
+  font-size:.78rem;
+  color:var(--muted);
+}
+
 /* Poovar visual block */
 .poovar-gallery{
   margin:clamp(2.5rem,5vw,4.5rem) 0 0;
@@ -182,6 +214,12 @@ a.person-card:focus-visible{
     aspect-ratio:4/5;
     border-radius:11px;
   }
+  .committees .patron{
+    grid-template-columns:1fr;
+    gap:.25rem;
+    padding:.9rem 1rem;
+  }
+  .committees .patron p{grid-row:auto}
   .poovar-gallery{grid-template-columns:1fr}
   .poovar-photo,.poovar-photo:first-child{min-height:270px}
   .about::before{background-size:180vw auto;opacity:.48}
