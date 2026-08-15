@@ -1,5 +1,17 @@
 /* CM4 2026 programme — compact participant-facing timetable */
 
+/* Updated conference-theme labels. The source markup keeps the six-theme grid;
+   these display labels broaden the scope without adding extra categories. */
+.themes span{font-size:0}
+.themes span b{font-size:.72rem}
+.themes span::after{font-size:1rem;line-height:1.45}
+.themes span:nth-child(1)::after{content:"Chemical bonding & electronic structure"}
+.themes span:nth-child(2)::after{content:"Molecular structure & dynamics"}
+.themes span:nth-child(3)::after{content:"Reactivity & mechanism"}
+.themes span:nth-child(4)::after{content:"Clusters & materials"}
+.themes span:nth-child(5)::after{content:"Theoretical & computational methods"}
+.themes span:nth-child(6)::after{content:"Machine learning & automation"}
+
 .programme{
   background:var(--paper);
   position:relative;
