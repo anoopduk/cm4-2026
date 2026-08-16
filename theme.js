@@ -97,7 +97,7 @@
         photo: 'https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Xcg4HSwAAAAJ&citpid=1'
       },
       {
-        name: 'D. Sravanakumar Perumalla', affiliation: 'Sasi Institute of Technology & Engineering', initials: 'SP',
+        name: 'Sravanakumar Perumalla D.', affiliation: 'Sasi Institute of Technology & Engineering', initials: 'SP',
         href: 'https://sasi.ac.in/applied-sciences-humanities/',
         photo: 'https://scholar.googleusercontent.com/citations?view_op=view_photo&user=QzBlgRgAAAAJ&citpid=1'
       },
@@ -124,17 +124,15 @@
     };
     renameParticipant('b-kiran.webp','Kiran Boggavarapu','KB','https://www.mcneese.edu/faculty/kiran-boggavarapu-ph-d/');
     renameParticipant('t-pradeep.webp','Pradeep Thalappil','PT','https://en.wikipedia.org/wiki/Thalappil_Pradeep');
+    renameParticipant('ed-jemmis.webp','Jemmis E. D.','EDJ');
+    renameParticipant('n-satyamurthy.webp','Satyamurthy N.','NS');
+    renameParticipant('rb-sunoj.webp','Sunoj R. B.','RBS');
+    renameParticipant('rs-swathi.webp','Swathi R. S.','RS');
 
-    const surnameKey = (name) => {
-      const cleaned=name.replace(/\b(Jr\.?|Sr\.?|II|III|IV)\b\.?$/i,'').trim();
-      const parts=cleaned.split(/\s+/);
-      return parts[parts.length-1] || cleaned;
-    };
     [...participantList.children].sort((a,b) => {
       const an=(a.querySelector('h3')?.textContent||'').trim();
       const bn=(b.querySelector('h3')?.textContent||'').trim();
-      const bySurname=surnameKey(an).localeCompare(surnameKey(bn), 'en', {sensitivity:'base'});
-      return bySurname || an.localeCompare(bn, 'en', {sensitivity:'base'});
+      return an.localeCompare(bn, 'en', {sensitivity:'base'});
     }).forEach((card)=>participantList.appendChild(card));
   }
 
