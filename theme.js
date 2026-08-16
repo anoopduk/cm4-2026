@@ -136,6 +136,33 @@
     }).forEach((card)=>participantList.appendChild(card));
   }
 
+  const committeeRenames = {
+    'C. H. Suresh':'Suresh C. H.',
+    'P. N. V. Pavankumar':'Pavankumar P. N. V.',
+    'G. Narahari Sastry':'Narahari Sastry G.',
+    'G. Subramanian':'Subramanian G.',
+    'P. Parameswaran':'Parameswaran P.',
+    'D. L. V. K. Prasad':'Prasad D. L. V. K.'
+  };
+  document.querySelectorAll('#committees .person-card').forEach((card) => {
+    const heading=card.querySelector('h3');
+    if(!heading)return;
+    const oldName=heading.textContent.trim();
+    const newName=committeeRenames[oldName];
+    if(newName){
+      heading.textContent=newName;
+      const photo=card.querySelector('.person-photo');
+      if(photo)photo.setAttribute('alt',newName);
+    }
+  });
+  document.querySelectorAll('#committees .person-list').forEach((list) => {
+    [...list.children].sort((a,b) => {
+      const an=(a.querySelector('h3')?.textContent||'').trim();
+      const bn=(b.querySelector('h3')?.textContent||'').trim();
+      return an.localeCompare(bn,'en',{sensitivity:'base'});
+    }).forEach((card)=>list.appendChild(card));
+  });
+
   const profileLinks = {
     'odile-eisenstein.webp':'https://www.icgm.fr/odile-eisenstein/',
     'milan-kumar-jena.webp':'https://www.iitbhilai.ac.in/index.php/index.php?pid=profile_milanjena',
