@@ -112,10 +112,29 @@
       if (existingNames.has(person.name.toLocaleLowerCase())) return;
       participantList.insertAdjacentHTML('beforeend', `<a class="person-card" href="${person.href}" target="_blank" rel="noopener noreferrer"><span class="portrait"><span class="person-mark">${person.initials}</span><img class="person-photo" src="${person.photo}" alt="${person.name}" loading="lazy" decoding="async" width="480" height="600"></span><span class="person-copy"><h3>${person.name}</h3><p>${person.affiliation}</p></span><span class="profile-arrow">↗</span></a>`);
     });
+
+    const renameParticipant = (filename, name, initials, href) => {
+      const photo=participantList.querySelector(`img[src$="${filename}"]`);
+      const card=photo?.closest('.person-card');
+      if(!photo||!card)return;
+      photo.setAttribute('alt',name);
+      const heading=card.querySelector('h3'); if(heading)heading.textContent=name;
+      const mark=card.querySelector('.person-mark'); if(mark)mark.textContent=initials;
+      if(href&&card.matches('a')) card.setAttribute('href',href);
+    };
+    renameParticipant('b-kiran.webp','Kiran Boggavarapu','KB','https://www.mcneese.edu/faculty/kiran-boggavarapu-ph-d/');
+    renameParticipant('t-pradeep.webp','Pradeep Thalappil','PT','https://en.wikipedia.org/wiki/Thalappil_Pradeep');
+
+    const surnameKey = (name) => {
+      const cleaned=name.replace(/\b(Jr\.?|Sr\.?|II|III|IV)\b\.?$/i,'').trim();
+      const parts=cleaned.split(/\s+/);
+      return parts[parts.length-1] || cleaned;
+    };
     [...participantList.children].sort((a,b) => {
       const an=(a.querySelector('h3')?.textContent||'').trim();
       const bn=(b.querySelector('h3')?.textContent||'').trim();
-      return an.localeCompare(bn, 'en', {sensitivity:'base'});
+      const bySurname=surnameKey(an).localeCompare(surnameKey(bn), 'en', {sensitivity:'base'});
+      return bySurname || an.localeCompare(bn, 'en', {sensitivity:'base'});
     }).forEach((card)=>participantList.appendChild(card));
   }
 
@@ -123,7 +142,7 @@
     'odile-eisenstein.webp':'https://www.icgm.fr/odile-eisenstein/',
     'milan-kumar-jena.webp':'https://www.iitbhilai.ac.in/index.php/index.php?pid=profile_milanjena',
     'sabyasachi-mishra.webp':'https://ccds.iitkgp.ac.in/people.php',
-    't-pradeep.webp':'https://ioe.iitm.ac.in/people/t-pradeep/',
+    't-pradeep.webp':'https://en.wikipedia.org/wiki/Thalappil_Pradeep',
     'sai-g-ramesh.webp':'https://ipc.iisc.ac.in/sgr',
     'rb-sunoj.webp':'https://www.chem.iitb.ac.in/facultyuserview/r-b-sunoj',
     'jayasree-eg.webp':'https://chem.cusat.ac.in/facultymain/faculty_jayasree.html',
