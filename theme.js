@@ -102,6 +102,10 @@
         photo: 'https://scholar.googleusercontent.com/citations?view_op=view_photo&user=QzBlgRgAAAAJ&citpid=1'
       },
       {
+        name: 'Subhendu Roy', affiliation: 'Saha Institute of Nuclear Physics, Kolkata', initials: 'SR',
+        href: 'https://www.saha.ac.in/web/cmbd-personal-page?mid=1063&tab=tab3'
+      },
+      {
         name: 'Upakarasamy Lourderaj', affiliation: 'NISER Bhubaneswar', initials: 'UL',
         href: 'https://www.niser.ac.in/profile/u.lourderaj',
         photo: 'https://www.niser.ac.in/assets/img/profile/u.lourderaj.jpg'
@@ -110,7 +114,10 @@
     const existingNames = new Set([...participantList.querySelectorAll('.person-card h3')].map((h) => h.textContent.trim().toLocaleLowerCase()));
     additions.forEach((person) => {
       if (existingNames.has(person.name.toLocaleLowerCase())) return;
-      participantList.insertAdjacentHTML('beforeend', `<a class="person-card" href="${person.href}" target="_blank" rel="noopener noreferrer"><span class="portrait"><span class="person-mark">${person.initials}</span><img class="person-photo" src="${person.photo}" alt="${person.name}" loading="lazy" decoding="async" width="480" height="600"></span><span class="person-copy"><h3>${person.name}</h3><p>${person.affiliation}</p></span><span class="profile-arrow">↗</span></a>`);
+      const portrait = person.photo
+        ? `<span class="portrait"><span class="person-mark">${person.initials}</span><img class="person-photo" src="${person.photo}" alt="${person.name}" loading="lazy" decoding="async" width="480" height="600"></span>`
+        : `<span class="portrait"><span class="person-mark">${person.initials}</span></span>`;
+      participantList.insertAdjacentHTML('beforeend', `<a class="person-card" href="${person.href}" target="_blank" rel="noopener noreferrer">${portrait}<span class="person-copy"><h3>${person.name}</h3><p>${person.affiliation}</p></span><span class="profile-arrow">↗</span></a>`);
     });
 
     const renameParticipant = (filename, name, initials, href) => {
