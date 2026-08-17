@@ -103,7 +103,8 @@
       },
       {
         name: 'Subhendu Roy', affiliation: 'Saha Institute of Nuclear Physics, Kolkata', initials: 'SR',
-        href: 'https://www.saha.ac.in/web/cmbd-personal-page?mid=1063&tab=tab3'
+        href: 'https://www.saha.ac.in/web/cmbd-personal-page?mid=1063&tab=tab3',
+        photo: 'https://www.saha.ac.in/web/portal/fac-homepage/photos/subhendu.roy.jpg'
       },
       {
         name: 'Upakarasamy Lourderaj', affiliation: 'NISER Bhubaneswar', initials: 'UL',
