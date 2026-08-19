@@ -40,15 +40,18 @@
 /* Venue: one landscape image + one concise information column. */
 #venue{
   display:grid;
-  grid-template-columns:minmax(0,1.3fr) minmax(300px,.7fr);
+  grid-template-columns:minmax(0,1.22fr) minmax(310px,.78fr);
   grid-template-rows:auto auto auto;
-  column-gap:clamp(2.25rem,5vw,5.25rem);
+  column-gap:clamp(1.75rem,3.5vw,3.75rem);
   row-gap:0;
   align-items:start;
-  padding-top:clamp(3.5rem,5vw,5rem);
-  padding-bottom:clamp(3.5rem,5vw,5rem);
+  padding-top:clamp(2.8rem,4vw,4rem);
+  padding-bottom:clamp(2.8rem,4vw,4rem);
 }
-#venue>.section-kicker{grid-column:1/-1;margin-bottom:clamp(2rem,3.2vw,2.8rem)}
+#venue>.section-kicker{
+  grid-column:1/-1;
+  margin-bottom:clamp(1.35rem,2.2vw,1.9rem);
+}
 
 /* Existing coast photograph is 16:9 and is shown at exactly that ratio: no crop. */
 #venue .poovar-gallery{
@@ -57,14 +60,17 @@
   margin:0;
   min-width:0;
   display:block;
+  align-self:start;
 }
 #venue .poovar-photo:first-child{
   display:block;
   width:100%;
+  max-width:820px;
   aspect-ratio:16/9;
   height:auto;
   min-height:0;
-  border-radius:1.15rem;
+  margin:0;
+  border-radius:1rem;
   overflow:hidden;
   box-shadow:var(--shadow);
 }
@@ -75,108 +81,105 @@
   object-position:center;
 }
 #venue .poovar-photo:nth-child(2){display:none}
-#venue .poovar-photo:first-child::after{height:28%}
-#venue .poovar-photo figcaption{
-  left:1rem;
-  right:1rem;
-  bottom:.9rem;
-  font-size:clamp(1rem,1.35vw,1.22rem);
-}
-html[data-theme="dark"] #venue .poovar-photo{box-shadow:0 18px 48px rgba(0,0,0,.25)}
+#venue .poovar-photo:first-child::after{display:none}
+#venue .poovar-photo figcaption{display:none}
+html[data-theme="dark"] #venue .poovar-photo{box-shadow:0 16px 42px rgba(0,0,0,.24)}
 
-/* Venue identity — no card, no oversized empty block. */
+/* Venue identity — tighter hierarchy, no card. */
 #venue .venue-simple{
   grid-column:2;
   grid-row:2;
   min-height:0;
-  padding:0 0 1.4rem;
+  padding:0 0 1rem;
   border-top:0;
   border-bottom:1px solid var(--line);
   display:block;
 }
-#venue .venue-simple .location-label{margin:0 0 .55rem}
+#venue .venue-simple .location-label{margin:0 0 .42rem}
 #venue .venue-simple h2{
-  max-width:9ch;
-  margin:0 0 .85rem;
-  font-size:clamp(2.35rem,3.7vw,3.85rem);
+  max-width:10ch;
+  margin:0 0 .62rem;
+  font-size:clamp(2.2rem,3.35vw,3.5rem);
   line-height:.98;
 }
 #venue .venue-simple>p:not(.location-label){
-  margin:.12rem 0;
-  font-size:.93rem;
-  line-height:1.5;
+  margin:.06rem 0;
+  font-size:.9rem;
+  line-height:1.42;
 }
 
-/* Arrival and transfers: one compact information block, not three travel cards. */
+/* Arrival and transfers: compact information, not travel cards. */
 #venue .travel-block{
   grid-column:2;
   grid-row:3;
-  margin:1.35rem 0 0;
+  margin:.9rem 0 0;
   padding:0;
   border:0;
   display:block;
 }
 #venue .travel-intro{
   display:block;
-  margin:0 0 .8rem;
+  margin:0 0 .55rem;
 }
 #venue .travel-intro .location-label{display:none}
 #venue .travel-intro h3{
-  margin:0 0 .55rem;
-  font-size:clamp(1.35rem,1.8vw,1.75rem);
-  line-height:1.08;
+  margin:0 0 .38rem;
+  font-size:clamp(1.25rem,1.65vw,1.58rem);
+  line-height:1.06;
   letter-spacing:-.025em;
 }
 #venue .travel-intro>p:last-child{
   margin:0;
-  max-width:42ch;
-  font-size:.84rem;
-  line-height:1.58;
+  max-width:44ch;
+  font-size:.8rem;
+  line-height:1.48;
 }
 
 #venue .travel-grid{
   display:block;
-  margin:.95rem 0 0;
+  margin:.62rem 0 0;
   border:0;
   background:transparent;
 }
 #venue .travel-card{
   min-height:0;
-  padding:.72rem 0;
+  padding:.5rem 0;
   border:0;
   border-top:1px solid var(--line);
   display:grid;
-  grid-template-columns:72px minmax(0,1fr);
-  column-gap:.8rem;
+  grid-template-columns:62px minmax(0,1fr);
+  column-gap:.7rem;
   align-items:start;
 }
 /* Transfer is already explained once in the paragraph above. */
 #venue .travel-card:nth-child(3){display:none}
 #venue .travel-label{
-  margin:.08rem 0 0;
+  margin:.05rem 0 0;
   grid-column:1;
   grid-row:1 / span 2;
-  font-size:.62rem;
+  font-size:.59rem;
 }
 #venue .travel-card h4{
   grid-column:2;
-  margin:0 0 .22rem;
-  font-size:.89rem;
-  line-height:1.28;
+  margin:0 0 .12rem;
+  font-size:.84rem;
+  line-height:1.22;
 }
 #venue .travel-card p:last-child{
   grid-column:2;
   margin:0;
-  font-size:.76rem;
-  line-height:1.45;
+  font-size:.72rem;
+  line-height:1.38;
 }
 #venue .venue-links{
-  margin:.85rem 0 0;
+  margin:.58rem 0 0;
+  padding-top:.55rem;
+  border-top:1px solid var(--line);
   display:flex;
-  gap:1.2rem;
+  gap:1rem;
   flex-wrap:wrap;
 }
-#venue .venue-links .text-link{font-size:.78rem}
+#venue .venue-links .text-link{font-size:.75rem}
 
 /* Old in-section credit is visually removed; accurate credit appears in footer. */
 #venue .photo-credit{
@@ -201,8 +204,11 @@ footer::after{
 }
 
 @media(max-width:1000px){
-  #venue{grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);column-gap:2rem}
-  #venue .venue-simple h2{font-size:clamp(2.2rem,4vw,3.35rem)}
+  #venue{
+    grid-template-columns:minmax(0,1.08fr) minmax(285px,.92fr);
+    column-gap:1.75rem;
+  }
+  #venue .venue-simple h2{font-size:clamp(2.1rem,3.9vw,3.15rem)}
 }
 
 @media(max-width:760px){
@@ -211,13 +217,19 @@ footer::after{
   #venue{
     display:flex;
     flex-direction:column;
-    padding-top:3.25rem;
-    padding-bottom:3.25rem;
+    padding-top:2.8rem;
+    padding-bottom:2.8rem;
   }
-  #venue>.section-kicker{width:100%;margin-bottom:1.7rem}
-  #venue .poovar-gallery{order:2;width:100%;margin-bottom:1.35rem}
-  #venue .venue-simple{order:1;width:100%;padding:0 0 1.2rem;margin-bottom:1rem}
+  #venue>.section-kicker{width:100%;margin-bottom:1.35rem}
+  #venue .venue-simple{
+    order:1;
+    width:100%;
+    padding:0 0 .9rem;
+    margin-bottom:.85rem;
+  }
   #venue .venue-simple h2{max-width:none}
+  #venue .poovar-gallery{order:2;width:100%;margin-bottom:1rem}
+  #venue .poovar-photo:first-child{max-width:none}
   #venue .travel-block{order:3;width:100%;margin-top:0}
   #venue .travel-intro>p:last-child{max-width:58ch}
 }
@@ -226,10 +238,10 @@ footer::after{
   .hero-card{padding-top:8.8rem}
   .hero-card::before{height:8rem}
   .hero-card::after{top:.65rem;left:.65rem;font-size:.6rem}
-  #venue{padding-top:3rem;padding-bottom:3rem}
-  #venue .venue-simple h2{font-size:clamp(2.3rem,10vw,3rem)}
-  #venue .poovar-photo:first-child{border-radius:1rem}
-  #venue .travel-card{grid-template-columns:62px minmax(0,1fr)}
-  #venue .venue-links{gap:.9rem}
+  #venue{padding-top:2.6rem;padding-bottom:2.6rem}
+  #venue .venue-simple h2{font-size:clamp(2.2rem,9.5vw,2.85rem)}
+  #venue .poovar-photo:first-child{border-radius:.9rem}
+  #venue .travel-card{grid-template-columns:56px minmax(0,1fr);padding:.46rem 0}
+  #venue .venue-links{gap:.8rem}
   footer::after{font-size:.58rem}
 }
