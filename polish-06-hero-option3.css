@@ -1,0 +1,280 @@
+/* CM4 visual polish 06 — Hero adaptation based on approved mockup Option 3.
+   Same CM4 text/content; only hierarchy, density and image treatment change. */
+
+/* Desktop: editorial two-zone hero. Copy and facts on the left; Poovar image on the right. */
+#top.hero{
+  display:grid;
+  grid-template-columns:minmax(0,1.42fr) minmax(340px,.72fr);
+  grid-template-rows:auto auto;
+  column-gap:clamp(2rem,4vw,4.25rem);
+  row-gap:1.2rem;
+  align-items:start;
+  padding-top:clamp(2.1rem,3vw,3rem);
+  padding-bottom:clamp(2.35rem,3.6vw,3.4rem);
+}
+
+#top.hero .hero-copy{
+  grid-column:1;
+  grid-row:1;
+  display:grid;
+  grid-template-columns:minmax(0,1.28fr) minmax(205px,.72fr);
+  grid-template-areas:
+    "eyebrow eyebrow"
+    "title intro"
+    "actions intro";
+  column-gap:clamp(1.35rem,2.8vw,2.75rem);
+  row-gap:.62rem;
+  align-items:start;
+  padding-bottom:0;
+  position:relative;
+  z-index:2;
+}
+
+#top.hero .eyebrow{
+  grid-area:eyebrow;
+  margin:0 0 .15rem;
+}
+
+#top.hero h1{
+  grid-area:title;
+  max-width:11.5ch;
+  margin:0;
+  font-size:clamp(2.9rem,4.45vw,5rem);
+  line-height:.965;
+  letter-spacing:-.043em;
+}
+
+#top.hero .hero-intro{
+  grid-area:intro;
+  align-self:start;
+  margin:.25rem 0 0;
+  padding:.1rem 0 .1rem clamp(1rem,1.8vw,1.6rem);
+  max-width:28ch;
+  border-left:1px solid var(--line);
+  font-size:clamp(.94rem,1.08vw,1.04rem);
+  line-height:1.55;
+}
+
+#top.hero .hero-actions{
+  grid-area:actions;
+  margin-top:.45rem;
+  gap:.85rem;
+  flex-wrap:wrap;
+}
+
+/* Facts row: visually light, closer to the approved Option 3 than separate cards. */
+#top.hero .hero-card{
+  grid-column:1;
+  grid-row:2;
+  position:static;
+  inset:auto;
+  z-index:2;
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:0;
+  align-content:start;
+  margin:0;
+  padding:.15rem 0 0;
+  border-top:1px solid var(--line);
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  color:var(--ink);
+  overflow:visible;
+  pointer-events:auto;
+}
+
+#top.hero .hero-card::before,
+#top.hero .hero-card::after{
+  content:none!important;
+  display:none!important;
+}
+
+#top.hero .hero-card>div{
+  position:relative;
+  z-index:auto;
+  min-height:76px;
+  padding:.9rem 1rem .55rem 2.55rem;
+  border:0!important;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none!important;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  gap:.12rem;
+  color:var(--ink);
+}
+
+#top.hero .hero-card>div:nth-child(2),
+#top.hero .hero-card>div:nth-child(3){
+  border-left:1px solid var(--line)!important;
+}
+
+#top.hero .hero-card>div::before{
+  position:absolute;
+  left:.78rem;
+  top:.88rem;
+  width:1.28rem;
+  height:1.28rem;
+  border:1px solid color-mix(in srgb,var(--teal) 55%,transparent);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--teal);
+  font-size:.72rem;
+  line-height:1;
+}
+
+#top.hero .hero-card>div:nth-child(1)::before{content:"◷"}
+#top.hero .hero-card>div:nth-child(2)::before{content:"⌖"}
+#top.hero .hero-card>div:nth-child(3)::before{content:"◇"}
+
+#top.hero .hero-card>div>span{
+  color:var(--teal)!important;
+  font-size:.64rem!important;
+  line-height:1.2;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:600;
+}
+
+#top.hero .hero-card>div>strong{
+  margin-top:.12rem;
+  color:var(--ink);
+  font-size:.88rem!important;
+  line-height:1.25;
+  font-weight:650;
+}
+
+#top.hero .hero-card>div>small{
+  margin-top:.08rem;
+  color:var(--muted)!important;
+  font-size:.68rem!important;
+  line-height:1.28;
+}
+
+#top.hero .hero-card .status{display:none!important}
+
+/* Independent image: one strong visual, no text/data trapped inside it. */
+#top.hero::after{
+  content:"";
+  grid-column:2;
+  grid-row:1 / span 2;
+  align-self:stretch;
+  justify-self:stretch;
+  min-height:clamp(330px,29vw,445px);
+  border-radius:1.25rem;
+  background:
+    linear-gradient(180deg,rgba(4,17,18,.02),rgba(4,17,18,.08)),
+    url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/THE_TRANQUIL_BACKWATERS_OF_POOVAR_-_KERALA.jpg/1280px-THE_TRANQUIL_BACKWATERS_OF_POOVAR_-_KERALA.jpg") center 50% / cover no-repeat;
+  box-shadow:var(--shadow);
+}
+
+html[data-theme="dark"] #top.hero::after{
+  box-shadow:0 18px 46px rgba(0,0,0,.28);
+}
+
+/* Keep the existing molecular/orbit decoration subtle and behind the new composition. */
+#top.hero .hero-orbit{opacity:.62}
+
+@media(max-width:1120px){
+  #top.hero{
+    grid-template-columns:minmax(0,1.32fr) minmax(300px,.68fr);
+    column-gap:2.25rem;
+  }
+  #top.hero .hero-copy{
+    grid-template-columns:minmax(0,1.2fr) minmax(190px,.8fr);
+    column-gap:1.5rem;
+  }
+  #top.hero h1{font-size:clamp(2.8rem,4.7vw,4.55rem)}
+  #top.hero::after{min-height:330px}
+}
+
+@media(max-width:900px){
+  #top.hero{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto auto;
+    gap:1.2rem;
+    padding:2.15rem clamp(1rem,5vw,3rem) 3rem;
+  }
+  #top.hero .hero-copy{
+    grid-column:1;
+    grid-row:1;
+    grid-template-columns:minmax(0,1.3fr) minmax(200px,.7fr);
+  }
+  #top.hero h1{
+    max-width:12ch;
+    font-size:clamp(3rem,7vw,4.8rem);
+  }
+  #top.hero .hero-card{
+    grid-column:1;
+    grid-row:2;
+    width:100%;
+    padding:0;
+  }
+  #top.hero::after{
+    grid-column:1;
+    grid-row:3;
+    min-height:260px;
+    width:100%;
+    border-radius:1.05rem;
+  }
+}
+
+@media(max-width:700px){
+  #top.hero .hero-copy{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "eyebrow"
+      "title"
+      "intro"
+      "actions";
+    row-gap:.68rem;
+  }
+  #top.hero h1{max-width:none}
+  #top.hero .hero-intro{
+    max-width:42ch;
+    margin:.15rem 0 0;
+    padding:0;
+    border-left:0;
+  }
+}
+
+@media(max-width:620px){
+  #top.hero{
+    gap:1rem;
+    padding:1.55rem 1rem 2.5rem;
+  }
+  #top.hero h1{
+    font-size:clamp(2.55rem,12vw,3.75rem);
+    line-height:.96;
+  }
+  #top.hero .hero-intro{
+    font-size:.96rem;
+    line-height:1.5;
+  }
+  #top.hero .hero-actions{margin-top:.25rem}
+  #top.hero .hero-card{
+    grid-template-columns:1fr;
+    border-top:1px solid var(--line);
+  }
+  #top.hero .hero-card>div{
+    min-height:0;
+    padding:.62rem .25rem .62rem 2.2rem;
+    border-left:0!important;
+    border-bottom:1px solid var(--line)!important;
+  }
+  #top.hero .hero-card>div:last-of-type{border-bottom:0!important}
+  #top.hero .hero-card>div::before{
+    left:.35rem;
+    top:.68rem;
+  }
+  #top.hero .hero-card>div>strong{font-size:.86rem!important}
+  #top.hero::after{
+    min-height:205px;
+    border-radius:.9rem;
+  }
+}
