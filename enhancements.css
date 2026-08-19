@@ -386,3 +386,60 @@ html[data-theme="dark"] .programme-day{background:var(--paper-2)}
   .committee-block{margin-bottom:3.25rem}
   footer{padding:2rem 1rem}
 }
+
+/* 2026-08 typography audit: rebalance scale without changing content or structure. */
+.hero h1{
+  font-size:clamp(3rem,5.15vw,5.65rem);
+  line-height:.97;
+  letter-spacing:-.045em;
+}
+h2{
+  font-size:clamp(2.35rem,4.25vw,4.65rem);
+  line-height:1.02;
+}
+.hero-intro{font-size:clamp(1.02rem,1.2vw,1.16rem)}
+.prose{font-size:1.08rem;line-height:1.75}
+.eyebrow,.section-kicker p,.location-label,.price-label,.committee-label{font-size:.76rem}
+.site-header nav a{font-size:.9rem}
+.hero-card strong{font-size:1.03rem}
+.hero-card span,.hero-card small{font-size:.79rem}
+.person-card h3{font-size:1.06rem;line-height:1.22}
+.person-card p{font-size:.83rem;line-height:1.4}
+.featured .person-card h3{font-size:1.08rem}
+.themes span::after{font-size:1.03rem}
+.programme-head h2{font-size:clamp(2.3rem,4vw,4.3rem)}
+.programme-intro{font-size:1rem}
+.programme-day-head h3{font-size:clamp(1.7rem,2.45vw,2.35rem)}
+.programme-item strong{font-size:.96rem}
+.programme-item time{font-size:.8rem}
+.travel-intro h3{font-size:clamp(1.75rem,2.6vw,2.55rem)}
+.travel-card h4{font-size:1.02rem}
+.travel-card p:last-child{font-size:.92rem}
+.price-card{font-size:1rem}
+.committees .patron h2{font-size:1.12rem}
+.committees .patron span{font-size:.82rem}
+footer p{font-size:.8rem}
+
+@media(max-width:1100px){
+  .hero h1{font-size:clamp(3rem,5.65vw,5.25rem)}
+  h2{font-size:clamp(2.3rem,4.4vw,4.25rem)}
+}
+@media(max-width:900px){
+  .hero h1{font-size:clamp(2.9rem,8vw,4.8rem)}
+  h2{font-size:clamp(2.25rem,6vw,3.8rem)}
+  .person-card h3{font-size:1.03rem}
+  .featured .person-card h3{font-size:1.05rem}
+}
+@media(max-width:620px){
+  .hero h1{font-size:clamp(2.55rem,11.6vw,3.55rem);line-height:.97}
+  h2,.section-heading h2{font-size:clamp(2.15rem,9vw,3rem)}
+  .hero-intro{font-size:1rem}
+  .prose{font-size:1rem;line-height:1.7}
+  .eyebrow,.section-kicker p,.location-label,.price-label,.committee-label{font-size:.72rem}
+  .site-header nav a{font-size:.8rem}
+  .person-card h3,.featured .person-card h3{font-size:1rem}
+  .person-card p{font-size:.81rem}
+  .themes span::after{font-size:.96rem}
+  .programme-day-head h3{font-size:1.65rem}
+  .programme-item strong{font-size:.93rem}
+}
