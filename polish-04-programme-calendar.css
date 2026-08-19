@@ -1,0 +1,357 @@
+/* CM4 visual polish 04 — robust four-day week-view programme.
+   Scoped to #programme so the late-loaded base programme stylesheet cannot override it. */
+
+#programme{
+  --cal-hour:52px;
+  --cal-head:72px;
+  --cal-body:728px; /* 08:00–22:00 */
+  background:var(--paper);
+}
+
+#programme::before{opacity:.16}
+
+#programme .programme-head{
+  grid-template-columns:minmax(0,1fr) minmax(290px,.58fr)!important;
+  gap:clamp(2rem,5vw,5rem)!important;
+  align-items:end!important;
+  margin-bottom:2rem!important;
+}
+#programme .programme-intro{max-width:560px!important}
+
+/* The calendar itself: sticky time gutter + four day columns. */
+#programme .programme-grid{
+  display:grid!important;
+  grid-template-columns:72px repeat(4,minmax(210px,1fr))!important;
+  grid-template-rows:auto!important;
+  gap:0!important;
+  position:relative!important;
+  padding:0!important;
+  margin:0!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  border:1px solid var(--line)!important;
+  border-radius:1.1rem!important;
+  background:var(--paper)!important;
+  box-shadow:var(--shadow)!important;
+  scrollbar-width:thin;
+  isolation:isolate;
+}
+html[data-theme="dark"] #programme .programme-grid{background:var(--paper)!important}
+
+/* Hour labels: a true first grid column, sticky while the four days scroll horizontally. */
+#programme .programme-grid::before{
+  content:"08:00\A 09:00\A 10:00\A 11:00\A 12:00\A 13:00\A 14:00\A 15:00\A 16:00\A 17:00\A 18:00\A 19:00\A 20:00\A 21:00"!important;
+  white-space:pre!important;
+  grid-column:1!important;
+  grid-row:1!important;
+  position:sticky!important;
+  left:0!important;
+  z-index:8!important;
+  width:72px!important;
+  height:calc(var(--cal-head) + var(--cal-body))!important;
+  padding:calc(var(--cal-head) - 1px) .75rem 0 0!important;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(var(--cal-hour) - 1px),
+      var(--line) calc(var(--cal-hour) - 1px),
+      var(--line) var(--cal-hour)
+    ) 0 var(--cal-head) / 100% var(--cal-body) no-repeat,
+    var(--paper)!important;
+  border-right:1px solid var(--line)!important;
+  color:var(--muted)!important;
+  font-size:.72rem!important;
+  font-variant-numeric:tabular-nums!important;
+  line-height:var(--cal-hour)!important;
+  text-align:right!important;
+  box-sizing:border-box!important;
+  pointer-events:none!important;
+}
+#programme .programme-grid::after{
+  content:"TIME\A(IST)"!important;
+  white-space:pre!important;
+  grid-column:1!important;
+  grid-row:1!important;
+  position:sticky!important;
+  left:0!important;
+  align-self:start!important;
+  z-index:9!important;
+  width:72px!important;
+  height:var(--cal-head)!important;
+  padding:1rem .75rem 0 0!important;
+  background:var(--paper)!important;
+  border-right:1px solid var(--line)!important;
+  border-bottom:1px solid var(--line)!important;
+  color:var(--teal)!important;
+  font-size:.62rem!important;
+  font-weight:700!important;
+  line-height:1.25!important;
+  letter-spacing:.1em!important;
+  text-align:right!important;
+  box-sizing:border-box!important;
+  pointer-events:none!important;
+}
+
+#programme .programme-day{
+  grid-row:1!important;
+  min-width:210px!important;
+  width:auto!important;
+  height:calc(var(--cal-head) + var(--cal-body))!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  border:0!important;
+  border-right:1px solid var(--line)!important;
+  border-radius:0!important;
+  background:var(--paper)!important;
+  box-shadow:none!important;
+  position:relative!important;
+}
+#programme .programme-day:nth-child(1){grid-column:2!important}
+#programme .programme-day:nth-child(2){grid-column:3!important}
+#programme .programme-day:nth-child(3){grid-column:4!important}
+#programme .programme-day:nth-child(4){grid-column:5!important;border-right:0!important}
+html[data-theme="dark"] #programme .programme-day{background:var(--paper)!important}
+
+#programme .programme-day-head{
+  height:var(--cal-head)!important;
+  min-height:var(--cal-head)!important;
+  margin:0!important;
+  padding:.82rem .7rem!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  border:0!important;
+  border-bottom:1px solid rgba(255,255,255,.16)!important;
+  background:var(--deep)!important;
+  color:#fff!important;
+  box-sizing:border-box!important;
+}
+html[data-theme="dark"] #programme .programme-day-head{background:#092225!important}
+#programme .programme-day-head>div{min-width:0!important}
+#programme .programme-day-head p{
+  margin:0 0 .2rem!important;
+  color:rgba(255,255,255,.78)!important;
+  font-size:.67rem!important;
+  font-weight:600!important;
+  line-height:1.1!important;
+  letter-spacing:.15em!important;
+  text-transform:uppercase!important;
+}
+#programme .programme-day-head h3{
+  margin:0!important;
+  color:#fff!important;
+  font-family:"DM Sans",Arial,sans-serif!important;
+  font-size:.82rem!important;
+  font-weight:600!important;
+  line-height:1.2!important;
+  letter-spacing:.045em!important;
+  text-transform:uppercase!important;
+}
+#programme .programme-day-head>span{display:none!important}
+
+#programme .programme-items{
+  position:relative!important;
+  display:block!important;
+  width:100%!important;
+  height:var(--cal-body)!important;
+  min-height:var(--cal-body)!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(var(--cal-hour) - 1px),
+      var(--line) calc(var(--cal-hour) - 1px),
+      var(--line) var(--cal-hour)
+    )!important;
+}
+
+/* Event blocks. Solid theme-aware surfaces avoid the white-patch artefacts. */
+#programme .programme-item{
+  position:absolute!important;
+  left:8px!important;
+  right:8px!important;
+  width:auto!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:.36rem .52rem!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  align-items:flex-start!important;
+  gap:.08rem!important;
+  overflow:hidden!important;
+  border:1px solid rgba(13,102,101,.28)!important;
+  border-radius:.55rem!important;
+  background:#e7f2f0!important;
+  box-shadow:none!important;
+  box-sizing:border-box!important;
+  z-index:2!important;
+}
+html[data-theme="dark"] #programme .programme-item{
+  background:#0d2c2e!important;
+  border-color:rgba(124,207,197,.38)!important;
+}
+#programme .programme-item::before{display:none!important}
+#programme .programme-item strong{
+  order:1!important;
+  margin:0!important;
+  color:var(--ink)!important;
+  font-size:.77rem!important;
+  font-weight:650!important;
+  line-height:1.12!important;
+}
+#programme .programme-item time{
+  order:2!important;
+  margin:0!important;
+  color:var(--muted)!important;
+  font-size:.65rem!important;
+  font-variant-numeric:tabular-nums!important;
+  line-height:1.08!important;
+  white-space:nowrap!important;
+}
+
+#programme .programme-break{
+  background:#fbf0d9!important;
+  border-color:#e5c376!important;
+}
+html[data-theme="dark"] #programme .programme-break{
+  background:#302817!important;
+  border-color:#8f7133!important;
+}
+#programme .programme-meal{
+  background:#eceeea!important;
+  border-color:#cfd5ce!important;
+}
+html[data-theme="dark"] #programme .programme-meal{
+  background:#18282a!important;
+  border-color:#405254!important;
+}
+#programme .programme-special{
+  background:#eff5d5!important;
+  border-color:#b9ce59!important;
+}
+html[data-theme="dark"] #programme .programme-special{
+  background:#253019!important;
+  border-color:#8da63b!important;
+}
+
+/* Half-hour items are intentionally single-line so text never spills into neighbours. */
+#programme .programme-break,
+#programme .programme-day:nth-child(4) .programme-item:nth-child(4){
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:.38rem!important;
+  padding:.18rem .45rem!important;
+}
+#programme .programme-break strong,
+#programme .programme-day:nth-child(4) .programme-item:nth-child(4) strong{
+  font-size:.7rem!important;
+  white-space:nowrap!important;
+}
+#programme .programme-break time,
+#programme .programme-day:nth-child(4) .programme-item:nth-child(4) time{
+  font-size:.61rem!important;
+  white-space:nowrap!important;
+}
+
+/* 08:00 is zero. One hour = 52px. */
+/* Thursday 3 Dec — morning intentionally blank for arrival/travel. */
+#programme .programme-day:nth-child(1) .programme-item:nth-child(1){top:260px!important;height:52px!important}
+#programme .programme-day:nth-child(1) .programme-item:nth-child(2){top:325px!important;height:65px!important}
+#programme .programme-day:nth-child(1) .programme-item:nth-child(3){top:390px!important;height:26px!important}
+#programme .programme-day:nth-child(1) .programme-item:nth-child(4){top:416px!important;height:130px!important}
+#programme .programme-day:nth-child(1) .programme-item:nth-child(5){top:572px!important;height:104px!important}
+
+/* Friday 4 Dec */
+#programme .programme-day:nth-child(2) .programme-item:nth-child(1){top:52px!important;height:78px!important}
+#programme .programme-day:nth-child(2) .programme-item:nth-child(2){top:130px!important;height:26px!important}
+#programme .programme-day:nth-child(2) .programme-item:nth-child(3){top:156px!important;height:104px!important}
+#programme .programme-day:nth-child(2) .programme-item:nth-child(4){top:260px!important;height:52px!important}
+#programme .programme-day:nth-child(2) .programme-item:nth-child(5){top:312px!important;height:78px!important}
+#programme .programme-day:nth-child(2) .programme-item:nth-child(6){top:390px!important;height:26px!important}
+#programme .programme-day:nth-child(2) .programme-item:nth-child(7){top:416px!important;height:130px!important}
+#programme .programme-day:nth-child(2) .programme-item:nth-child(8){top:572px!important;height:104px!important}
+
+/* Saturday 5 Dec */
+#programme .programme-day:nth-child(3) .programme-item:nth-child(1){top:52px!important;height:78px!important}
+#programme .programme-day:nth-child(3) .programme-item:nth-child(2){top:130px!important;height:26px!important}
+#programme .programme-day:nth-child(3) .programme-item:nth-child(3){top:156px!important;height:104px!important}
+#programme .programme-day:nth-child(3) .programme-item:nth-child(4){top:260px!important;height:52px!important}
+#programme .programme-day:nth-child(3) .programme-item:nth-child(5){top:312px!important;height:208px!important}
+#programme .programme-day:nth-child(3) .programme-item:nth-child(6){top:546px!important;height:78px!important}
+#programme .programme-day:nth-child(3) .programme-item:nth-child(7){top:624px!important;height:104px!important}
+
+/* Sunday 6 Dec — afternoon/evening intentionally blank for departure/travel. */
+#programme .programme-day:nth-child(4) .programme-item:nth-child(1){top:52px!important;height:78px!important}
+#programme .programme-day:nth-child(4) .programme-item:nth-child(2){top:130px!important;height:26px!important}
+#programme .programme-day:nth-child(4) .programme-item:nth-child(3){top:156px!important;height:78px!important}
+#programme .programme-day:nth-child(4) .programme-item:nth-child(4){top:234px!important;height:26px!important}
+#programme .programme-day:nth-child(4) .programme-item:nth-child(5){top:260px!important;height:52px!important}
+
+/* Keep the week-view mental map on smaller devices by scrolling horizontally. */
+@media(max-width:1100px){
+  #programme .programme-head{grid-template-columns:1fr!important;gap:1rem!important}
+  #programme .programme-grid{grid-template-columns:64px repeat(4,230px)!important}
+  #programme .programme-grid::before,
+  #programme .programme-grid::after{width:64px!important}
+  #programme .programme-day{min-width:230px!important}
+}
+
+@media(max-width:620px){
+  #programme{
+    --cal-hour:46px;
+    --cal-head:66px;
+    --cal-body:644px;
+    padding-left:1rem!important;
+    padding-right:1rem!important;
+  }
+  #programme .programme-grid{grid-template-columns:58px repeat(4,218px)!important;border-radius:.9rem!important}
+  #programme .programme-grid::before{
+    width:58px!important;
+    height:calc(var(--cal-head) + var(--cal-body))!important;
+    padding-right:.55rem!important;
+    font-size:.65rem!important;
+  }
+  #programme .programme-grid::after{width:58px!important;padding-right:.55rem!important;font-size:.57rem!important}
+  #programme .programme-day{min-width:218px!important;height:calc(var(--cal-head) + var(--cal-body))!important}
+  #programme .programme-day-head{height:var(--cal-head)!important;min-height:var(--cal-head)!important}
+  #programme .programme-items{height:var(--cal-body)!important;min-height:var(--cal-body)!important}
+  #programme .programme-item{left:6px!important;right:6px!important}
+  #programme .programme-item strong{font-size:.73rem!important}
+  #programme .programme-item time{font-size:.62rem!important}
+
+  /* Mobile scale: 46px/hour. */
+  #programme .programme-day:nth-child(1) .programme-item:nth-child(1){top:230px!important;height:46px!important}
+  #programme .programme-day:nth-child(1) .programme-item:nth-child(2){top:287.5px!important;height:57.5px!important}
+  #programme .programme-day:nth-child(1) .programme-item:nth-child(3){top:345px!important;height:23px!important}
+  #programme .programme-day:nth-child(1) .programme-item:nth-child(4){top:368px!important;height:115px!important}
+  #programme .programme-day:nth-child(1) .programme-item:nth-child(5){top:506px!important;height:92px!important}
+
+  #programme .programme-day:nth-child(2) .programme-item:nth-child(1),
+  #programme .programme-day:nth-child(3) .programme-item:nth-child(1),
+  #programme .programme-day:nth-child(4) .programme-item:nth-child(1){top:46px!important;height:69px!important}
+  #programme .programme-day:nth-child(2) .programme-item:nth-child(2),
+  #programme .programme-day:nth-child(3) .programme-item:nth-child(2),
+  #programme .programme-day:nth-child(4) .programme-item:nth-child(2){top:115px!important;height:23px!important}
+  #programme .programme-day:nth-child(2) .programme-item:nth-child(3),
+  #programme .programme-day:nth-child(3) .programme-item:nth-child(3){top:138px!important;height:92px!important}
+  #programme .programme-day:nth-child(2) .programme-item:nth-child(4),
+  #programme .programme-day:nth-child(3) .programme-item:nth-child(4){top:230px!important;height:46px!important}
+  #programme .programme-day:nth-child(2) .programme-item:nth-child(5){top:276px!important;height:69px!important}
+  #programme .programme-day:nth-child(2) .programme-item:nth-child(6){top:345px!important;height:23px!important}
+  #programme .programme-day:nth-child(2) .programme-item:nth-child(7){top:368px!important;height:115px!important}
+  #programme .programme-day:nth-child(2) .programme-item:nth-child(8){top:506px!important;height:92px!important}
+  #programme .programme-day:nth-child(3) .programme-item:nth-child(5){top:276px!important;height:184px!important}
+  #programme .programme-day:nth-child(3) .programme-item:nth-child(6){top:483px!important;height:69px!important}
+  #programme .programme-day:nth-child(3) .programme-item:nth-child(7){top:552px!important;height:92px!important}
+  #programme .programme-day:nth-child(4) .programme-item:nth-child(3){top:138px!important;height:69px!important}
+  #programme .programme-day:nth-child(4) .programme-item:nth-child(4){top:207px!important;height:23px!important}
+  #programme .programme-day:nth-child(4) .programme-item:nth-child(5){top:230px!important;height:46px!important}
+}
