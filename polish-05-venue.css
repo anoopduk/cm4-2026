@@ -1,0 +1,159 @@
+/* CM4 visual polish 05 — integrate Poovar imagery into the hero and compact the venue.
+   Content remains unchanged; this layer only changes visual placement and density. */
+
+/* Reuse the existing Poovar coast image as the hero visual without duplicating content. */
+.hero-card{
+  position:relative;
+  overflow:hidden;
+  padding-top:clamp(12.5rem,18vw,15rem);
+  isolation:isolate;
+}
+.hero-card::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto 0;
+  height:clamp(11.5rem,17vw,14rem);
+  background:
+    linear-gradient(to bottom,rgba(4,17,18,.03) 52%,var(--deep) 100%),
+    url("assets/poovar-coast.webp") center 54% / cover no-repeat;
+  z-index:-1;
+}
+.hero-card::after{
+  content:"Poovar · Kerala";
+  position:absolute;
+  top:1rem;
+  left:1rem;
+  padding:.38rem .62rem;
+  border:1px solid rgba(255,255,255,.32);
+  border-radius:999px;
+  background:rgba(4,17,18,.55);
+  color:white;
+  font-size:.68rem;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
+}
+.hero-card>div{position:relative;z-index:1}
+
+/* Venue becomes one compact information + image composition. */
+#venue{
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(340px,1.1fr);
+  column-gap:clamp(2rem,5vw,5rem);
+  align-items:stretch;
+}
+#venue>.section-kicker,
+#venue>.travel-block{grid-column:1/-1}
+#venue>.section-kicker{margin-bottom:clamp(2.25rem,3.8vw,3.5rem)}
+
+#venue .venue-simple{
+  grid-column:1;
+  min-height:0;
+  padding:clamp(1.25rem,2.5vw,2.25rem) 0;
+  justify-content:center;
+  border-top:0;
+  border-bottom:1px solid var(--line);
+}
+#venue .venue-simple h2{
+  margin:.55rem 0 1.15rem;
+  font-size:clamp(2.65rem,4.5vw,4.65rem);
+}
+#venue .venue-simple>p:not(.location-label){font-size:1rem}
+
+#venue .poovar-gallery{
+  grid-column:2;
+  margin:0;
+  display:block;
+  min-width:0;
+}
+/* Coast photo is now represented in the hero; keep only the mangrove image here. */
+#venue .poovar-photo:first-child{display:none}
+#venue .poovar-photo:nth-child(2){
+  min-height:clamp(300px,31vw,430px);
+  height:100%;
+  border-radius:1.25rem;
+  box-shadow:var(--shadow);
+}
+#venue .poovar-photo:nth-child(2) img{object-position:center 52%}
+#venue .poovar-photo:nth-child(2)::after{height:36%}
+#venue .poovar-photo figcaption{
+  font-size:clamp(1.15rem,1.8vw,1.5rem);
+  bottom:1rem;
+}
+
+/* Keep the existing linked source credit in the document for accessibility, but move the
+   visible credit treatment to the footer where it no longer interrupts the venue layout. */
+#venue .photo-credit{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+footer::after{
+  content:"Image credits: Poovar coast — Midhun Subhash (CC0) · Mangrove backwaters — Deepsikder (CC BY-SA 4.0).";
+  grid-column:1/-1;
+  border-top:1px solid rgba(255,255,255,.13);
+  padding-top:1rem;
+  color:rgba(255,255,255,.42);
+  font-size:.65rem;
+  line-height:1.5;
+}
+
+/* Travel remains complete, but is visually subordinate to the venue/image pair. */
+#venue .travel-block{
+  margin-top:clamp(2.25rem,4vw,3.5rem);
+  padding-top:clamp(1.75rem,3vw,2.5rem);
+}
+#venue .travel-intro{
+  grid-template-columns:minmax(180px,.45fr) minmax(0,1.2fr);
+  gap:clamp(1.5rem,4vw,4rem);
+  margin-bottom:1.75rem;
+}
+#venue .travel-intro>p:last-child{margin:.45rem 0 0}
+#venue .travel-grid{border-radius:1rem;overflow:hidden}
+#venue .travel-card{
+  min-height:155px;
+  padding:1.2rem;
+}
+#venue .travel-label{margin-bottom:1.25rem}
+#venue .venue-links{margin-top:1.5rem}
+
+html[data-theme="dark"] #venue .poovar-photo{box-shadow:0 20px 55px rgba(0,0,0,.28)}
+
+@media(max-width:1000px){
+  .hero-card{padding-top:12rem}
+  .hero-card::before{height:11rem}
+  #venue{grid-template-columns:minmax(0,.85fr) minmax(300px,1.15fr);column-gap:2rem}
+  #venue .travel-intro{grid-template-columns:1fr}
+  #venue .travel-intro>p:last-child{grid-column:auto}
+}
+
+@media(max-width:760px){
+  .hero-card{padding-top:11.25rem}
+  .hero-card::before{height:10.25rem}
+  #venue{display:block}
+  #venue .venue-simple{
+    padding:0 0 1.75rem;
+    margin-bottom:1rem;
+    border-bottom:0;
+  }
+  #venue .poovar-photo:nth-child(2){min-height:310px;height:310px}
+  #venue .travel-block{margin-top:2rem}
+}
+
+@media(max-width:620px){
+  .hero-card{padding-top:10.5rem}
+  .hero-card::before{height:9.6rem}
+  .hero-card::after{top:.75rem;left:.75rem;font-size:.62rem}
+  #venue .venue-simple h2{font-size:clamp(2.4rem,10vw,3.1rem)}
+  #venue .poovar-photo:nth-child(2){min-height:260px;height:260px;border-radius:1rem}
+  #venue .travel-card{min-height:0;padding:1.05rem}
+  footer::after{font-size:.61rem}
+}
