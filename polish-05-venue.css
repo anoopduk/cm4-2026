@@ -16,13 +16,14 @@
   background:
     linear-gradient(to bottom,rgba(4,17,18,.03) 52%,var(--deep) 100%),
     url("assets/poovar-coast.webp") center 54% / cover no-repeat;
-  z-index:-1;
+  z-index:0;
 }
 .hero-card::after{
   content:"Poovar · Kerala";
   position:absolute;
   top:1rem;
   left:1rem;
+  z-index:2;
   padding:.38rem .62rem;
   border:1px solid rgba(255,255,255,.32);
   border-radius:999px;
