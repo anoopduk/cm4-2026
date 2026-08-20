@@ -1,7 +1,7 @@
 [
   {
     "name": "Rajeev Ahuja",
-    "sortKey": "Ahuja, Rajeev",
+    "sortKey": "Rajeev Ahuja",
     "initials": "RA",
     "affiliation": "IIT Ropar",
     "image": "rajeev-ahuja.webp",
@@ -9,7 +9,7 @@
   },
   {
     "name": "Deb Ranjan Banerjee",
-    "sortKey": "Banerjee, Deb Ranjan",
+    "sortKey": "Deb Ranjan Banerjee",
     "initials": "DB",
     "affiliation": "NIT Durgapur",
     "image": "deb-ranjan-banerjee.webp",
@@ -17,7 +17,7 @@
   },
   {
     "name": "Aditi Chandrasekar",
-    "sortKey": "Chandrasekar, Aditi",
+    "sortKey": "Aditi Chandrasekar",
     "initials": "AC",
     "affiliation": "Azim Premji University",
     "image": "aditi-chandrasekhar.webp",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Peter Comba",
-    "sortKey": "Comba, Peter",
+    "sortKey": "Peter Comba",
     "initials": "PC",
     "affiliation": "Heidelberg University, Germany",
     "image": "peter-comba.webp",
@@ -33,7 +33,7 @@
   },
   {
     "name": "Étienne Derat",
-    "sortKey": "Derat, Etienne",
+    "sortKey": "Etienne Derat",
     "initials": "ÉD",
     "affiliation": "Sorbonne Université, France",
     "image": "etienne-derat.webp",
@@ -41,7 +41,7 @@
   },
   {
     "name": "Odile Eisenstein",
-    "sortKey": "Eisenstein, Odile",
+    "sortKey": "Odile Eisenstein",
     "initials": "OE",
     "affiliation": "Université de Montpellier, CNRS, ENSCM, France",
     "image": "odile-eisenstein.webp",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Sagar Ghorai",
-    "sortKey": "Ghorai, Sagar",
+    "sortKey": "Sagar Ghorai",
     "initials": "SG",
     "affiliation": "Hokkaido University, Japan",
     "image": "sagar-ghorai.webp",
@@ -57,15 +57,15 @@
   },
   {
     "name": "Subhas Ghosal",
-    "sortKey": "Ghosal, Subhas",
+    "sortKey": "Subhas Ghosal",
     "initials": "SG",
     "affiliation": "NIT Durgapur",
     "image": "subhas-ghosal.webp",
     "profile": "https://nitdgp.ac.in/department/chemistry/faculty-5/subhas-ghosal"
   },
   {
-    "name": "E. D. Jemmis",
-    "sortKey": "Jemmis, E. D.",
+    "name": "Jemmis E. D.",
+    "sortKey": "Jemmis E. D.",
     "initials": "EDJ",
     "affiliation": "Indian Institute of Science, Bengaluru",
     "image": "ed-jemmis.webp",
@@ -73,15 +73,15 @@
   },
   {
     "name": "Milan Kumar Jena",
-    "sortKey": "Jena, Milan Kumar",
+    "sortKey": "Milan Kumar Jena",
     "initials": "MJ",
     "affiliation": "IIT Bhilai",
     "image": "milan-kumar-jena.webp",
     "profile": "https://www.iitbhilai.ac.in/index.php?pid=dept_msme_people"
   },
   {
-    "name": "B. Kiran",
-    "sortKey": "Kiran, B.",
+    "name": "Kiran Boggavarapu",
+    "sortKey": "Kiran Boggavarapu",
     "initials": "BK",
     "affiliation": "McNeese State University, USA",
     "image": "b-kiran.webp",
@@ -89,7 +89,7 @@
   },
   {
     "name": "Sandeep Kumar",
-    "sortKey": "Kumar, Sandeep",
+    "sortKey": "Sandeep Kumar",
     "initials": "SK",
     "affiliation": "Applied Materials",
     "image": "sandeep-kumar.webp",
@@ -97,7 +97,7 @@
   },
   {
     "name": "Satoshi Maeda",
-    "sortKey": "Maeda, Satoshi",
+    "sortKey": "Satoshi Maeda",
     "initials": "SM",
     "affiliation": "Hokkaido University, Japan",
     "image": "satoshi-maeda.webp",
@@ -105,7 +105,7 @@
   },
   {
     "name": "Arup Mahata",
-    "sortKey": "Mahata, Arup",
+    "sortKey": "Arup Mahata",
     "initials": "AM",
     "affiliation": "IIT Hyderabad",
     "image": "arup-mahata.webp",
@@ -113,31 +113,31 @@
   },
   {
     "name": "Sabyasachi Mishra",
-    "sortKey": "Mishra, Sabyasachi",
+    "sortKey": "Sabyasachi Mishra",
     "initials": "SM",
     "affiliation": "IIT Kharagpur",
     "image": "sabyasachi-mishra.webp",
     "profile": "https://www.iitkgp.ac.in/department/CY/faculty/cy-mishra"
   },
   {
-    "name": "T. Pradeep",
-    "sortKey": "Pradeep, T.",
+    "name": "Pradeep T.",
+    "sortKey": "Pradeep T.",
     "initials": "TP",
     "affiliation": "IIT Madras",
     "image": "t-pradeep.webp",
     "profile": "https://www.chem.iitm.ac.in/faculty/pradeep"
   },
   {
-    "name": "Sai G. Ramesh",
-    "sortKey": "Ramesh, Sai G.",
+    "name": "Sai Ramesh G.",
+    "sortKey": "Sai Ramesh G.",
     "initials": "SGR",
     "affiliation": "Indian Institute of Science, Bengaluru",
     "image": "sai-g-ramesh.webp",
     "profile": "https://ipc.iisc.ac.in/sgr.php"
   },
   {
-    "name": "N. Satyamurthy",
-    "sortKey": "Satyamurthy, N.",
+    "name": "Satyamurthy N.",
+    "sortKey": "Satyamurthy N.",
     "initials": "NS",
     "affiliation": "IISER Thiruvananthapuram",
     "image": "n-satyamurthy.webp",
@@ -145,7 +145,7 @@
   },
   {
     "name": "Henry F. Schaefer III",
-    "sortKey": "Schaefer, Henry F., III",
+    "sortKey": "Henry F. Schaefer III",
     "initials": "HS",
     "affiliation": "University of Georgia, USA",
     "image": "henry-f-schaefer-iii.webp",
@@ -153,31 +153,31 @@
   },
   {
     "name": "Sason Shaik",
-    "sortKey": "Shaik, Sason",
+    "sortKey": "Sason Shaik",
     "initials": "SS",
     "affiliation": "The Hebrew University of Jerusalem, Israel",
     "image": "sason-shaik.webp",
     "profile": "https://chemistry.huji.ac.il/people/sason-s-shaik"
   },
   {
-    "name": "A. Sirohiwal",
-    "sortKey": "Sirohiwal, A.",
+    "name": "Abhishek Sirohiwal",
+    "sortKey": "Abhishek Sirohiwal",
     "initials": "AS",
     "affiliation": "Indian Institute of Science, Bengaluru",
     "image": "a-sirohiwal.webp",
     "profile": "https://ipc.iisc.ac.in/as.php"
   },
   {
-    "name": "R. B. Sunoj",
-    "sortKey": "Sunoj, R. B.",
+    "name": "Sunoj R. B.",
+    "sortKey": "Sunoj R. B.",
     "initials": "RBS",
     "affiliation": "IIT Bombay",
     "image": "rb-sunoj.webp",
     "profile": "https://www.chem.iitb.ac.in/~sunoj/prof.html"
   },
   {
-    "name": "R. S. Swathi",
-    "sortKey": "Swathi, R. S.",
+    "name": "Swathi R. S.",
+    "sortKey": "Swathi R. S.",
     "initials": "RS",
     "affiliation": "IISER Thiruvananthapuram",
     "image": "rs-swathi.webp",
@@ -185,7 +185,7 @@
   },
   {
     "name": "Soujanya Yarasi",
-    "sortKey": "Yarasi, Soujanya",
+    "sortKey": "Soujanya Yarasi",
     "initials": "SY",
     "affiliation": "CSIR-IICT Hyderabad",
     "image": "soujanya-yarasi.webp",
@@ -193,7 +193,7 @@
   },
   {
     "name": "Martin Zacharias",
-    "sortKey": "Zacharias, Martin",
+    "sortKey": "Martin Zacharias",
     "initials": "MZ",
     "affiliation": "Technical University of Munich, Germany",
     "image": "martin-zacharias.webp",
