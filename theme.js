@@ -89,32 +89,32 @@
       {
         name: 'Deepa Janardanan', affiliation: 'Central University of Kerala', initials: 'DJ',
         href: 'https://schools.cukerala.ac.in/Dept/Faculty_Preview?Id=53',
-        photo: 'https://faculty.cukerala.ac.in/Uploads/Faculty/Profiles/394365Deepa-pic2.jpg'
+        photo: 'assets/people/deepa-janardanan.webp'
       },
       {
         name: 'Radhika Gupta', affiliation: 'Aix-Marseille Université, France', initials: 'RG',
         href: 'https://ism2.univ-amu.fr/en/directory/gupta-radhika',
-        photo: 'https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Xcg4HSwAAAAJ&citpid=1'
+        photo: 'assets/people/radhika-gupta.webp'
       },
       {
         name: 'Sravanakumar Perumalla D.', affiliation: 'Sasi Institute of Technology & Engineering', initials: 'SP',
         href: 'https://sasi.ac.in/applied-sciences-humanities/',
-        photo: 'https://scholar.googleusercontent.com/citations?view_op=view_photo&user=QzBlgRgAAAAJ&citpid=1'
+        photo: 'assets/people/sravanakumar-perumalla.webp'
       },
       {
         name: 'Padmesh Anjukandi', affiliation: 'IIT Palakkad', initials: 'PA',
         href: 'https://iitpkd.ac.in/people/padmesh',
-        photo: 'https://iitpkd.ac.in/sites/default/files/styles/with_scale_/public/pictures/2023-02/Padmesh.jpg?itok=Mw_ivUIz'
+        photo: 'assets/people/padmesh-anjukandi.webp'
       },
       {
         name: 'Subhendu Roy', affiliation: 'Saha Institute of Nuclear Physics, Kolkata', initials: 'SR',
         href: 'https://www.saha.ac.in/web/cmbd-personal-page?mid=1063&tab=tab3',
-        photo: 'https://www.saha.ac.in/web/portal/fac-homepage/photos/subhendu.roy.jpg'
+        photo: 'assets/people/subhendu-roy.webp'
       },
       {
         name: 'Upakarasamy Lourderaj', affiliation: 'NISER Bhubaneswar', initials: 'UL',
         href: 'https://www.niser.ac.in/profile/u.lourderaj',
-        photo: 'https://www.niser.ac.in/assets/img/profile/u.lourderaj.jpg'
+        photo: 'assets/people/upakarasamy-lourderaj.webp'
       }
     ];
     const existingNames = new Set([...participantList.querySelectorAll('.person-card h3')].map((h) => h.textContent.trim().toLocaleLowerCase()));
