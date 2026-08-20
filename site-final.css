@@ -17,11 +17,11 @@ html,body{max-width:100%;overflow-x:hidden}
 
 /* One Registration entry only: desktop uses the CTA pill; compact headers use the nav link. */
 @media(min-width:1101px){
-  .site-header nav a[href="#registration"]{display:none!important}
+  .site-header nav a[href$="#registration"]{display:none!important}
   .site-header>.button{display:inline-flex!important}
 }
 @media(max-width:1100px){
-  .site-header nav a[href="#registration"]{display:inline-flex!important}
+  .site-header nav a[href$="#registration"]{display:inline-flex!important}
   .site-header>.button{display:none!important}
 }
 
@@ -545,4 +545,88 @@ footer::after{
   #registration .price-card li strong{font-size:.88rem}
   #committees .committee-block{margin-bottom:2.6rem}
   footer::after{font-size:.56rem}
+}
+
+/* ---------- Committee preview and directory ---------- */
+.site-header nav a[aria-current="page"]{color:var(--teal)}
+.site-header nav a[aria-current="page"]::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:1px;
+  height:2px;
+  border-radius:999px;
+  background:currentColor;
+}
+
+#committees .committee-preview-head{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(280px,.65fr);
+  gap:clamp(2rem,5vw,5rem);
+  align-items:end;
+  margin-bottom:1.35rem;
+}
+#committees .committee-preview-head .committee-label{margin:0 0 .55rem;color:var(--teal)}
+#committees .committee-preview-head h2{font-size:clamp(2.2rem,3.8vw,4rem)}
+#committees .committee-preview-head>p{margin:0;color:var(--muted);line-height:1.65;max-width:52ch}
+#committees .committee-preview-block,
+#committees .academic-preview{
+  display:grid;
+  grid-template-columns:minmax(150px,.34fr) minmax(0,1.66fr);
+  gap:clamp(1.5rem,4vw,4rem);
+  padding:1.15rem 0;
+  border-top:1px solid var(--line);
+}
+#committees .committee-preview-label{display:flex;flex-direction:column;gap:.3rem}
+#committees .committee-preview-label p{position:static;margin:0}
+#committees .committee-preview-label span{font-size:.72rem;color:var(--muted)}
+#committees .committee-preview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem 1rem}
+#committees .committee-preview-card{display:grid;grid-template-columns:58px minmax(0,1fr);gap:.75rem;align-items:center;min-width:0}
+#committees .preview-portrait{width:52px;height:65px;border-radius:.65rem;overflow:hidden;background:var(--paper-2)}
+#committees .preview-portrait img{display:block;width:100%;height:100%;object-fit:cover}
+#committees .committee-preview-card h3{margin:0 0 .18rem;font-size:.88rem;line-height:1.2}
+#committees .committee-preview-card p{margin:0;color:var(--muted);font-size:.7rem;line-height:1.3}
+#committees .academic-mosaic{display:flex;align-items:center;flex-wrap:wrap;gap:.45rem}
+#committees .academic-mosaic>span{width:46px;height:58px;overflow:hidden;border-radius:.6rem;background:var(--paper-2);border:2px solid var(--paper)}
+#committees .academic-mosaic img{display:block;width:100%;height:100%;object-fit:cover}
+#committees .academic-mosaic .mosaic-more{display:grid;place-items:center;background:var(--deep);color:var(--lime);font-size:.78rem;font-weight:700}
+#committees .committee-preview-action{display:flex;align-items:center;gap:1rem;margin:1rem 0 0 calc(17% + clamp(1.5rem,4vw,4rem))}
+#committees .committee-preview-action p{margin:0;color:var(--muted);font-size:.74rem}
+
+.committee-page .site-header nav a{position:relative}
+.committee-page .committee-directory{padding-top:clamp(2.4rem,4vw,3.8rem)}
+.committee-page .directory-back{display:inline-flex;align-items:center;gap:.45rem;margin-bottom:2rem;color:var(--muted);font-size:.82rem;font-weight:600;text-decoration:none}
+.committee-page .directory-back:hover{color:var(--teal)}
+.committee-page .directory-heading{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.65fr);gap:clamp(2rem,6vw,6rem);align-items:end;margin-bottom:2.2rem}
+.committee-page .directory-heading .eyebrow{margin:0 0 .7rem;color:var(--teal)}
+.committee-page .directory-heading h1{margin:0;font-size:clamp(3rem,6vw,6.2rem);max-width:none}
+.committee-page .directory-heading>p{margin:0;color:var(--muted);line-height:1.7;max-width:55ch}
+.committee-page #committees .patron{margin-bottom:clamp(2.5rem,4vw,3.75rem)}
+.committee-page #committees .committee-block{margin-bottom:clamp(3rem,5vw,5rem)}
+.committee-page #committees .academic-block{margin-bottom:0}
+.committee-page footer::after{display:none}
+
+@media(max-width:900px){
+  #committees .committee-preview-head,
+  .committee-page .directory-heading{grid-template-columns:1fr;gap:1rem}
+  #committees .committee-preview-block,
+  #committees .academic-preview{grid-template-columns:1fr;gap:.85rem}
+  #committees .committee-preview-label{flex-direction:row;align-items:baseline;justify-content:space-between}
+  #committees .committee-preview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #committees .committee-preview-action{margin-left:0}
+}
+
+@media(max-width:620px){
+  #committees .committee-preview-grid{grid-template-columns:1fr 1fr;gap:1rem .7rem}
+  #committees .committee-preview-card{grid-template-columns:46px minmax(0,1fr);gap:.6rem}
+  #committees .preview-portrait{width:42px;height:53px;border-radius:.5rem}
+  #committees .committee-preview-card h3{font-size:.8rem}
+  #committees .committee-preview-card p{font-size:.64rem}
+  #committees .academic-mosaic{gap:.35rem}
+  #committees .academic-mosaic>span{width:38px;height:48px;border-radius:.5rem}
+  #committees .committee-preview-action{align-items:flex-start;flex-direction:column;gap:.45rem}
+  .committee-page .directory-back{margin-bottom:1.4rem}
+  .committee-page .directory-heading{margin-bottom:1.6rem}
+  .committee-page .directory-heading h1{font-size:clamp(2.7rem,14vw,4rem)}
 }

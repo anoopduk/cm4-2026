@@ -1,5 +1,7 @@
 (() => {
   const root = document.documentElement;
+  const scriptUrl = new URL(document.currentScript?.src || document.querySelector('script[src$="theme.js"]')?.src || 'theme.js', document.baseURI);
+  const siteAsset = (path) => new URL(path, scriptUrl).href;
   const toggle = document.querySelector('[data-theme-toggle]');
   const metaTheme = document.querySelector('#theme-color');
   const system = window.matchMedia('(prefers-color-scheme: dark)');
@@ -16,7 +18,7 @@
     root.dataset.theme = theme;
     if (metaTheme) metaTheme.setAttribute('content', theme === 'dark' ? '#081617' : '#f4f1e8');
     document.querySelectorAll('.site-header .brand img, footer img').forEach((logo) => {
-      logo.setAttribute('src', theme === 'dark' ? 'logo-dark.svg' : 'logo.webp');
+      logo.setAttribute('src', siteAsset(theme === 'dark' ? 'logo-dark.svg' : 'logo.webp'));
       logo.style.filter = 'none';
       logo.style.mixBlendMode = 'normal';
       logo.style.background = 'transparent';
@@ -44,10 +46,10 @@
     });
   }
 
-  if (!document.querySelector('link[href="programme.css"]')) {
+  if (document.querySelector('#participants') && !document.querySelector('link[href$="programme.css"]')) {
     const programmeStyles = document.createElement('link');
     programmeStyles.rel = 'stylesheet';
-    programmeStyles.href = 'programme.css';
+    programmeStyles.href = siteAsset('programme.css');
     document.head.appendChild(programmeStyles);
   }
 
@@ -81,6 +83,7 @@
     if(venueNumber)venueNumber.textContent='04'; if(registrationNumber)registrationNumber.textContent='05'; if(committeeNumber)committeeNumber.textContent='06';
     const participantNav=document.querySelector('nav a[href="#participants"]');
     if(participantNav&&!document.querySelector('nav a[href="#programme"]')) participantNav.insertAdjacentHTML('afterend','<a href="#programme">Programme</a>');
+    if(window.location.hash==='#programme') requestAnimationFrame(()=>document.querySelector('#programme')?.scrollIntoView());
   }
 
   const participantList = document.querySelector('#participants .person-list.featured');
@@ -89,32 +92,32 @@
       {
         name: 'Deepa Janardanan', affiliation: 'Central University of Kerala', initials: 'DJ',
         href: 'https://schools.cukerala.ac.in/Dept/Faculty_Preview?Id=53',
-        photo: 'assets/people/deepa-janardanan.webp'
+        photo: siteAsset('assets/people/deepa-janardanan.webp')
       },
       {
         name: 'Radhika Gupta', affiliation: 'Aix-Marseille Université, France', initials: 'RG',
         href: 'https://ism2.univ-amu.fr/en/directory/gupta-radhika',
-        photo: 'assets/people/radhika-gupta.webp'
+        photo: siteAsset('assets/people/radhika-gupta.webp')
       },
       {
         name: 'Sravanakumar Perumalla D.', affiliation: 'Sasi Institute of Technology & Engineering', initials: 'SP',
         href: 'https://sasi.ac.in/applied-sciences-humanities/',
-        photo: 'assets/people/sravanakumar-perumalla.webp'
+        photo: siteAsset('assets/people/sravanakumar-perumalla.webp')
       },
       {
         name: 'Padmesh Anjukandi', affiliation: 'IIT Palakkad', initials: 'PA',
         href: 'https://iitpkd.ac.in/people/padmesh',
-        photo: 'assets/people/padmesh-anjukandi.webp'
+        photo: siteAsset('assets/people/padmesh-anjukandi.webp')
       },
       {
         name: 'Subhendu Roy', affiliation: 'Saha Institute of Nuclear Physics, Kolkata', initials: 'SR',
         href: 'https://www.saha.ac.in/web/cmbd-personal-page?mid=1063&tab=tab3',
-        photo: 'assets/people/subhendu-roy.webp'
+        photo: siteAsset('assets/people/subhendu-roy.webp')
       },
       {
         name: 'Upakarasamy Lourderaj', affiliation: 'NISER Bhubaneswar', initials: 'UL',
         href: 'https://www.niser.ac.in/profile/u.lourderaj',
-        photo: 'assets/people/upakarasamy-lourderaj.webp'
+        photo: siteAsset('assets/people/upakarasamy-lourderaj.webp')
       }
     ];
     const existingNames = new Set([...participantList.querySelectorAll('.person-card h3')].map((h) => h.textContent.trim().toLocaleLowerCase()));
