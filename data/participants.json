@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Rajeev Ahuja",
+    "sortKey": "Ahuja, Rajeev",
+    "initials": "RA",
+    "affiliation": "IIT Ropar",
+    "image": "rajeev-ahuja.webp",
+    "profile": "https://www.iitrpr.ac.in/physics/Faculties/rahuja.php"
+  },
+  {
+    "name": "Deb Ranjan Banerjee",
+    "sortKey": "Banerjee, Deb Ranjan",
+    "initials": "DB",
+    "affiliation": "NIT Durgapur",
+    "image": "deb-ranjan-banerjee.webp",
+    "profile": "https://nitdgp.ac.in/department/chemistry/faculty-5/deb-ranjan-banerjee"
+  },
+  {
+    "name": "Aditi Chandrasekar",
+    "sortKey": "Chandrasekar, Aditi",
+    "initials": "AC",
+    "affiliation": "Azim Premji University",
+    "image": "aditi-chandrasekhar.webp",
+    "profile": "https://azimpremjiuniversity.edu.in/people/aditi-chandrasekar"
+  },
+  {
+    "name": "Peter Comba",
+    "sortKey": "Comba, Peter",
+    "initials": "PC",
+    "affiliation": "Heidelberg University, Germany",
+    "image": "peter-comba.webp",
+    "profile": "https://www.uni-heidelberg.de/fakultaeten/chemgeo/aci/comba/comba.html"
+  },
+  {
+    "name": "Étienne Derat",
+    "sortKey": "Derat, Etienne",
+    "initials": "ÉD",
+    "affiliation": "Sorbonne Université, France",
+    "image": "etienne-derat.webp",
+    "profile": "https://ipcm.fr/en/en-research/en-presentation-maco-group/en-maco-group-members/en-etienne-derat/"
+  },
+  {
+    "name": "Odile Eisenstein",
+    "sortKey": "Eisenstein, Odile",
+    "initials": "OE",
+    "affiliation": "Université de Montpellier, CNRS, ENSCM, France",
+    "image": "odile-eisenstein.webp",
+    "profile": "https://www.icgm.fr/en/odile-eisenstein-2/"
+  },
+  {
+    "name": "Sagar Ghorai",
+    "sortKey": "Ghorai, Sagar",
+    "initials": "SG",
+    "affiliation": "Hokkaido University, Japan",
+    "image": "sagar-ghorai.webp",
+    "profile": "https://www.icredd.hokudai.ac.jp/ghorai-sagar"
+  },
+  {
+    "name": "Subhas Ghosal",
+    "sortKey": "Ghosal, Subhas",
+    "initials": "SG",
+    "affiliation": "NIT Durgapur",
+    "image": "subhas-ghosal.webp",
+    "profile": "https://nitdgp.ac.in/department/chemistry/faculty-5/subhas-ghosal"
+  },
+  {
+    "name": "E. D. Jemmis",
+    "sortKey": "Jemmis, E. D.",
+    "initials": "EDJ",
+    "affiliation": "Indian Institute of Science, Bengaluru",
+    "image": "ed-jemmis.webp",
+    "profile": "https://ipc.iisc.ac.in/edj.php"
+  },
+  {
+    "name": "Milan Kumar Jena",
+    "sortKey": "Jena, Milan Kumar",
+    "initials": "MJ",
+    "affiliation": "IIT Bhilai",
+    "image": "milan-kumar-jena.webp",
+    "profile": "https://www.iitbhilai.ac.in/index.php?pid=dept_msme_people"
+  },
+  {
+    "name": "B. Kiran",
+    "sortKey": "Kiran, B.",
+    "initials": "BK",
+    "affiliation": "McNeese State University, USA",
+    "image": "b-kiran.webp",
+    "profile": "https://www.mcneese.edu/faculty/kiran-boggavarapu-ph-d/"
+  },
+  {
+    "name": "Sandeep Kumar",
+    "sortKey": "Kumar, Sandeep",
+    "initials": "SK",
+    "affiliation": "Applied Materials",
+    "image": "sandeep-kumar.webp",
+    "profile": null
+  },
+  {
+    "name": "Satoshi Maeda",
+    "sortKey": "Maeda, Satoshi",
+    "initials": "SM",
+    "affiliation": "Hokkaido University, Japan",
+    "image": "satoshi-maeda.webp",
+    "profile": "https://www.icredd.hokudai.ac.jp/maeda-satoshi"
+  },
+  {
+    "name": "Arup Mahata",
+    "sortKey": "Mahata, Arup",
+    "initials": "AM",
+    "affiliation": "IIT Hyderabad",
+    "image": "arup-mahata.webp",
+    "profile": "https://iith.ac.in/chy/arup/"
+  },
+  {
+    "name": "Sabyasachi Mishra",
+    "sortKey": "Mishra, Sabyasachi",
+    "initials": "SM",
+    "affiliation": "IIT Kharagpur",
+    "image": "sabyasachi-mishra.webp",
+    "profile": "https://www.iitkgp.ac.in/department/CY/faculty/cy-mishra"
+  },
+  {
+    "name": "T. Pradeep",
+    "sortKey": "Pradeep, T.",
+    "initials": "TP",
+    "affiliation": "IIT Madras",
+    "image": "t-pradeep.webp",
+    "profile": "https://www.chem.iitm.ac.in/faculty/pradeep"
+  },
+  {
+    "name": "Sai G. Ramesh",
+    "sortKey": "Ramesh, Sai G.",
+    "initials": "SGR",
+    "affiliation": "Indian Institute of Science, Bengaluru",
+    "image": "sai-g-ramesh.webp",
+    "profile": "https://ipc.iisc.ac.in/sgr.php"
+  },
+  {
+    "name": "N. Satyamurthy",
+    "sortKey": "Satyamurthy, N.",
+    "initials": "NS",
+    "affiliation": "IISER Thiruvananthapuram",
+    "image": "n-satyamurthy.webp",
+    "profile": "https://chemistry.iisertvm.ac.in/people/honorary-adjunct-visiting"
+  },
+  {
+    "name": "Henry F. Schaefer III",
+    "sortKey": "Schaefer, Henry F., III",
+    "initials": "HS",
+    "affiliation": "University of Georgia, USA",
+    "image": "henry-f-schaefer-iii.webp",
+    "profile": "https://www.chem.uga.edu/directory/people/henry-schaefer"
+  },
+  {
+    "name": "Sason Shaik",
+    "sortKey": "Shaik, Sason",
+    "initials": "SS",
+    "affiliation": "The Hebrew University of Jerusalem, Israel",
+    "image": "sason-shaik.webp",
+    "profile": "https://chemistry.huji.ac.il/people/sason-s-shaik"
+  },
+  {
+    "name": "A. Sirohiwal",
+    "sortKey": "Sirohiwal, A.",
+    "initials": "AS",
+    "affiliation": "Indian Institute of Science, Bengaluru",
+    "image": "a-sirohiwal.webp",
+    "profile": "https://ipc.iisc.ac.in/as.php"
+  },
+  {
+    "name": "R. B. Sunoj",
+    "sortKey": "Sunoj, R. B.",
+    "initials": "RBS",
+    "affiliation": "IIT Bombay",
+    "image": "rb-sunoj.webp",
+    "profile": "https://www.chem.iitb.ac.in/~sunoj/prof.html"
+  },
+  {
+    "name": "R. S. Swathi",
+    "sortKey": "Swathi, R. S.",
+    "initials": "RS",
+    "affiliation": "IISER Thiruvananthapuram",
+    "image": "rs-swathi.webp",
+    "profile": "https://www.iisertvm.ac.in/faculty/swathi/"
+  },
+  {
+    "name": "Soujanya Yarasi",
+    "sortKey": "Yarasi, Soujanya",
+    "initials": "SY",
+    "affiliation": "CSIR-IICT Hyderabad",
+    "image": "soujanya-yarasi.webp",
+    "profile": null
+  },
+  {
+    "name": "Martin Zacharias",
+    "sortKey": "Zacharias, Martin",
+    "initials": "MZ",
+    "affiliation": "Technical University of Munich, Germany",
+    "image": "martin-zacharias.webp",
+    "profile": "https://www.bio.nat.tum.de/en/t38/people/head-of-the-group/"
+  }
+]
