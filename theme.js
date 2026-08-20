@@ -1,6 +1,6 @@
 (() => {
   const root = document.documentElement;
-  const scriptUrl = new URL(document.currentScript?.src || document.querySelector('script[src$="theme.js"]')?.src || 'theme.js', document.baseURI);
+  const scriptUrl = new URL(document.currentScript?.src || document.querySelector('script[src*="theme.js"]')?.src || 'theme.js', document.baseURI);
   const siteAsset = (path) => new URL(path, scriptUrl).href;
   const toggle = document.querySelector('[data-theme-toggle]');
   const metaTheme = document.querySelector('#theme-color');
