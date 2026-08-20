@@ -102,6 +102,11 @@
         photo: 'https://scholar.googleusercontent.com/citations?view_op=view_photo&user=QzBlgRgAAAAJ&citpid=1'
       },
       {
+        name: 'Padmesh Anjukandi', affiliation: 'IIT Palakkad', initials: 'PA',
+        href: 'https://iitpkd.ac.in/people/padmesh',
+        photo: 'https://iitpkd.ac.in/sites/default/files/styles/with_scale_/public/pictures/2023-02/Padmesh.jpg?itok=Mw_ivUIz'
+      },
+      {
         name: 'Subhendu Roy', affiliation: 'Saha Institute of Nuclear Physics, Kolkata', initials: 'SR',
         href: 'https://www.saha.ac.in/web/cmbd-personal-page?mid=1063&tab=tab3',
         photo: 'https://www.saha.ac.in/web/portal/fac-homepage/photos/subhendu.roy.jpg'
