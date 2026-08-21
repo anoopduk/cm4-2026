@@ -19,20 +19,104 @@
     }
   })();
 </script>
-<link rel="stylesheet" href="../styles.css?v=20260821-1">
+<link rel="stylesheet" href="../styles.css?v=20260821-2">
 <script src="../theme.js?v=20260820-5" defer></script>
 </head>
-<body>
-<main class="payment-shell">
-  <section class="payment-card" aria-labelledby="payment-title">
-    <a class="payment-logo" href="../" aria-label="CM4 2026 home"><img src="../logo.webp" alt="CM4 2026" width="420" height="420" data-site-logo></a>
-    <p class="eyebrow">CM4 2026 · Registered participants</p>
-    <h1 id="payment-title">Registration payment</h1>
-    <p>This page is for invited participants who have completed the CM4 2026 registration form. Use the button below to proceed to the conference payment page.</p>
-    <a class="button" href="https://sites.google.com/duk.ac.in/cm4-2026/payment" target="_blank" rel="noopener noreferrer">Proceed to payment <span aria-hidden="true">↗</span></a>
-    <p class="payment-help">If you have any difficulty with payment, contact <a href="mailto:anoop.a@duk.ac.in">anoop.a@duk.ac.in</a>.</p>
-    <p class="payment-note">3–6 December 2026 · Club Mahindra Poovar · Thiruvananthapuram, Kerala, India</p>
+<body class="payment-page">
+<a class="skip-link" href="#main">Skip to payment options</a>
+<header class="payment-header">
+  <a class="payment-logo" href="../" aria-label="CM4 2026 homepage"><img src="../logo.webp" alt="CM4 2026" width="420" height="420" data-site-logo></a>
+  <p>Registration payment</p>
+  <div class="payment-header-actions">
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch colour theme">
+      <span class="theme-toggle-icon theme-toggle-sun" aria-hidden="true">☀</span>
+      <span class="theme-toggle-icon theme-toggle-moon" aria-hidden="true">☾</span>
+      <span class="theme-toggle-label">Theme</span>
+    </button>
+    <a class="button button-small" href="../">CM4 home</a>
+  </div>
+</header>
+<main class="payment-shell" id="main">
+  <section class="payment-intro" aria-labelledby="payment-title">
+    <div>
+      <p class="eyebrow">CM4 2026 · Invited participants</p>
+      <h1 id="payment-title">Registration payment</h1>
+    </div>
+    <div class="payment-intro-copy">
+      <p>Keep your registration form open while making payment. Select the same registration and accommodation category below, complete the secure Razorpay payment, then return to the form to enter the transaction details and submit it.</p>
+      <div class="payment-intro-actions">
+        <a class="button button-secondary" href="https://forms.gle/JE7BGkwDA1iDN3zG8" target="_blank" rel="noopener noreferrer">Reopen registration form <span aria-hidden="true">↗</span></a>
+        <a class="payment-home-link" href="../"><span aria-hidden="true">←</span> Back to CM4 homepage</a>
+      </div>
+      <p class="payment-form-note">Use the form link only if your original registration-form tab is no longer open.</p>
+    </div>
   </section>
+
+  <section class="payment-guidance" aria-labelledby="payment-steps-title">
+    <div>
+      <p class="eyebrow">Payment workflow</p>
+      <h2 id="payment-steps-title">Before you pay</h2>
+    </div>
+    <ol>
+      <li><strong>Keep the form open.</strong> Do not submit or close the registration form yet.</li>
+      <li><strong>Pay the matching amount.</strong> Check the category carefully, complete payment, and retain the Razorpay confirmation.</li>
+      <li><strong>Return and submit.</strong> Enter the transaction details in the same registration form, then submit it.</li>
+    </ol>
+  </section>
+
+  <noscript><p class="payment-script-warning"><strong>Payment buttons require JavaScript.</strong> Enable JavaScript in your browser, reload this page, and then select your payment category.</p></noscript>
+
+  <section class="payment-group" aria-labelledby="india-payment-title">
+    <header class="payment-group-heading">
+      <div><p class="eyebrow">Participants from India</p><h2 id="india-payment-title">Indian registration categories</h2></div>
+      <p>Amounts are linked to accommodation occupancy for the conference period.</p>
+    </header>
+    <div class="payment-grid payment-grid-india">
+      <article class="payment-option">
+        <div><p class="payment-option-number">01</p><h3>Single occupancy</h3><p class="payment-option-amount">₹35,000</p><p>Participant with a single-occupancy room.</p></div>
+        <form aria-label="Pay for single occupancy"><button type="submit" hidden>Pay for single occupancy</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyGObA2bFTy0QF" async></script></form>
+      </article>
+      <article class="payment-option">
+        <div><p class="payment-option-number">02</p><h3>Twin sharing</h3><p class="payment-option-amount">₹25,000 <small>per participant</small></p><p>Participant sharing a room with one other participant.</p></div>
+        <form aria-label="Pay for twin sharing"><button type="submit" hidden>Pay for twin sharing</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyGbAxWOyYOonG" async></script></form>
+      </article>
+      <article class="payment-option">
+        <div><p class="payment-option-number">03</p><h3>Triple sharing</h3><p class="payment-option-amount">₹20,000 <small>per participant</small></p><p>Participant sharing a room with two other participants.</p></div>
+        <form aria-label="Pay for triple sharing"><button type="submit" hidden>Pay for triple sharing</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyH7hOOfh3OZkM" async></script></form>
+      </article>
+      <article class="payment-option">
+        <div><p class="payment-option-number">04</p><h3>With one accompanying person</h3><p class="payment-option-amount">₹45,000</p><p>One participant with one accompanying person.</p></div>
+        <form aria-label="Pay for participant with one accompanying person"><button type="submit" hidden>Pay for participant with one accompanying person</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyH9aWRLfioO2q" async></script></form>
+      </article>
+      <article class="payment-option">
+        <div><p class="payment-option-number">05</p><h3>With two accompanying persons</h3><p class="payment-option-amount">₹50,000</p><p>One participant with two accompanying persons.</p></div>
+        <form aria-label="Pay for participant with two accompanying persons"><button type="submit" hidden>Pay for participant with two accompanying persons</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyHCFZUK7vVBG7" async></script></form>
+      </article>
+    </div>
+  </section>
+
+  <section class="payment-group payment-group-international" aria-labelledby="international-payment-title">
+    <header class="payment-group-heading">
+      <div><p class="eyebrow">International participants</p><h2 id="international-payment-title">International registration categories</h2></div>
+      <p>Payment amounts are shown in US dollars.</p>
+    </header>
+    <div class="payment-grid payment-grid-international">
+      <article class="payment-option payment-option-accent">
+        <div><p class="payment-option-number">01</p><h3>Single occupancy</h3><p class="payment-option-amount">USD 500</p><p>International participant with single occupancy.</p></div>
+        <form aria-label="Pay for international single occupancy"><button type="submit" hidden>Pay for international single occupancy</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyHEzTL55Dghz8" async></script></form>
+      </article>
+      <article class="payment-option payment-option-accent">
+        <div><p class="payment-option-number">02</p><h3>Double occupancy</h3><p class="payment-option-amount">USD 650</p><p>International participant in the double-occupancy category.</p></div>
+        <form aria-label="Pay for international double occupancy"><button type="submit" hidden>Pay for international double occupancy</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyHH3eVNteTCYF" async></script></form>
+      </article>
+    </div>
+  </section>
+
+  <section class="payment-support" aria-labelledby="payment-support-title">
+    <div><p class="eyebrow">Need assistance?</p><h2 id="payment-support-title">Payment support</h2></div>
+    <div><p>If a payment fails or the selected category needs correction, do not repeat the payment immediately. Contact the conference organiser with the participant name and transaction status.</p><a class="text-link" href="mailto:anoop.a@duk.ac.in">anoop.a@duk.ac.in</a></div>
+  </section>
+  <p class="payment-note">CM4 2026 · 3–6 December 2026 · Club Mahindra Poovar · Thiruvananthapuram, Kerala, India</p>
 </main>
 </body>
 </html>
