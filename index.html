@@ -72,9 +72,9 @@
     }
   })();
 </script>
-<link rel="stylesheet" href="styles.css?v=20260821-3">
+<link rel="stylesheet" href="styles.css?v=20260821-4">
 <link rel="preload" as="image" href="assets/poovar-hero.webp" type="image/webp" media="(min-width: 701px)" fetchpriority="high">
-<script src="theme.js?v=20260820-5" defer></script>
+<script src="theme.js?v=20260821-6" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -123,15 +123,15 @@
 <section class="section about" id="about">
   <div class="section-kicker"><span>01</span><p>About CM4 2026</p></div>
   <div class="about-grid">
-    <div><h2>About the meeting</h2></div>
+    <div class="about-heading"><h2>About the meeting</h2></div>
     <div class="prose">
       <p>CM4 2026 brings together researchers working on computational modelling of molecules and materials, from electronic structure and chemical bonding to reactivity, clusters and materials.</p>
       <p>The meeting also includes emerging directions in machine learning and automation, with an emphasis on scientific discussion, interpretation and the chemistry behind computed results.</p>
     </div>
+    <ul class="themes">
+      <li><b>01</b>Chemical bonding</li><li><b>02</b>Molecular structure</li><li><b>03</b>Reactivity &amp; mechanism</li><li><b>04</b>Clusters &amp; materials</li><li><b>05</b>Theoretical chemistry</li><li><b>06</b>Machine learning &amp; automation</li>
+    </ul>
   </div>
-  <ul class="themes">
-    <li><b>01</b>Chemical bonding</li><li><b>02</b>Molecular structure</li><li><b>03</b>Reactivity &amp; mechanism</li><li><b>04</b>Clusters &amp; materials</li><li><b>05</b>Theoretical chemistry</li><li><b>06</b>Machine learning &amp; automation</li>
-  </ul>
 </section>
 
 <section class="section participants" id="participants">
@@ -185,18 +185,21 @@
     </div>
   </div>
   <section class="programme-grid" aria-label="CM4 2026 programme outline">
-    <article class="programme-day">
-      <header class="programme-day-head"><div><p>Thursday</p><h3>3 December</h3></div><span>Arrival day</span></header>
+    <details class="programme-day" open>
+      <summary class="programme-day-head"><span class="programme-day-title"><span class="programme-day-name">Thursday</span><span class="programme-day-date">3 December</span></span><span>Arrival day</span></summary>
       <ol class="programme-items">
+        <li class="programme-empty" aria-hidden="true"></li>
+        <li class="programme-empty" aria-hidden="true"></li>
+        <li class="programme-empty" aria-hidden="true"></li>
         <li class="programme-meal"><time>13:00–14:00</time><strong>Lunch</strong></li>
         <li class="programme-session"><time>14:15–15:30</time><strong>Inauguration and Session 1</strong></li>
         <li class="programme-break"><time>15:30–16:00</time><strong>Tea Break</strong></li>
         <li class="programme-session"><time>16:00–18:30</time><strong>Session 2</strong></li>
         <li class="programme-meal"><time>19:00–21:00</time><strong>Dinner</strong></li>
       </ol>
-    </article>
-    <article class="programme-day">
-      <header class="programme-day-head"><div><p>Friday</p><h3>4 December</h3></div><span>Scientific sessions</span></header>
+    </details>
+    <details class="programme-day" open>
+      <summary class="programme-day-head"><span class="programme-day-title"><span class="programme-day-name">Friday</span><span class="programme-day-date">4 December</span></span><span>Scientific sessions</span></summary>
       <ol class="programme-items">
         <li class="programme-session"><time>09:00–10:30</time><strong>Session 3</strong></li>
         <li class="programme-break"><time>10:30–11:00</time><strong>Tea Break</strong></li>
@@ -207,29 +210,33 @@
         <li class="programme-session"><time>16:00–18:30</time><strong>Session 6</strong></li>
         <li class="programme-meal"><time>19:00–21:00</time><strong>Dinner</strong></li>
       </ol>
-    </article>
-    <article class="programme-day">
-      <header class="programme-day-head"><div><p>Saturday</p><h3>5 December</h3></div><span>Science and local programme</span></header>
+    </details>
+    <details class="programme-day" open>
+      <summary class="programme-day-head"><span class="programme-day-title"><span class="programme-day-name">Saturday</span><span class="programme-day-date">5 December</span></span><span>Science and local programme</span></summary>
       <ol class="programme-items">
         <li class="programme-session"><time>09:00–10:30</time><strong>Session 7</strong></li>
         <li class="programme-break"><time>10:30–11:00</time><strong>Tea Break</strong></li>
         <li class="programme-session"><time>11:00–13:00</time><strong>Session 8</strong></li>
         <li class="programme-meal"><time>13:00–14:00</time><strong>Lunch</strong></li>
         <li class="programme-special"><time>14:00–18:00</time><strong>Local Visit</strong></li>
+        <li class="programme-empty" aria-hidden="true"></li>
         <li class="programme-special"><time>18:30–20:00</time><strong>Felicitation Session</strong></li>
         <li class="programme-special"><time>20:00–22:00</time><strong>Conference Dinner</strong></li>
       </ol>
-    </article>
-    <article class="programme-day">
-      <header class="programme-day-head"><div><p>Sunday</p><h3>6 December</h3></div><span>Closing day</span></header>
+    </details>
+    <details class="programme-day" open>
+      <summary class="programme-day-head"><span class="programme-day-title"><span class="programme-day-name">Sunday</span><span class="programme-day-date">6 December</span></span><span>Closing day</span></summary>
       <ol class="programme-items">
         <li class="programme-session"><time>09:00–10:30</time><strong>Session 9</strong></li>
         <li class="programme-break"><time>10:30–11:00</time><strong>Tea Break</strong></li>
         <li class="programme-session"><time>11:00–12:30</time><strong>Session 10</strong></li>
-        <li class="programme-special"><time>12:30–13:00</time><strong>Valedictory Session</strong></li>
         <li class="programme-meal"><time>13:00 onwards</time><strong>Lunch and Departure</strong></li>
+        <li class="programme-empty" aria-hidden="true"></li>
+        <li class="programme-empty" aria-hidden="true"></li>
+        <li class="programme-empty" aria-hidden="true"></li>
+        <li class="programme-empty" aria-hidden="true"></li>
       </ol>
-    </article>
+    </details>
   </section>
 </section>
 
