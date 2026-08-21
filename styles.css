@@ -1606,6 +1606,17 @@ footer {
   align-items: center;
 }
 
+.payment-intro-actions .button-secondary {
+  border-color: var(--line-strong);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.payment-intro-actions .button-secondary:hover {
+  border-color: var(--teal);
+  background: var(--surface-soft);
+}
+
 .payment-intro-copy > .payment-form-note {
   margin: 0.8rem 0 0;
   color: var(--muted);
