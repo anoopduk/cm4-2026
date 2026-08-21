@@ -13,5 +13,7 @@ To add or update a participant:
 4. Run `node scripts/generate-participants.mjs`.
 5. Validate with `node scripts/generate-participants.mjs --check` before
    committing.
+6. Run `node scripts/check-site.mjs` to confirm that local assets, profile
+   links, page anchors and image metadata remain valid.
 
 Both generated sections retain equal portrait treatment and the same ordering.

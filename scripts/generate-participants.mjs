@@ -40,7 +40,7 @@ const preview = `<div class="section-heading participant-preview-heading">
   </div>
   <div class="participant-preview-row">
     <div class="participant-preview-label"><p>Participant portraits</p><span>${ordered.length} confirmed</span></div>
-    <div class="participant-mosaic" aria-label="Confirmed participant portraits">
+    <div class="participant-mosaic" role="group" aria-label="Confirmed participant portraits">
 ${ordered.map((participant) => `      <a class="participant-thumb" href="participants/#${escapeHtml(slug(participant))}" aria-label="View ${escapeHtml(participant.name)} in the participant directory" title="${escapeHtml(participant.name)}"><img src="assets/people/${escapeHtml(participant.image)}" alt="${escapeHtml(participant.name)}" loading="lazy" decoding="async" width="480" height="600"></a>`).join("\n")}
     </div>
   </div>
@@ -49,10 +49,10 @@ ${ordered.map((participant) => `      <a class="participant-thumb" href="partici
 const directoryCards = ordered.map((participant) => {
   const tag = participant.profile ? "a" : "article";
   const link = participant.profile
-    ? ` href="${escapeHtml(participant.profile)}" target="_blank" rel="noreferrer"`
+    ? ` href="${escapeHtml(participant.profile)}" target="_blank" rel="noopener noreferrer"`
     : "";
   const arrow = participant.profile ? '<span class="profile-arrow" aria-hidden="true">↗</span>' : "";
-  return `    <${tag} class="participant-directory-card" id="${escapeHtml(slug(participant))}"${link}><span class="participant-directory-portrait"><span class="person-mark">${escapeHtml(participant.initials)}</span><img src="../assets/people/${escapeHtml(participant.image)}" alt="${escapeHtml(participant.name)}" loading="lazy" decoding="async" width="480" height="600"></span><span class="participant-directory-copy"><h2>${escapeHtml(participant.name)}</h2><p>${escapeHtml(participant.affiliation)}</p></span>${arrow}</${tag}>`;
+  return `    <${tag} class="participant-directory-card" id="${escapeHtml(slug(participant))}"${link}><span class="participant-directory-portrait"><span class="person-mark">${escapeHtml(participant.initials)}</span><img src="../assets/people/${escapeHtml(participant.image)}" alt="${escapeHtml(participant.name)}" loading="lazy" decoding="async" width="480" height="600"></span><div class="participant-directory-copy"><h2>${escapeHtml(participant.name)}</h2><p>${escapeHtml(participant.affiliation)}</p></div>${arrow}</${tag}>`;
 }).join("\n");
 
 const directory = `<div class="directory-heading">

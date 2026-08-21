@@ -1,24 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" id="theme-color" content="#f4f1e8">
 <meta name="robots" content="noindex,nofollow">
 <meta name="description" content="CM4 2026 payment page for registered participants.">
 <title>CM4 2026 | Payment</title>
-<link rel="stylesheet" href="../styles.css">
-<style>
-.payment-shell{min-height:100vh;display:grid;place-items:center;padding:1rem;background:var(--paper)}
-.payment-card{width:min(620px,100%);background:white;border:1px solid var(--line);border-radius:1.5rem;padding:clamp(1.5rem,5vw,3.5rem);box-shadow:0 24px 70px rgba(8,63,64,.10)}
-.payment-logo{width:96px;margin:0 0 1.7rem;display:block}.payment-logo img{display:block;width:100%;mix-blend-mode:multiply}
-.payment-card .eyebrow{color:var(--teal);margin:0 0 .8rem}.payment-card h1{font-size:clamp(2.3rem,8vw,4.4rem);line-height:1;margin:0 0 1.2rem}.payment-card p{color:var(--muted);line-height:1.7}.payment-card .button{margin-top:.9rem}.payment-note{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.82rem}.payment-help{font-size:.86rem}
-@media(max-width:520px){.payment-card{border-radius:1.1rem}.payment-card .button{width:100%}}
-</style>
+<script>
+  (() => {
+    try {
+      const saved = localStorage.getItem('cm4-theme');
+      const theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+    } catch (_) {
+      document.documentElement.dataset.theme = 'light';
+    }
+  })();
+</script>
+<link rel="stylesheet" href="../styles.css?v=20260821-1">
+<script src="../theme.js?v=20260820-5" defer></script>
 </head>
 <body>
 <main class="payment-shell">
   <section class="payment-card" aria-labelledby="payment-title">
-    <a class="payment-logo" href="../" aria-label="CM4 2026 home"><img src="../logo.webp" alt="CM4 2026"></a>
+    <a class="payment-logo" href="../" aria-label="CM4 2026 home"><img src="../logo.webp" alt="CM4 2026" width="420" height="420" data-site-logo></a>
     <p class="eyebrow">CM4 2026 · Registered participants</p>
     <h1 id="payment-title">Registration payment</h1>
     <p>This page is for invited participants who have completed the CM4 2026 registration form. Use the button below to proceed to the conference payment page.</p>
