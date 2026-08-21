@@ -51,6 +51,33 @@
     if (!readPreference()) applyTheme(event.matches ? 'dark' : 'light');
   });
 
+  const programmeDays = [...document.querySelectorAll('.programme-day')];
+  const mobileProgramme = window.matchMedia('(max-width: 700px)');
+
+  const syncProgrammeDays = () => {
+    if (!programmeDays.length) return;
+
+    if (!mobileProgramme.matches) {
+      programmeDays.forEach((day) => { day.open = true; });
+      return;
+    }
+
+    const firstOpenDay = programmeDays.find((day) => day.open) || programmeDays[0];
+    programmeDays.forEach((day) => { day.open = day === firstOpenDay; });
+  };
+
+  programmeDays.forEach((day) => {
+    day.addEventListener('toggle', () => {
+      if (!mobileProgramme.matches || !day.open) return;
+      programmeDays.forEach((otherDay) => {
+        if (otherDay !== day) otherDay.open = false;
+      });
+    });
+  });
+
+  mobileProgramme.addEventListener?.('change', syncProgrammeDays);
+  syncProgrammeDays();
+
   const sections = [...document.querySelectorAll('main > section[id]')];
   const inPageLinks = [...document.querySelectorAll('.site-header nav a[href^="#"]')];
 

@@ -517,8 +517,20 @@ h2 {
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.8fr);
-  gap: clamp(2rem, 7vw, 7rem);
+  grid-template-areas:
+    "heading prose"
+    "themes prose";
+  column-gap: clamp(2rem, 7vw, 7rem);
+  row-gap: 0;
   align-items: start;
+}
+
+.about-heading {
+  grid-area: heading;
+}
+
+.about-grid .prose {
+  grid-area: prose;
 }
 
 .prose {
@@ -537,24 +549,27 @@ h2 {
 }
 
 .themes {
-  margin: clamp(3rem, 6vw, 5.5rem) 0 0;
+  grid-area: themes;
+  margin: clamp(1.5rem, 3vw, 2.4rem) 0 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  gap: 0.65rem;
 }
 
 .themes li {
-  min-height: 118px;
-  padding: 1.1rem;
+  min-height: 78px;
+  padding: 0.7rem 0.78rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.5rem;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  gap: 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+  font-size: 0.78rem;
   font-weight: 650;
+  line-height: 1.25;
   list-style: none;
 }
 
@@ -719,6 +734,11 @@ h2 {
   box-shadow: 0 10px 30px rgba(8, 63, 64, 0.06);
 }
 
+.programme-day[open] {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
 .programme-day-head {
   min-height: 108px;
   padding: 1rem;
@@ -728,10 +748,21 @@ h2 {
   gap: 0.8rem;
   background: var(--deep);
   color: #fff;
+  cursor: default;
+  list-style: none;
 }
 
-.programme-day-head p {
+.programme-day-head::-webkit-details-marker {
+  display: none;
+}
+
+.programme-day-title {
+  display: block;
+}
+
+.programme-day-name {
   margin: 0 0 0.14rem;
+  display: block;
   color: var(--lime);
   font-size: 0.64rem;
   font-weight: 700;
@@ -739,8 +770,9 @@ h2 {
   text-transform: uppercase;
 }
 
-.programme-day-head h3 {
+.programme-day-date {
   margin: 0;
+  display: block;
   font-family: var(--font-serif);
   font-size: 1.4rem;
   font-weight: 500;
@@ -759,12 +791,14 @@ h2 {
   margin: 0;
   padding: 0.65rem;
   display: grid;
+  grid-template-rows: repeat(8, 54px);
   gap: 0.38rem;
   list-style: none;
 }
 
 .programme-items li {
-  min-height: 54px;
+  min-height: 0;
+  height: 54px;
   padding: 0.65rem 0.7rem;
   display: flex;
   flex-direction: column;
@@ -772,6 +806,11 @@ h2 {
   gap: 0.18rem;
   border: 1px solid var(--line);
   border-radius: 0.58rem;
+}
+
+.programme-items .programme-empty {
+  border-color: color-mix(in srgb, var(--line) 48%, transparent);
+  background: transparent;
 }
 
 .programme-items time {
@@ -1981,6 +2020,17 @@ footer {
     gap: 1.2rem;
   }
 
+  .about-grid {
+    grid-template-areas:
+      "heading"
+      "prose"
+      "themes";
+  }
+
+  .themes {
+    margin-top: 0.4rem;
+  }
+
   .participant-preview-row,
   .committee-preview-block,
   .academic-preview {
@@ -2106,10 +2156,32 @@ footer {
 
   .programme-grid {
     grid-template-columns: 1fr;
+    gap: 0.65rem;
   }
 
   .programme-day-head {
-    min-height: 92px;
+    min-height: 78px;
+    cursor: pointer;
+  }
+
+  .programme-day-head::after {
+    content: "+";
+    margin-left: 0.25rem;
+    color: var(--lime);
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .programme-day[open] .programme-day-head::after {
+    content: "−";
+  }
+
+  .programme-day:not([open]) .programme-day-head {
+    border-radius: var(--radius-md);
+  }
+
+  .programme-day-head > span {
+    margin-left: auto;
   }
 
   .poovar-gallery {
@@ -2211,9 +2283,9 @@ footer {
   }
 
   .themes li {
-    min-height: 105px;
-    padding: 0.9rem;
-    font-size: 0.84rem;
+    min-height: 82px;
+    padding: 0.72rem;
+    font-size: 0.8rem;
   }
 
   .participant-mosaic {
