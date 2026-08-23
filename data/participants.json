@@ -198,5 +198,22 @@
     "affiliation": "Technical University of Munich, Germany",
     "image": "martin-zacharias.webp",
     "profile": "https://www.bio.nat.tum.de/en/t38/people/head-of-the-group/"
+  },
+  {
+    "name": "Padmesh Anjukandi",
+    "sortKey": "Padmesh Anjukandi",
+    "initials": "PA",
+    "affiliation": "IIT Palakkad",
+    "image": "padmesh-anjukandi.webp",
+    "profile": "https://iitpkd.ac.in/people/padmesh"
+  },
+  {
+    "name": "U. Deva Priyakumar",
+    "sortKey": "U. Deva Priyakumar",
+    "initials": "UDP",
+    "affiliation": "IIIT Hyderabad",
+    "image": "https://www.iiit.ac.in/wp-content/uploads/2022/12/Deva-Priyakumar-U-300x300.jpg",
+    "slug": "u-deva-priyakumar",
+    "profile": "https://www.iiit.ac.in/faculty/deva-priyakumar-u/"
   }
 ]
