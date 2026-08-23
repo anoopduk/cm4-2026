@@ -9,6 +9,7 @@ const participants = JSON.parse(readFileSync(join(root, "data/participants.json"
 const required = ["name", "sortKey", "initials", "affiliation", "image"];
 const names = new Set();
 const sortKeys = new Set();
+const isExternalImage = (image) => /^https?:\/\//i.test(image);
 
 for (const [index, participant] of participants.entries()) {
   for (const field of required) {
@@ -18,8 +19,10 @@ for (const [index, participant] of participants.entries()) {
   if (sortKeys.has(participant.sortKey)) throw new Error(`Duplicate sort key: ${participant.sortKey}`);
   names.add(participant.name);
   sortKeys.add(participant.sortKey);
-  const imagePath = join(root, "assets/people", participant.image);
-  if (!existsSync(imagePath)) throw new Error(`Missing portrait: ${imagePath}`);
+  if (!isExternalImage(participant.image)) {
+    const imagePath = join(root, "assets/people", participant.image);
+    if (!existsSync(imagePath)) throw new Error(`Missing portrait: ${imagePath}`);
+  }
 }
 
 const ordered = [...participants].sort((a, b) =>
@@ -32,7 +35,13 @@ const escapeHtml = (value) => String(value)
   .replaceAll(">", "&gt;")
   .replaceAll('"', "&quot;");
 
-const slug = ({ image }) => image.replace(/\.webp$/i, "");
+const slug = (participant) => {
+  if (participant.slug) return participant.slug;
+  return participant.image.replace(/\.[^.]+$/i, "");
+};
+
+const imageSource = (participant, localPrefix) =>
+  isExternalImage(participant.image) ? participant.image : `${localPrefix}${participant.image}`;
 
 const preview = `<div class="section-heading participant-preview-heading">
     <div><h2>Confirmed participants</h2><p class="participant-count"><strong>${ordered.length}</strong> participants</p></div>
@@ -41,7 +50,7 @@ const preview = `<div class="section-heading participant-preview-heading">
   <div class="participant-preview-row">
     <div class="participant-preview-label"><p>Participant portraits</p><span>${ordered.length} confirmed</span></div>
     <div class="participant-mosaic" role="group" aria-label="Confirmed participant portraits">
-${ordered.map((participant) => `      <a class="participant-thumb" href="participants/#${escapeHtml(slug(participant))}" aria-label="View ${escapeHtml(participant.name)} in the participant directory" title="${escapeHtml(participant.name)}"><img src="assets/people/${escapeHtml(participant.image)}" alt="${escapeHtml(participant.name)}" loading="lazy" decoding="async" width="480" height="600"></a>`).join("\n")}
+${ordered.map((participant) => `      <a class="participant-thumb" href="participants/#${escapeHtml(slug(participant))}" aria-label="View ${escapeHtml(participant.name)} in the participant directory" title="${escapeHtml(participant.name)}"><img src="${escapeHtml(imageSource(participant, "assets/people/"))}" alt="${escapeHtml(participant.name)}" loading="lazy" decoding="async" width="480" height="600"></a>`).join("\n")}
     </div>
   </div>
   <div class="participant-preview-action"><a class="button" href="participants/">View participant directory <span aria-hidden="true">→</span></a><p>Photographs, affiliations and verified profile links</p></div>`;
@@ -52,7 +61,7 @@ const directoryCards = ordered.map((participant) => {
     ? ` href="${escapeHtml(participant.profile)}" target="_blank" rel="noopener noreferrer"`
     : "";
   const arrow = participant.profile ? '<span class="profile-arrow" aria-hidden="true">↗</span>' : "";
-  return `    <${tag} class="participant-directory-card" id="${escapeHtml(slug(participant))}"${link}><span class="participant-directory-portrait"><span class="person-mark">${escapeHtml(participant.initials)}</span><img src="../assets/people/${escapeHtml(participant.image)}" alt="${escapeHtml(participant.name)}" loading="lazy" decoding="async" width="480" height="600"></span><div class="participant-directory-copy"><h2>${escapeHtml(participant.name)}</h2><p>${escapeHtml(participant.affiliation)}</p></div>${arrow}</${tag}>`;
+  return `    <${tag} class="participant-directory-card" id="${escapeHtml(slug(participant))}"${link}><span class="participant-directory-portrait"><span class="person-mark">${escapeHtml(participant.initials)}</span><img src="${escapeHtml(imageSource(participant, "../assets/people/"))}" alt="${escapeHtml(participant.name)}" loading="lazy" decoding="async" width="480" height="600"></span><div class="participant-directory-copy"><h2>${escapeHtml(participant.name)}</h2><p>${escapeHtml(participant.affiliation)}</p></div>${arrow}</${tag}>`;
 }).join("\n");
 
 const directory = `<div class="directory-heading">
