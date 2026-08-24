@@ -84,6 +84,7 @@
     {
       id: 'padmesh-anjukandi',
       name: 'Padmesh Anjukandi',
+      sortKey: 'Padmesh Anjukandi',
       initials: 'PA',
       affiliation: 'IIT Palakkad',
       profile: 'https://iitpkd.ac.in/people/padmesh',
@@ -92,6 +93,7 @@
     {
       id: 'u-deva-priyakumar',
       name: 'U. Deva Priyakumar',
+      sortKey: 'Deva Priyakumar U.',
       initials: 'UDP',
       affiliation: 'IIIT Hyderabad',
       profile: 'https://www.iiit.ac.in/faculty/deva-priyakumar-u/',
@@ -102,10 +104,15 @@
   const mosaic = document.querySelector('.participant-mosaic');
   if (mosaic) {
     participantPatches.forEach((participant) => {
-      if (mosaic.querySelector(`a[href="participants/#${participant.id}"]`)) return;
+      const existing = mosaic.querySelector(`a[href="participants/#${participant.id}"]`);
+      if (existing) {
+        existing.dataset.sortKey = participant.sortKey;
+        return;
+      }
       const link = document.createElement('a');
       link.className = 'participant-thumb';
       link.href = `participants/#${participant.id}`;
+      link.dataset.sortKey = participant.sortKey;
       link.setAttribute('aria-label', `View ${participant.name} in the participant directory`);
       link.title = participant.name;
       link.innerHTML = `<img src="${participant.image}" alt="${participant.name}" loading="lazy" decoding="async" width="480" height="600">`;
@@ -113,7 +120,7 @@
     });
 
     [...mosaic.children]
-      .sort((a, b) => (a.title || '').localeCompare(b.title || '', 'en', { sensitivity: 'base' }))
+      .sort((a, b) => (a.dataset.sortKey || a.title || '').localeCompare(b.dataset.sortKey || b.title || '', 'en', { sensitivity: 'base' }))
       .forEach((card) => mosaic.appendChild(card));
 
     const count = mosaic.children.length;
@@ -126,10 +133,15 @@
   const directoryGrid = document.querySelector('.participant-directory-grid');
   if (directoryGrid) {
     participantPatches.forEach((participant) => {
-      if (document.getElementById(participant.id)) return;
+      const existing = document.getElementById(participant.id);
+      if (existing) {
+        existing.dataset.sortKey = participant.sortKey;
+        return;
+      }
       const card = document.createElement('a');
       card.className = 'participant-directory-card';
       card.id = participant.id;
+      card.dataset.sortKey = participant.sortKey;
       card.href = participant.profile;
       card.target = '_blank';
       card.rel = 'noopener noreferrer';
@@ -138,7 +150,7 @@
     });
 
     [...directoryGrid.children]
-      .sort((a, b) => (a.querySelector('h2')?.textContent || '').localeCompare(b.querySelector('h2')?.textContent || '', 'en', { sensitivity: 'base' }))
+      .sort((a, b) => (a.dataset.sortKey || a.querySelector('h2')?.textContent || '').localeCompare(b.dataset.sortKey || b.querySelector('h2')?.textContent || '', 'en', { sensitivity: 'base' }))
       .forEach((card) => directoryGrid.appendChild(card));
 
     const count = directoryGrid.children.length;
