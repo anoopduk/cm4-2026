@@ -192,6 +192,30 @@
     "profile": null
   },
   {
+    "name": "Devesh Kumar",
+    "sortKey": "Devesh Kumar",
+    "initials": "DK",
+    "affiliation": "Babasaheb Bhimrao Ambedkar University, Lucknow",
+    "image": "devesh-kumar.webp",
+    "profile": "https://www.bbau.ac.in/DeptPhysicsFaculties.aspx"
+  },
+  {
+    "name": "Sastri C. V.",
+    "sortKey": "Sastri C. V.",
+    "initials": "CVS",
+    "affiliation": "IIT Guwahati",
+    "image": "cv-sastri.webp",
+    "profile": "https://www.iitg.ac.in/sastricv/"
+  },
+  {
+    "name": "Subramanian V.",
+    "sortKey": "Subramanian V.",
+    "initials": "VS",
+    "affiliation": "SRM Institute of Science and Technology; IIT Madras",
+    "image": "v-subramanian.webp",
+    "profile": "https://www.srmist.edu.in/faculty/prof-subramanian-v/"
+  },
+  {
     "name": "Martin Zacharias",
     "sortKey": "Martin Zacharias",
     "initials": "MZ",
@@ -208,11 +232,11 @@
     "profile": "https://iitpkd.ac.in/people/padmesh"
   },
   {
-    "name": "U. Deva Priyakumar",
+    "name": "Deva Priyakumar U.",
     "sortKey": "Deva Priyakumar U.",
     "initials": "UDP",
     "affiliation": "IIIT Hyderabad",
-    "image": "https://www.iiit.ac.in/wp-content/uploads/2022/12/Deva-Priyakumar-U-300x300.jpg",
+    "image": "u-deva-priyakumar.webp",
     "slug": "u-deva-priyakumar",
     "profile": "https://www.iiit.ac.in/faculty/deva-priyakumar-u/"
   }
