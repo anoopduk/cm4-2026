@@ -240,5 +240,21 @@
     "image": "u-deva-priyakumar.webp",
     "slug": "u-deva-priyakumar",
     "profile": "https://www.iiit.ac.in/faculty/deva-priyakumar-u/"
+  },
+  {
+    "name": "Arul Murugan N.",
+    "sortKey": "Arul Murugan N.",
+    "initials": "NAM",
+    "affiliation": "IIIT Delhi",
+    "image": "arul-murugan-n.webp",
+    "profile": "https://iiitd.ac.in/arulmurugan"
+  },
+  {
+    "name": "Radhakrishnan T. P.",
+    "sortKey": "Radhakrishnan T. P.",
+    "initials": "TPR",
+    "affiliation": "University of Hyderabad",
+    "image": "radhakrishnan-tp.webp",
+    "profile": "https://chemistry.uohyd.ac.in/tpr.htm"
   }
 ]
