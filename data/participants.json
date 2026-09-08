@@ -256,5 +256,13 @@
     "affiliation": "University of Hyderabad",
     "image": "radhakrishnan-tp.webp",
     "profile": "https://chemistry.uohyd.ac.in/tpr.htm"
+  },
+  {
+    "name": "Akhil S. Nair",
+    "sortKey": "Akhil S. Nair",
+    "initials": "ASN",
+    "affiliation": "CSIR-IICT Hyderabad",
+    "image": "akhil-s-nair.png",
+    "profile": "https://www.nomad-laboratory.de/sugathan_nair"
   }
 ]
