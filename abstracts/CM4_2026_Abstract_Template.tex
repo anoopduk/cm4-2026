@@ -1,4 +1,6 @@
-% Compile with pdfLaTeX. One A4 page, 25 mm margins.
+% Keep references.bib and rsc.bst in the same folder as this file.
+% Compile with: pdflatex, bibtex, pdflatex, pdflatex.
+% One A4 page, 25 mm margins.
 % Replace placeholders and remove instructional text before submission.
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=25mm]{geometry}
@@ -7,6 +9,11 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{microtype}
+\usepackage[super,sort&compress,comma]{natbib}
+\renewcommand{\refname}{%
+  \fontsize{10}{12}\selectfont
+  \bfseries References%
+}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt}
@@ -24,7 +31,7 @@
 \end{center}
 Replace this text with your scientific abstract in English (maximum 300 words). State the research question or objective, briefly describe the methods, summarise the principal results, and explain their significance. Use specific findings where available and define unfamiliar abbreviations. The complete submission, including authors, affiliations, any figure, acknowledgement and essential references, must fit on one A4 page. Keep the prescribed margins and font sizes.
 
-Replace every bracketed placeholder. Use superscript numbers to link each author to the correct affiliation; mark the presenting author with an asterisk. Retain the presenting-author email line. Delete unused optional sections and all instructional text, including this paragraph, before exporting your PDF. Submit the PDF together with the editable Word file or LaTeX source (a ZIP containing the source and figure files if needed).
+Replace every bracketed placeholder. Use superscript numbers to link each author to the correct affiliation; mark the presenting author with an asterisk. Retain the presenting-author email line. Add citations with \verb|\cite{key}| and edit \texttt{references.bib}; replace the example citation below. Delete unused optional sections and all instructional text, including this paragraph, before exporting your PDF. Submit the PDF together with the editable Word file or LaTeX source (a ZIP containing the source, bibliography and figure files if needed).
 
 {\fontsize{10}{12}\selectfont
 \textbf{Keywords:} [Three to five keywords separated by semicolons]\par
@@ -34,7 +41,9 @@ Replace every bracketed placeholder. Use superscript numbers to link each author
 % \includegraphics[width=0.65\linewidth]{figure.pdf}
 % \par\small Figure 1. Replace with a concise caption.
 % \end{center}
+\textit{[Example citation: replace this text and citation key, or delete if no references are needed.]}\cite{example}\par
 \textbf{Acknowledgement:} [Optional brief acknowledgement; delete if unused.]\par
-\textbf{References:} [Optional essential references in numbered order; delete if unused.]\par
+\bibliographystyle{rsc}
+\bibliography{references}
 }
 \end{document}
