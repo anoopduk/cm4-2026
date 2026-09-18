@@ -578,6 +578,102 @@ h2 {
   font-size: 0.65rem;
 }
 
+/* Abstract submission */
+
+.abstract-submission {
+  background: color-mix(in srgb, var(--paper-2) 62%, var(--paper));
+}
+
+.abstract-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.72fr);
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: start;
+}
+
+.abstract-copy .section-overline {
+  color: var(--teal);
+}
+
+.abstract-copy h2 {
+  max-width: 12ch;
+  margin-top: 0.75rem;
+}
+
+.abstract-copy > p:last-child {
+  max-width: 62ch;
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.abstract-panel {
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.abstract-panel dl {
+  margin: 0;
+}
+
+.abstract-panel dl > div {
+  padding: 0.8rem 0;
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.abstract-panel dl > div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.abstract-panel dt {
+  color: var(--teal);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.abstract-panel dd {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.abstract-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.abstract-button-secondary {
+  border-color: var(--line-strong);
+  background: transparent;
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.abstract-button-secondary:hover {
+  border-color: var(--teal);
+  background: color-mix(in srgb, var(--surface-soft) 68%, transparent);
+  box-shadow: none;
+}
+
+.abstract-signin-note {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.5;
+}
+
 /* Participant preview */
 
 .participants,
@@ -2011,6 +2107,7 @@ footer {
   }
 
   .about-grid,
+  .abstract-layout,
   .programme-head,
   .venue-layout,
   .registration-head,
@@ -2307,6 +2404,23 @@ footer {
 
   .poovar-photo {
     height: 300px;
+  }
+
+  .abstract-panel {
+    padding: 1.1rem;
+  }
+
+  .abstract-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .abstract-actions .button {
+    width: 100%;
+  }
+
+  .abstract-panel dl > div {
+    grid-template-columns: 76px minmax(0, 1fr);
   }
 
   .registration-head p {
