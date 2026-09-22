@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const checkOnly = process.argv.includes("--check");
 const participants = JSON.parse(readFileSync(join(root, "data/participants.json"), "utf8"));
-const directoryVersion = "20260908";
+const directoryVersion = "20260922";
 
 const required = ["name", "sortKey", "initials", "affiliation", "image"];
 const names = new Set();

@@ -264,5 +264,14 @@
     "affiliation": "CSIR-IICT Hyderabad",
     "image": "akhil-s-nair.png",
     "profile": "https://www.nomad-laboratory.de/sugathan_nair"
+  },
+  {
+    "name": "Sudip Roy",
+    "sortKey": "Sudip Roy",
+    "initials": "SR",
+    "affiliation": "Prescience Insilico",
+    "image": "https://corvusglobalevents.com/uploads/conference_speaker/sudip-roy-32.png",
+    "slug": "sudip-roy",
+    "profile": "https://krea.edu.in/about/faculty/sias/sudip-roy"
   }
 ]
