@@ -218,6 +218,24 @@ html[data-theme="dark"] .theme-toggle-moon {
   display: inline;
 }
 
+
+.header-status {
+  min-height: 40px;
+  padding: 0.55rem 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface) 68%, transparent);
+  color: var(--teal);
+  font-size: 0.7rem;
+  font-weight: 750;
+  line-height: 1.15;
+  text-align: center;
+  white-space: nowrap;
+}
+
 /* Reusable controls */
 
 .button {
@@ -1086,6 +1104,57 @@ h2 {
 
 /* Registration */
 
+.registration-inline-notice {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.registration-inline-notice::before {
+  width: 0.58rem;
+  height: 0.58rem;
+  flex: 0 0 0.58rem;
+  border-radius: 50%;
+  background: var(--lime-strong);
+  content: "";
+}
+
+.registration-hold {
+  max-width: 980px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.registration-hold .eyebrow {
+  margin: 0 0 0.85rem;
+  color: var(--lime);
+}
+
+.registration-hold h2 {
+  max-width: 900px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.25rem, 5vw, 4.8rem);
+  line-height: 0.98;
+}
+
+.registration-hold > p:last-child {
+  max-width: 68ch;
+  margin: 1.3rem 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+
+
 .registration-head {
   margin-bottom: 1.8rem;
   display: grid;
@@ -1647,6 +1716,16 @@ footer {
   line-height: 1.45;
 }
 
+
+.footer-status {
+  margin: 0;
+  color: var(--lime);
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1.4;
+  text-align: right;
+}
+
 /* Payment */
 
 .payment-page {
@@ -2085,7 +2164,8 @@ footer {
     grid-row: 1;
   }
 
-  .header-cta {
+  .header-cta,
+  .header-status {
     grid-column: 4;
     grid-row: 1;
   }
@@ -2343,8 +2423,10 @@ footer {
     justify-content: center;
   }
 
-  .header-cta {
-    padding-inline: 0.82rem;
+  .header-cta,
+  .header-status {
+    padding-inline: 0.65rem;
+    font-size: 0.62rem;
   }
 
   .hero {
@@ -2500,13 +2582,16 @@ footer {
   }
 
   .footer-details,
-  footer > .button {
+  footer > .button,
+  .footer-status {
     grid-column: 1;
     grid-row: auto;
   }
 
-  footer > .button {
+  footer > .button,
+  .footer-status {
     width: fit-content;
+    text-align: left;
   }
 
   .payment-header {
