@@ -80,6 +80,7 @@
 
   /* Keep newly confirmed participants visible immediately. The generated source data
      contains the same records, so this bridge becomes a no-op after regeneration. */
+  const participantRemovals = ['sabyasachi-mishra', 'radhika-gupta'];
   const participantPatches = [
     {
       id: 'padmesh-anjukandi',
@@ -98,13 +99,26 @@
       affiliation: 'IIIT Hyderabad',
       profile: 'https://www.iiit.ac.in/faculty/deva-priyakumar-u/',
       image: 'https://www.iiit.ac.in/wp-content/uploads/2022/12/Deva-Priyakumar-U-300x300.jpg'
+    },
+    {
+      id: 'ashim-nandi',
+      name: 'Ashim Nandi',
+      sortKey: 'Ashim Nandi',
+      initials: 'AN',
+      affiliation: 'IIT Goa',
+      profile: 'https://iitgoa.ac.in/CH-faculty-profile/?exp=CH&uid=ashim',
+      image: new URL('assets/people/ashim-nandi.svg', assetBase).href
     }
   ];
 
   const mosaic = document.querySelector('.participant-mosaic');
   if (mosaic) {
+    participantRemovals.forEach((id) => {
+      mosaic.querySelector(`a[href$="#${id}"]`)?.remove();
+    });
+
     participantPatches.forEach((participant) => {
-      const existing = mosaic.querySelector(`a[href="participants/#${participant.id}"]`);
+      const existing = mosaic.querySelector(`a[href$="#${participant.id}"]`);
       if (existing) {
         existing.dataset.sortKey = participant.sortKey;
         return;
@@ -132,6 +146,8 @@
 
   const directoryGrid = document.querySelector('.participant-directory-grid');
   if (directoryGrid) {
+    participantRemovals.forEach((id) => document.getElementById(id)?.remove());
+
     participantPatches.forEach((participant) => {
       const existing = document.getElementById(participant.id);
       if (existing) {
