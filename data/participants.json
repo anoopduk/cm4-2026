@@ -112,14 +112,6 @@
     "profile": "https://iith.ac.in/chy/arup/"
   },
   {
-    "name": "Sabyasachi Mishra",
-    "sortKey": "Sabyasachi Mishra",
-    "initials": "SM",
-    "affiliation": "IIT Kharagpur",
-    "image": "sabyasachi-mishra.webp",
-    "profile": "https://www.iitkgp.ac.in/department/CY/faculty/cy-mishra"
-  },
-  {
     "name": "Pradeep T.",
     "sortKey": "Pradeep T.",
     "initials": "TP",
@@ -273,5 +265,13 @@
     "image": "https://krea.edu.in/wp-content/uploads/2026/06/Sudip-Roy.png",
     "slug": "sudip-roy",
     "profile": "https://krea.edu.in/about/faculty/sias/sudip-roy"
+  },
+  {
+    "name": "Ashim Nandi",
+    "sortKey": "Ashim Nandi",
+    "initials": "AN",
+    "affiliation": "IIT Goa",
+    "image": "ashim-nandi.svg",
+    "profile": "https://iitgoa.ac.in/CH-faculty-profile/?exp=CH&uid=ashim"
   }
 ]
