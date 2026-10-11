@@ -291,5 +291,23 @@
     "image": "upakarasamy-lourderaj.webp",
     "slug": "u-lourderaj",
     "profile": "https://www.niser.ac.in/profile/u.lourderaj"
+  },
+  {
+    "name": "Krishnan Raghavachari",
+    "sortKey": "Krishnan Raghavachari",
+    "initials": "KR",
+    "affiliation": "Indiana University Bloomington, USA",
+    "image": "https://www.chem.indiana.edu/wp-content/uploads/2017/02/Raghavachari-scaled.jpg",
+    "slug": "krishnan-raghavachari",
+    "profile": "https://www.chem.indiana.edu/faculty/krishnan-raghavachari/"
+  },
+  {
+    "name": "K. D. Sen",
+    "sortKey": "Sen K. D.",
+    "initials": "KDS",
+    "affiliation": "University of Hyderabad",
+    "image": "https://chemistry.uohyd.ac.in/Files/Image/KDS.jpg",
+    "slug": "kd-sen",
+    "profile": "https://chemistry.uohyd.ac.in/kds.htm"
   }
 ]
