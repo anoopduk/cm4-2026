@@ -128,8 +128,8 @@
     "profile": "https://ipc.iisc.ac.in/sgr.php"
   },
   {
-    "name": "Satyamurthy N.",
-    "sortKey": "Satyamurthy N.",
+    "name": "N. Sathyamurthy",
+    "sortKey": "Sathyamurthy N.",
     "initials": "NS",
     "affiliation": "IISER Thiruvananthapuram",
     "image": "n-satyamurthy.webp",
@@ -282,5 +282,14 @@
     "image": "https://iitpkd.ac.in/sites/default/files/styles/with_scale_/public/pictures/2024-05/Rositha.jpg?itok=iRIF2p_x",
     "slug": "rositha-kuniyil",
     "profile": "https://iitpkd.ac.in/people/rosithak"
+  },
+  {
+    "name": "U. Lourderaj",
+    "sortKey": "Lourderaj U.",
+    "initials": "UL",
+    "affiliation": "NISER Bhubaneswar",
+    "image": "upakarasamy-lourderaj.webp",
+    "slug": "u-lourderaj",
+    "profile": "https://www.niser.ac.in/profile/u.lourderaj"
   }
 ]
