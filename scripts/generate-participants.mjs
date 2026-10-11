@@ -67,7 +67,6 @@ const directoryCards = ordered.map((participant) => {
 
 const directory = `<div class="directory-heading">
     <div><p class="eyebrow">CM4 2026</p><h1>Confirmed participants</h1></div>
-    <p><strong>${ordered.length}</strong> researchers have confirmed their participation. Official or institutional profile links are provided where verified.</p>
   </div>
   <div class="participant-directory-grid">
 ${directoryCards}
