@@ -273,5 +273,14 @@
     "affiliation": "IIT Goa",
     "image": "ashim-nandi.svg",
     "profile": "https://iitgoa.ac.in/CH-faculty-profile/?exp=CH&uid=ashim"
+  },
+  {
+    "name": "Rositha Kuniyil",
+    "sortKey": "Rositha Kuniyil",
+    "initials": "RK",
+    "affiliation": "IIT Palakkad",
+    "image": "https://iitpkd.ac.in/sites/default/files/styles/with_scale_/public/pictures/2024-05/Rositha.jpg?itok=iRIF2p_x",
+    "slug": "rositha-kuniyil",
+    "profile": "https://iitpkd.ac.in/people/rosithak"
   }
 ]
