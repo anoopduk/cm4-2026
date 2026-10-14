@@ -309,5 +309,32 @@
     "image": "https://chemistry.uohyd.ac.in/Files/Image/KDS.jpg",
     "slug": "kd-sen",
     "profile": "https://chemistry.uohyd.ac.in/kds.htm"
+  },
+  {
+    "name": "Deepa Janardanan",
+    "sortKey": "Deepa Janardanan",
+    "initials": "DJ",
+    "affiliation": "Central University of Kerala",
+    "image": "deepa-janardanan.svg",
+    "slug": "deepa-janardanan",
+    "profile": "https://schools.cukerala.ac.in/Dept/Faculty_Preview?Id=53"
+  },
+  {
+    "name": "D. Sravanakumar Perumalla",
+    "sortKey": "D. Sravanakumar Perumalla",
+    "initials": "DSP",
+    "affiliation": "SASI Institute of Technology & Engineering",
+    "image": "d-sravanakumar-perumalla.svg",
+    "slug": "d-sravanakumar-perumalla",
+    "profile": "https://www.sasi.ac.in/applied-sciences-humanities/"
+  },
+  {
+    "name": "Sundargopal Ghosh",
+    "sortKey": "Sundargopal Ghosh",
+    "initials": "SG",
+    "affiliation": "IIT Madras",
+    "image": "sundargopal-ghosh.svg",
+    "slug": "sundargopal-ghosh",
+    "profile": "https://chem.iitm.ac.in/faculty/ghosh/"
   }
 ]
