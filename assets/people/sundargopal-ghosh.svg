@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="600" viewBox="0 0 480 600" role="img" aria-label="SG">
+<rect width="480" height="600" rx="24" fill="#152238"/>
+<circle cx="240" cy="230" r="96" fill="#2a3f5f"/>
+<rect x="100" y="350" width="280" height="150" rx="75" fill="#2a3f5f"/>
+<text x="240" y="560" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="54" font-weight="700" fill="#ffffff">SG</text>
+</svg>
