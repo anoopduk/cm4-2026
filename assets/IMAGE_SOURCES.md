@@ -23,3 +23,9 @@ participants; their source record is retained here for provenance.
 | `people/krishnan-raghavachari.webp` | [Indiana University faculty photograph](https://www.chem.indiana.edu/wp-content/uploads/2017/02/Raghavachari-scaled.jpg) |
 | `people/rositha-kuniyil.webp` | [IIT Palakkad faculty photograph](https://iitpkd.ac.in/sites/default/files/styles/with_scale_/public/pictures/2024-05/Rositha.jpg?itok=iRIF2p_x) |
 | `people/sudip-roy.webp` | [Krea University faculty photograph](https://krea.edu.in/wp-content/uploads/2026/06/Sudip-Roy.png) |
+| `poovar-beach.webp` | [Wikimedia Commons: Puvar 20080220-1](https://commons.wikimedia.org/wiki/File:Puvar_20080220-1.jpg) — Hans A. Rosbach, CC BY-SA 3.0 |
+| `poovar-elephant-rock.webp` | [Wikimedia Commons: Elephant Rock Poovar Island](https://commons.wikimedia.org/wiki/File:Elephant_Rock_Poovar_Island.jpg) — Maskaravivek, CC BY-SA 3.0 |
+| `poovar-boat-ride.webp` | [Wikimedia Commons: Poovar backwaters boat ride, Kerala, India](https://commons.wikimedia.org/wiki/File:Poovar_backwaters_boat_ride,_Kerala,_India.jpg) — Arindambasu2, CC BY-SA 4.0 |
+| `kathakali.webp` | [Wikimedia Commons: Kathakali 1 (Kerala)](https://commons.wikimedia.org/wiki/File:Kathakali_1(Kerala).jpg) — Jijojoygd, CC BY-SA 4.0 |
+| `kovalam-beach.webp` | [Wikimedia Commons: Kovalam beach trivandrum kerala](https://commons.wikimedia.org/wiki/File:Kovalam_beach_trivandrum_kerala.jpg) — Georgeumartin, CC BY-SA 4.0 |
+| `kerala-sadya.webp` | [Wikimedia Commons: Sadya - An art](https://commons.wikimedia.org/wiki/File:Sadya_-_An_art.jpeg) — Sreerajsadanand, CC BY-SA 4.0 |
