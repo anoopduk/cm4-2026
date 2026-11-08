@@ -18,3 +18,8 @@ links displayed on the website remain unchanged.
 The Poovar image credit and licence notice are displayed on the website. The
 participant photographs are used solely to identify confirmed conference
 participants; their source record is retained here for provenance.
+| `people/ashim-nandi.webp` | [IIT Goa faculty photograph](https://iitgoa.ac.in/wp-content/uploads/ashim.jpg) |
+| `people/kd-sen.webp` | [University of Hyderabad faculty photograph](https://chemistry.uohyd.ac.in/Files/Image/KDS.jpg) |
+| `people/krishnan-raghavachari.webp` | [Indiana University faculty photograph](https://www.chem.indiana.edu/wp-content/uploads/2017/02/Raghavachari-scaled.jpg) |
+| `people/rositha-kuniyil.webp` | [IIT Palakkad faculty photograph](https://iitpkd.ac.in/sites/default/files/styles/with_scale_/public/pictures/2024-05/Rositha.jpg?itok=iRIF2p_x) |
+| `people/sudip-roy.webp` | [Krea University faculty photograph](https://krea.edu.in/wp-content/uploads/2026/06/Sudip-Roy.png) |

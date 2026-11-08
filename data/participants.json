@@ -254,7 +254,7 @@
     "sortKey": "Sudip Roy",
     "initials": "SR",
     "affiliation": "Prescience Insilico",
-    "image": "https://krea.edu.in/wp-content/uploads/2026/06/Sudip-Roy.png",
+    "image": "sudip-roy.webp",
     "slug": "sudip-roy",
     "profile": "https://krea.edu.in/about/faculty/sias/sudip-roy"
   },
@@ -263,7 +263,7 @@
     "sortKey": "Ashim Nandi",
     "initials": "AN",
     "affiliation": "IIT Goa",
-    "image": "ashim-nandi.svg",
+    "image": "ashim-nandi.webp",
     "profile": "https://iitgoa.ac.in/CH-faculty-profile/?exp=CH&uid=ashim"
   },
   {
@@ -271,7 +271,7 @@
     "sortKey": "Rositha Kuniyil",
     "initials": "RK",
     "affiliation": "IIT Palakkad",
-    "image": "https://iitpkd.ac.in/sites/default/files/styles/with_scale_/public/pictures/2024-05/Rositha.jpg?itok=iRIF2p_x",
+    "image": "rositha-kuniyil.webp",
     "slug": "rositha-kuniyil",
     "profile": "https://iitpkd.ac.in/people/rosithak"
   },
@@ -289,7 +289,7 @@
     "sortKey": "Krishnan Raghavachari",
     "initials": "KR",
     "affiliation": "Indiana University Bloomington, USA",
-    "image": "https://www.chem.indiana.edu/wp-content/uploads/2017/02/Raghavachari-scaled.jpg",
+    "image": "krishnan-raghavachari.webp",
     "slug": "krishnan-raghavachari",
     "profile": "https://www.chem.indiana.edu/faculty/krishnan-raghavachari/"
   },
@@ -298,7 +298,7 @@
     "sortKey": "Sen K. D.",
     "initials": "KDS",
     "affiliation": "University of Hyderabad",
-    "image": "https://chemistry.uohyd.ac.in/Files/Image/KDS.jpg",
+    "image": "kd-sen.webp",
     "slug": "kd-sen",
     "profile": "https://chemistry.uohyd.ac.in/~kds/"
   },
@@ -310,15 +310,6 @@
     "image": "deepa-janardanan-photo.svg",
     "slug": "deepa-janardanan",
     "profile": "https://schools.cukerala.ac.in/Dept/Faculty_Preview?Id=53"
-  },
-  {
-    "name": "D. Sravanakumar Perumalla",
-    "sortKey": "D. Sravanakumar Perumalla",
-    "initials": "DSP",
-    "affiliation": "SASI Institute of Technology & Engineering",
-    "image": "d-sravanakumar-perumalla.svg",
-    "slug": "d-sravanakumar-perumalla",
-    "profile": "https://www.sasi.ac.in/applied-sciences-humanities/"
   },
   {
     "name": "Sundargopal Ghosh",
