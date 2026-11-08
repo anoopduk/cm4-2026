@@ -7,7 +7,8 @@ const htmlFiles = [
   "index.html",
   "participants/index.html",
   "committees/index.html",
-  "payment/index.html"
+  "payment/index.html",
+  "abstracts/index.html"
 ];
 const documents = new Map();
 const failures = [];
