@@ -2771,14 +2771,6 @@ footer {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.registration .photo-credit {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.registration .photo-credit a {
-  color: #fff;
-}
-
 @media (max-width: 700px) {
   .photo-band-triple {
     height: auto;
