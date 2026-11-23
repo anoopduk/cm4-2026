@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" id="theme-color" content="#f4f1e8">
 <meta name="robots" content="noindex,nofollow">
-<meta name="description" content="CM4 2026 payment page for registered participants.">
+<meta name="description" content="CM4 2026 bank-transfer details for registered participants.">
 <title>CM4 2026 | Payment</title>
 <script>
   (() => {
@@ -19,11 +19,11 @@
     }
   })();
 </script>
-<link rel="stylesheet" href="../styles.css?v=20261108-3">
+<link rel="stylesheet" href="../styles.css?v=20261124-1">
 <script src="../theme.js?v=20261108-1" defer></script>
 </head>
 <body class="payment-page">
-<a class="skip-link" href="#main">Skip to payment options</a>
+<a class="skip-link" href="#bank-details">Skip to bank details</a>
 <header class="payment-header">
   <a class="payment-logo" href="../" aria-label="CM4 2026 homepage"><img src="../logo.webp" alt="CM4 2026" width="420" height="420" data-site-logo></a>
   <p>Registration payment</p>
@@ -44,7 +44,7 @@
     </div>
     <div class="payment-intro-copy">
       <p><strong>Registration deadline: 15 November 2026</strong></p>
-      <p>Keep your registration form open while making payment. Select the same registration and accommodation category below, complete the secure Razorpay payment, then return to the form to enter the transaction details and submit it.</p>
+      <p>Registration and accommodation fees should be paid by direct bank transfer using the details below. After completing the transfer, return to the registration form, enter the transaction details and submit it.</p>
       <div class="payment-intro-actions">
         <a class="button button-secondary" href="https://forms.gle/JE7BGkwDA1iDN3zG8" target="_blank" rel="noopener noreferrer">Reopen registration form <span aria-hidden="true">↗</span></a>
         <a class="payment-home-link" href="../"><span aria-hidden="true">←</span> Back to CM4 homepage</a>
@@ -59,57 +59,32 @@
       <h2 id="payment-steps-title">Before you pay</h2>
     </div>
     <ol>
-      <li><strong>Keep the form open.</strong> Do not submit or close the registration form yet.</li>
-      <li><strong>Pay the matching amount.</strong> Check the category carefully, complete payment, and retain the Razorpay confirmation.</li>
-      <li><strong>Return and submit.</strong> Enter the transaction details in the same registration form, then submit it.</li>
+      <li><strong>Confirm the amount.</strong> Check the registration and accommodation category in the registration form.</li>
+      <li><strong>Make the transfer.</strong> Include the participant's name and <strong>CM4 2026</strong> in the payment remarks.</li>
+      <li><strong>Return and submit.</strong> Enter the transaction reference or UTR in the registration form, then submit it.</li>
     </ol>
   </section>
 
-  <noscript><p class="payment-script-warning"><strong>Payment buttons require JavaScript.</strong> Enable JavaScript in your browser, reload this page, and then select your payment category.</p></noscript>
-
-  <section class="payment-group" aria-labelledby="india-payment-title">
+  <section class="payment-group payment-bank" id="bank-details" aria-labelledby="bank-details-title">
     <header class="payment-group-heading">
-      <div><p class="eyebrow">Participants from India</p><h2 id="india-payment-title">Indian registration categories</h2></div>
-      <p>Amounts are linked to accommodation occupancy for the conference period.</p>
+      <div><p class="eyebrow">Direct bank transfer</p><h2 id="bank-details-title">Payment details</h2></div>
+      <p>Use the account information below for registration and accommodation payments.</p>
     </header>
-    <div class="payment-grid payment-grid-india">
-      <article class="payment-option">
-        <div><p class="payment-option-number">01</p><h3>Single occupancy</h3><p class="payment-option-amount">₹35,000</p><p>Participant with a single-occupancy room.</p></div>
-        <form aria-label="Pay for single occupancy"><button type="submit" hidden>Pay for single occupancy</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyGObA2bFTy0QF" async></script></form>
-      </article>
-      <article class="payment-option">
-        <div><p class="payment-option-number">02</p><h3>Twin sharing</h3><p class="payment-option-amount">₹25,000 <small>per participant</small></p><p>Participant sharing a room with one other participant.</p></div>
-        <form aria-label="Pay for twin sharing"><button type="submit" hidden>Pay for twin sharing</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyGbAxWOyYOonG" async></script></form>
-      </article>
-      <article class="payment-option">
-        <div><p class="payment-option-number">03</p><h3>Triple sharing</h3><p class="payment-option-amount">₹20,000 <small>per participant</small></p><p>Participant sharing a room with two other participants.</p></div>
-        <form aria-label="Pay for triple sharing"><button type="submit" hidden>Pay for triple sharing</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyH7hOOfh3OZkM" async></script></form>
-      </article>
-      <article class="payment-option">
-        <div><p class="payment-option-number">04</p><h3>With one accompanying person</h3><p class="payment-option-amount">₹45,000</p><p>One participant with one accompanying person.</p></div>
-        <form aria-label="Pay for participant with one accompanying person"><button type="submit" hidden>Pay for participant with one accompanying person</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyH9aWRLfioO2q" async></script></form>
-      </article>
-      <article class="payment-option">
-        <div><p class="payment-option-number">05</p><h3>With two accompanying persons</h3><p class="payment-option-amount">₹50,000</p><p>One participant with two accompanying persons.</p></div>
-        <form aria-label="Pay for participant with two accompanying persons"><button type="submit" hidden>Pay for participant with two accompanying persons</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyHCFZUK7vVBG7" async></script></form>
-      </article>
-    </div>
-  </section>
-
-  <section class="payment-group payment-group-international" aria-labelledby="international-payment-title">
-    <header class="payment-group-heading">
-      <div><p class="eyebrow">International participants</p><h2 id="international-payment-title">International registration categories</h2></div>
-      <p>Payment amounts are shown in US dollars.</p>
-    </header>
-    <div class="payment-grid payment-grid-international">
-      <article class="payment-option payment-option-accent">
-        <div><p class="payment-option-number">01</p><h3>Single occupancy</h3><p class="payment-option-amount">USD 500</p><p>International participant with single occupancy.</p></div>
-        <form aria-label="Pay for international single occupancy"><button type="submit" hidden>Pay for international single occupancy</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyHEzTL55Dghz8" async></script></form>
-      </article>
-      <article class="payment-option payment-option-accent">
-        <div><p class="payment-option-number">02</p><h3>With one accompanying person</h3><p class="payment-option-amount">USD 650</p><p>One international participant with one accompanying person.</p></div>
-        <form aria-label="Pay for international participant with one accompanying person"><button type="submit" hidden>Pay for international participant with one accompanying person</button><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_SyHH3eVNteTCYF" async></script></form>
-      </article>
+    <div class="payment-bank-panel">
+      <dl class="payment-bank-details">
+        <div><dt>Account name</dt><dd>Aura Hospitality</dd></div>
+        <div><dt>Account number</dt><dd>1200 3127 6001</dd></div>
+        <div><dt>Bank</dt><dd>Canara Bank</dd></div>
+        <div><dt>Branch</dt><dd>Nemom, Trivandrum, Kerala – 695020</dd></div>
+        <div><dt>IFSC</dt><dd>CNRB0002995</dd></div>
+        <div><dt>SWIFT/BIC</dt><dd>CNRBINBBBFD</dd></div>
+      </dl>
+      <aside class="payment-bank-reminder">
+        <p class="eyebrow">Payment reference</p>
+        <h3>Identify your transfer</h3>
+        <p>Please include the participant's name and <strong>CM4 2026</strong> in the payment remarks.</p>
+        <p>Retain the transaction reference or payment receipt for confirmation.</p>
+      </aside>
     </div>
   </section>
 

@@ -1946,20 +1946,6 @@ footer {
   color: var(--ink);
 }
 
-.payment-script-warning {
-  margin: calc(-1 * clamp(2rem, 4vw, 3rem)) 0 clamp(3rem, 6vw, 5rem);
-  padding: 1rem 1.2rem;
-  border: 1px solid #a14b35;
-  border-radius: var(--radius-sm);
-  background: color-mix(in srgb, #a14b35 8%, var(--surface));
-  color: var(--muted);
-  font-size: 0.86rem;
-}
-
-.payment-script-warning strong {
-  color: var(--ink);
-}
-
 .payment-group + .payment-group {
   margin-top: clamp(2.5rem, 4.5vw, 4rem);
 }
@@ -1984,128 +1970,81 @@ footer {
   line-height: 1.55;
 }
 
-.payment-grid {
+.payment-bank-panel {
   display: grid;
-  gap: 1rem;
-}
-
-.payment-grid-india {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.payment-grid-international {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.payment-option {
-  min-width: 0;
-  min-height: 300px;
-  padding: clamp(1.25rem, 2.5vw, 2rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.6rem;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
+  overflow: hidden;
   background: var(--surface);
   box-shadow: 0 12px 34px rgba(8, 63, 64, 0.07);
 }
 
-.payment-option-number {
-  margin: 0 0 1.4rem;
-  color: var(--teal);
-  font-size: 0.64rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-}
-
-.payment-option h3 {
-  max-width: 22ch;
+.payment-bank-details {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: clamp(1.35rem, 2.3vw, 1.85rem);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.05;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
 }
 
-.payment-option-amount {
-  margin: 1.1rem 0 0.45rem;
+.payment-bank-details > div {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: minmax(140px, 0.4fr) minmax(0, 1fr);
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.payment-bank-details > div:first-child {
+  padding-top: 0;
+}
+
+.payment-bank-details > div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.payment-bank-details dt {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 650;
+}
+
+.payment-bank-details dd {
+  min-width: 0;
+  margin: 0;
   color: var(--ink);
-  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  font-size: clamp(0.96rem, 1.5vw, 1.08rem);
   font-weight: 700;
-  line-height: 1.1;
+  overflow-wrap: anywhere;
 }
 
-.payment-option-amount small {
-  display: block;
-  margin-top: 0.25rem;
-  color: var(--muted);
-  font-size: 0.64rem;
-  font-weight: 600;
-}
-
-.payment-option > div > p:last-child {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.8rem;
-  line-height: 1.5;
-}
-
-.payment-option form {
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-}
-
-.payment-option .razorpay-payment-button,
-.payment-option form input[type="submit"],
-.payment-option form button {
-  min-height: 44px;
-  padding: 0.75rem 1.2rem;
-  border: 0;
-  border-radius: 999px;
+.payment-bank-reminder {
+  padding: clamp(1.5rem, 3.5vw, 3rem);
   background: var(--deep);
   color: #fff;
-  cursor: pointer;
-  font-size: 0.84rem;
-  font-weight: 700;
 }
 
-.payment-option .razorpay-payment-button:hover,
-.payment-option form input[type="submit"]:hover,
-.payment-option form button:hover {
-  background: var(--deep-2);
-}
-
-.payment-option-accent {
-  border-color: transparent;
-  background: var(--deep);
-  color: #fff;
-  box-shadow: var(--shadow);
-}
-
-.payment-option-accent .payment-option-number,
-.payment-option-accent .payment-option-amount {
+.payment-bank-reminder .eyebrow {
   color: var(--lime);
 }
 
-.payment-option-accent .payment-option-amount small,
-.payment-option-accent > div > p:last-child {
-  color: rgba(255, 255, 255, 0.68);
+.payment-bank-reminder h3 {
+  max-width: 12ch;
+  margin: 0 0 1.5rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.05;
 }
 
-.payment-option-accent .razorpay-payment-button,
-.payment-option-accent form input[type="submit"],
-.payment-option-accent form button {
-  background: var(--lime);
-  color: #102a2b;
+.payment-bank-reminder p:not(.eyebrow) {
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.86rem;
+  line-height: 1.6;
 }
 
-.payment-option-accent .razorpay-payment-button:hover,
-.payment-option-accent form input[type="submit"]:hover,
-.payment-option-accent form button:hover {
-  background: var(--lime-strong);
+.payment-bank-reminder strong {
+  color: #fff;
 }
 
 .payment-support {
@@ -2296,8 +2235,8 @@ footer {
     gap: 1.25rem;
   }
 
-  .payment-grid-india {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .payment-bank-panel {
+    grid-template-columns: 1fr;
   }
 
   footer {
@@ -2444,17 +2383,8 @@ footer {
     width: calc(100% - 2rem);
   }
 
-  .payment-guidance,
-  .payment-grid-international {
+  .payment-guidance {
     grid-template-columns: 1fr;
-  }
-
-  .payment-grid-india {
-    grid-template-columns: 1fr;
-  }
-
-  .payment-option {
-    min-height: 260px;
   }
 }
 
@@ -2696,8 +2626,9 @@ footer {
     gap: 0.45rem;
   }
 
-  .payment-option {
-    min-height: 240px;
+  .payment-bank-details > div {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
   }
 
   .payment-support {
