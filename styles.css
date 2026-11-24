@@ -774,6 +774,7 @@ h2 {
 }
 
 .participant-thumb {
+  position: relative;
   width: 44px;
   height: 55px;
   display: block;

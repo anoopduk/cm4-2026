@@ -5,9 +5,9 @@ import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const checkOnly = process.argv.includes("--check");
 const participants = JSON.parse(readFileSync(join(root, "data/participants.json"), "utf8"));
-const directoryVersion = "20260922";
+const directoryVersion = "20261124";
 
-const required = ["name", "sortKey", "initials", "affiliation", "image"];
+const required = ["name", "sortKey", "initials", "affiliation"];
 const names = new Set();
 const sortKeys = new Set();
 const isExternalImage = (image) => /^https?:\/\//i.test(image);
@@ -20,7 +20,8 @@ for (const [index, participant] of participants.entries()) {
   if (sortKeys.has(participant.sortKey)) throw new Error(`Duplicate sort key: ${participant.sortKey}`);
   names.add(participant.name);
   sortKeys.add(participant.sortKey);
-  if (!isExternalImage(participant.image)) {
+  if (!participant.image && !participant.slug) throw new Error(`Missing directory anchor: ${participant.name}`);
+  if (participant.image && !isExternalImage(participant.image)) {
     const imagePath = join(root, "assets/people", participant.image);
     if (!existsSync(imagePath)) throw new Error(`Missing portrait: ${imagePath}`);
   }
@@ -44,14 +45,19 @@ const slug = (participant) => {
 const imageSource = (participant, localPrefix) =>
   isExternalImage(participant.image) ? participant.image : `${localPrefix}${participant.image}`;
 
+const portrait = (participant, prefix) => participant.image
+  ? `<img src="${escapeHtml(imageSource(participant, prefix))}" alt="${escapeHtml(participant.name)}" loading="lazy" decoding="async" width="480" height="600">`
+  : "";
+const initials = (participant) => `<span class="person-mark" aria-hidden="true">${escapeHtml(participant.initials)}</span>`;
+
 const preview = `<div class="section-heading participant-preview-heading">
     <div><h2>Confirmed participants</h2><p class="participant-count"><strong>${ordered.length}</strong> participants</p></div>
     <p>Official or institutional profile links are provided where verified.</p>
   </div>
   <div class="participant-preview-row">
-    <div class="participant-preview-label"><p>Participant portraits</p><span>${ordered.length} confirmed</span></div>
-    <div class="participant-mosaic" role="group" aria-label="Confirmed participant portraits">
-${ordered.map((participant) => `      <a class="participant-thumb" href="participants/?v=${directoryVersion}#${escapeHtml(slug(participant))}" aria-label="View ${escapeHtml(participant.name)} in the participant directory" title="${escapeHtml(participant.name)}"><img src="${escapeHtml(imageSource(participant, "assets/people/"))}" alt="${escapeHtml(participant.name)}" loading="lazy" decoding="async" width="480" height="600"></a>`).join("\n")}
+    <div class="participant-preview-label"><p>Participant directory</p><span>${ordered.length} confirmed</span></div>
+    <div class="participant-mosaic" role="group" aria-label="Confirmed participants">
+${ordered.map((participant) => `      <a class="participant-thumb" href="participants/?v=${directoryVersion}#${escapeHtml(slug(participant))}" aria-label="View ${escapeHtml(participant.name)} in the participant directory" title="${escapeHtml(participant.name)}">${portrait(participant, "assets/people/") || initials(participant)}</a>`).join("\n")}
     </div>
   </div>
   <div class="participant-preview-action"><a class="button" href="participants/?v=${directoryVersion}">View participant directory <span aria-hidden="true">→</span></a><p>Photographs, affiliations and verified profile links</p></div>`;
@@ -62,7 +68,8 @@ const directoryCards = ordered.map((participant) => {
     ? ` href="${escapeHtml(participant.profile)}" target="_blank" rel="noopener noreferrer"`
     : "";
   const arrow = participant.profile ? '<span class="profile-arrow" aria-hidden="true">↗</span>' : "";
-  return `    <${tag} class="participant-directory-card" id="${escapeHtml(slug(participant))}"${link}><span class="participant-directory-portrait"><span class="person-mark">${escapeHtml(participant.initials)}</span><img src="${escapeHtml(imageSource(participant, "../assets/people/"))}" alt="${escapeHtml(participant.name)}" loading="lazy" decoding="async" width="480" height="600"></span><div class="participant-directory-copy"><h2>${escapeHtml(participant.name)}</h2><p>${escapeHtml(participant.affiliation)}</p></div>${arrow}</${tag}>`;
+  const attendance = participant.attendance ? `<p>${escapeHtml(participant.attendance)}</p>` : "";
+  return `    <${tag} class="participant-directory-card" id="${escapeHtml(slug(participant))}"${link}><span class="participant-directory-portrait">${initials(participant)}${portrait(participant, "../assets/people/")}</span><div class="participant-directory-copy"><h2>${escapeHtml(participant.name)}</h2><p>${escapeHtml(participant.affiliation)}</p>${attendance}</div>${arrow}</${tag}>`;
 }).join("\n");
 
 const directory = `<div class="directory-heading">

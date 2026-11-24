@@ -1,28 +1,11 @@
 [
   {
-    "name": "Rajeev Ahuja",
-    "sortKey": "Rajeev Ahuja",
-    "initials": "RA",
-    "affiliation": "IIT Ropar",
-    "image": "rajeev-ahuja.webp",
-    "profile": "https://www.iitrpr.ac.in/physics/Faculties/rahuja.php"
-  },
-  {
     "name": "Deb Ranjan Banerjee",
     "sortKey": "Deb Ranjan Banerjee",
     "initials": "DB",
     "affiliation": "NIT Durgapur",
     "image": "deb-ranjan-banerjee.webp",
     "profile": "https://nitdgp.ac.in/department/chemistry/faculty-5/deb-ranjan-banerjee"
-  },
-  {
-    "name": "Aditi Chandrasekar",
-    "sortKey": "Aditi Chandrasekar",
-    "initials": "AC",
-    "affiliation": "Azim Premji University",
-    "image": "aditi-chandrasekhar.webp",
-    "slug": "aditi-chandrasekar",
-    "profile": "https://azimpremjiuniversity.edu.in/people/aditi-chandrasekar"
   },
   {
     "name": "Peter Comba",
@@ -46,7 +29,8 @@
     "initials": "OE",
     "affiliation": "Université de Montpellier, CNRS, ENSCM, France",
     "image": "odile-eisenstein.webp",
-    "profile": "https://www.icgm.fr/en/odile-eisenstein-2/"
+    "profile": "https://www.icgm.fr/en/odile-eisenstein-2/",
+    "attendance": "Online"
   },
   {
     "name": "Sagar Ghorai",
@@ -73,22 +57,6 @@
     "profile": "https://ipc.iisc.ac.in/edj.php"
   },
   {
-    "name": "Milan Kumar Jena",
-    "sortKey": "Milan Kumar Jena",
-    "initials": "MJ",
-    "affiliation": "IIT Bhilai",
-    "image": "milan-kumar-jena.webp",
-    "profile": "https://www.iitbhilai.ac.in/index.php?pid=profile_milanjena"
-  },
-  {
-    "name": "Kiran Boggavarapu",
-    "sortKey": "Kiran Boggavarapu",
-    "initials": "BK",
-    "affiliation": "McNeese State University, USA",
-    "image": "b-kiran.webp",
-    "profile": "https://www.mcneese.edu/faculty/kiran-boggavarapu-ph-d/"
-  },
-  {
     "name": "Sandeep Kumar",
     "sortKey": "Sandeep Kumar",
     "initials": "SK",
@@ -113,22 +81,6 @@
     "profile": "https://iith.ac.in/chy/arup/"
   },
   {
-    "name": "Sai G. Ramesh",
-    "sortKey": "Sai G. Ramesh",
-    "initials": "SGR",
-    "affiliation": "Indian Institute of Science, Bengaluru",
-    "image": "sai-g-ramesh.webp",
-    "profile": "https://ipc.iisc.ac.in/sgr.php"
-  },
-  {
-    "name": "N. Sathyamurthy",
-    "sortKey": "Sathyamurthy N.",
-    "initials": "NS",
-    "affiliation": "IISER Thiruvananthapuram",
-    "image": "n-satyamurthy.webp",
-    "profile": "https://www.iisermohali.ac.in/faculty/dcs/nsath"
-  },
-  {
     "name": "Henry F. Schaefer III",
     "sortKey": "Henry F. Schaefer III",
     "initials": "HS",
@@ -142,7 +94,8 @@
     "initials": "SS",
     "affiliation": "The Hebrew University of Jerusalem, Israel",
     "image": "sason-shaik.webp",
-    "profile": "https://chemistry.huji.ac.il/people/sason-s-shaik"
+    "profile": "https://chemistry.huji.ac.il/people/sason-s-shaik",
+    "attendance": "Online"
   },
   {
     "name": "Abhishek Sirohiwal",
@@ -151,14 +104,6 @@
     "affiliation": "Indian Institute of Science, Bengaluru",
     "image": "a-sirohiwal.webp",
     "profile": "https://ipc.iisc.ac.in/as.php"
-  },
-  {
-    "name": "Sunoj R. B.",
-    "sortKey": "Sunoj R. B.",
-    "initials": "RBS",
-    "affiliation": "IIT Bombay",
-    "image": "rb-sunoj.webp",
-    "profile": "https://www.chem.iitb.ac.in/~sunoj/prof.html"
   },
   {
     "name": "Swathi R. S.",
@@ -251,15 +196,6 @@
     "profile": "https://www.nomad-laboratory.de/sugathan_nair"
   },
   {
-    "name": "Sudip Roy",
-    "sortKey": "Sudip Roy",
-    "initials": "SR",
-    "affiliation": "Prescience Insilico",
-    "image": "sudip-roy.webp",
-    "slug": "sudip-roy",
-    "profile": "https://krea.edu.in/about/faculty/sias/sudip-roy"
-  },
-  {
     "name": "Ashim Nandi",
     "sortKey": "Ashim Nandi",
     "initials": "AN",
@@ -295,33 +231,6 @@
     "profile": "https://www.chem.indiana.edu/faculty/krishnan-raghavachari/"
   },
   {
-    "name": "K. D. Sen",
-    "sortKey": "Sen K. D.",
-    "initials": "KDS",
-    "affiliation": "University of Hyderabad",
-    "image": "kd-sen.webp",
-    "slug": "kd-sen",
-    "profile": "https://chemistry.uohyd.ac.in/~kds/"
-  },
-  {
-    "name": "Deepa Janardanan",
-    "sortKey": "Deepa Janardanan",
-    "initials": "DJ",
-    "affiliation": "Central University of Kerala",
-    "image": "deepa-janardanan-photo.svg",
-    "slug": "deepa-janardanan",
-    "profile": "https://schools.cukerala.ac.in/Dept/Faculty_Preview?Id=53"
-  },
-  {
-    "name": "Sundargopal Ghosh",
-    "sortKey": "Sundargopal Ghosh",
-    "initials": "SG",
-    "affiliation": "IIT Madras",
-    "image": "sundargopal-ghosh-photo.svg",
-    "slug": "sundargopal-ghosh",
-    "profile": "https://www.cse.iitm.ac.in/~rupesh/service/hpce/highlight/?id=sghosh"
-  },
-  {
     "name": "Parthasarathi Ramakrishnan",
     "sortKey": "Parthasarathi Ramakrishnan",
     "initials": "PR",
@@ -329,5 +238,307 @@
     "image": "https://csirhrdg.res.in/SiteContent/ManagedContent/ContentImage/20250910113921380Dr._Parthasarathi.jpg",
     "slug": "parthasarathi-ramakrishnan",
     "profile": "https://csirhrdg.res.in/Home/Index/1/InPage/62/1"
+  },
+  {
+    "name": "Anoop Ayyappan",
+    "sortKey": "Anoop Ayyappan",
+    "initials": "AA",
+    "affiliation": "Digital University Kerala",
+    "image": "anoop-ayyappan.webp",
+    "profile": "https://duk.ac.in/personnel/anoop-ayyappan/"
+  },
+  {
+    "name": "Mahesh Hariharan",
+    "sortKey": "Mahesh Hariharan",
+    "initials": "MH",
+    "affiliation": "IISER Thiruvananthapuram",
+    "image": "mahesh-hariharan.webp",
+    "profile": "https://www.iisertvm.ac.in/pages/deputy-director",
+    "attendance": "Felicitation only"
+  },
+  {
+    "name": "Susmita De",
+    "sortKey": "Susmita De",
+    "initials": "SD",
+    "affiliation": "University of Calicut",
+    "image": "susmita-de.webp",
+    "profile": "https://chemistry.uoc.ac.in/CCMSwebpage/CCMS.html"
+  },
+  {
+    "name": "Prasad V. Bharatam",
+    "sortKey": "Prasad V. Bharatam",
+    "initials": "BP",
+    "affiliation": "NIPER Mohali",
+    "image": "bharatam-v-prasad.webp",
+    "profile": "https://www.niper.gov.in/faculty/prof-p-v-bharatam"
+  },
+  {
+    "name": "Biswarup Pathak",
+    "sortKey": "Biswarup Pathak",
+    "initials": "BP",
+    "affiliation": "IIT Indore",
+    "image": "biswarup-pathak.webp",
+    "profile": "https://people.iiti.ac.in/~biswarup/"
+  },
+  {
+    "name": "Dandamudi Usharani",
+    "sortKey": "Dandamudi Usharani",
+    "initials": "DU",
+    "affiliation": "CSIR-CFTRI",
+    "image": "dandamudi-usharani.webp",
+    "profile": "../assets/cv/Usha-CV-2Page.pdf"
+  },
+  {
+    "name": "Jayasree E. G.",
+    "sortKey": "Jayasree E. G.",
+    "initials": "JG",
+    "affiliation": "CUSAT",
+    "image": "jayasree-eg.webp",
+    "profile": "https://iqac.cusat.ac.in/Web/profile_view/501/Prof.Dr.ELAMBALASSERYGJAYASREE"
+  },
+  {
+    "name": "Narahari Sastry G.",
+    "sortKey": "Narahari Sastry G.",
+    "initials": "GNS",
+    "affiliation": "IIT Hyderabad",
+    "image": "g-narahari-sastry.webp",
+    "profile": "https://iith.ac.in/bt/gnsastry/"
+  },
+  {
+    "name": "Pancharatna P. D.",
+    "sortKey": "Pancharatna P. D.",
+    "initials": "PPD",
+    "affiliation": "Amrita Vishwa Vidyapeetham",
+    "image": "pancharatna-pd.webp",
+    "profile": "https://www.amrita.edu/faculty/pattath-d-pancharatna/"
+  },
+  {
+    "name": "Parameswaran P.",
+    "sortKey": "Parameswaran P.",
+    "initials": "PP",
+    "affiliation": "NIT Calicut",
+    "image": "p-parameswaran.webp",
+    "profile": "https://nitc.ac.in/multidiscilplinary-centres/centre-for-qa-and-enhancement/faculty-and-staff/faculty/302f4080-a1ac-4ff3-9ebe-98a3424edbd3"
+  },
+  {
+    "name": "Priyakumari C. P.",
+    "sortKey": "Priyakumari C. P.",
+    "initials": "PCP",
+    "affiliation": "IISER Mohali",
+    "image": "priyakumari-cp.webp",
+    "profile": "https://web.iisermohali.ac.in/dept/dcs/index.php/faculty-and-staff/faculty-cpp"
+  },
+  {
+    "name": "K. L. Sebastian",
+    "sortKey": "Sebastian K. L.",
+    "initials": "KLS",
+    "affiliation": "IISc Bengaluru",
+    "slug": "k-l-sebastian",
+    "attendance": "Felicitation only",
+    "profile": "https://ipc.iisc.ac.in/~kls/index.html"
+  },
+  {
+    "name": "Arjun Ray",
+    "sortKey": "Arjun Ray",
+    "initials": "AR",
+    "affiliation": "IIIT Delhi",
+    "slug": "arjun-ray",
+    "profile": "https://iiitd.ac.in/arjun"
+  },
+  {
+    "name": "Saikat Roy",
+    "sortKey": "Saikat Roy",
+    "initials": "SR",
+    "affiliation": "University of Warsaw, Poland",
+    "slug": "saikat-roy"
+  },
+  {
+    "name": "Souvik Sinha",
+    "sortKey": "Souvik Sinha",
+    "initials": "SS",
+    "affiliation": "Prescience Insilico",
+    "slug": "souvik-sinha"
+  },
+  {
+    "name": "Sayan Paul",
+    "sortKey": "Sayan Paul",
+    "initials": "SP",
+    "affiliation": "IIT Kharagpur",
+    "slug": "sayan-paul"
+  },
+  {
+    "name": "Govinddas M. Vaishnav",
+    "sortKey": "Govinddas M. Vaishnav",
+    "initials": "GMV",
+    "affiliation": "NIPER Mohali",
+    "slug": "govinddas-m-vaishnav"
+  },
+  {
+    "name": "Poulami Paul",
+    "sortKey": "Poulami Paul",
+    "initials": "PP",
+    "affiliation": "IIT Indore",
+    "slug": "poulami-paul"
+  },
+  {
+    "name": "Dipti Maurya",
+    "sortKey": "Dipti Maurya",
+    "initials": "DM",
+    "affiliation": "IIT Indore",
+    "slug": "dipti-maurya"
+  },
+  {
+    "name": "Bhrigu Chakraborty",
+    "sortKey": "Bhrigu Chakraborty",
+    "initials": "BC",
+    "affiliation": "IIT Kharagpur",
+    "slug": "bhrigu-chakraborty"
+  },
+  {
+    "name": "Sanjeev Ranjan",
+    "sortKey": "Sanjeev Ranjan",
+    "initials": "SR",
+    "affiliation": "NIPER Mohali",
+    "slug": "sanjeev-ranjan"
+  },
+  {
+    "name": "Mithu Kumari",
+    "sortKey": "Mithu Kumari",
+    "initials": "MK",
+    "affiliation": "IISER Mohali",
+    "slug": "mithu-kumari"
+  },
+  {
+    "name": "Jitesh Sharma",
+    "sortKey": "Jitesh Sharma",
+    "initials": "JS",
+    "affiliation": "IISER Mohali",
+    "slug": "jitesh-sharma"
+  },
+  {
+    "name": "Anjalin Joy",
+    "sortKey": "Anjalin Joy",
+    "initials": "AJ",
+    "affiliation": "IIT Palakkad",
+    "slug": "anjalin-joy"
+  },
+  {
+    "name": "Keerthana V.",
+    "sortKey": "Keerthana V.",
+    "initials": "KV",
+    "affiliation": "NIT Calicut",
+    "slug": "keerthana-v"
+  },
+  {
+    "name": "Athira P.",
+    "sortKey": "Athira P.",
+    "initials": "AP",
+    "affiliation": "IIT Hyderabad",
+    "slug": "athira-p"
+  },
+  {
+    "name": "Krishnapriya A. U.",
+    "sortKey": "Krishnapriya A. U.",
+    "initials": "KAU",
+    "affiliation": "IIT Palakkad",
+    "slug": "krishnapriya-a-u"
+  },
+  {
+    "name": "Palak",
+    "sortKey": "Palak",
+    "initials": "P",
+    "affiliation": "IIT Hyderabad",
+    "slug": "palak"
+  },
+  {
+    "name": "Vishnu Suresh M. S.",
+    "sortKey": "Vishnu Suresh M. S.",
+    "initials": "VSMS",
+    "affiliation": "IIT Palakkad",
+    "slug": "vishnu-suresh-m-s"
+  },
+  {
+    "name": "R. S. Malavika",
+    "sortKey": "Malavika R. S.",
+    "initials": "RSM",
+    "affiliation": "IIT Palakkad",
+    "slug": "r-s-malavika"
+  },
+  {
+    "name": "Balineni Prasad",
+    "sortKey": "Balineni Prasad",
+    "initials": "BP",
+    "affiliation": "IIT Palakkad",
+    "slug": "balineni-prasad"
+  },
+  {
+    "name": "Nikhil Mondal",
+    "sortKey": "Nikhil Mondal",
+    "initials": "NM",
+    "affiliation": "IIT Palakkad",
+    "slug": "nikhil-mondal"
+  },
+  {
+    "name": "Surya K.",
+    "sortKey": "Surya K.",
+    "initials": "SK",
+    "affiliation": "IIT Palakkad",
+    "slug": "surya-k"
+  },
+  {
+    "name": "Pritam Chakraborty",
+    "sortKey": "Pritam Chakraborty",
+    "initials": "PC",
+    "affiliation": "IIT Palakkad",
+    "slug": "pritam-chakraborty"
+  },
+  {
+    "name": "Amitabha Das",
+    "sortKey": "Amitabha Das",
+    "initials": "AD",
+    "affiliation": "NIT Mizoram",
+    "slug": "amitabha-das"
+  },
+  {
+    "name": "Blessy Elsa Joseph",
+    "sortKey": "Blessy Elsa Joseph",
+    "initials": "BEJ",
+    "affiliation": "University of Calicut",
+    "slug": "blessy-elsa-joseph"
+  },
+  {
+    "name": "I. V. Krishnendu",
+    "sortKey": "Krishnendu I. V.",
+    "initials": "IVK",
+    "affiliation": "University of Calicut",
+    "slug": "i-v-krishnendu"
+  },
+  {
+    "name": "Anjali N. M.",
+    "sortKey": "Anjali N. M.",
+    "initials": "ANM",
+    "affiliation": "University of Calicut",
+    "slug": "anjali-n-m"
+  },
+  {
+    "name": "Harsha K. Sasidharan",
+    "sortKey": "Harsha K. Sasidharan",
+    "initials": "HKS",
+    "affiliation": "IISc Bengaluru",
+    "slug": "harsha-k-sasidharan"
+  },
+  {
+    "name": "Annabel Benny",
+    "sortKey": "Annabel Benny",
+    "initials": "AB",
+    "affiliation": "IISc Bengaluru",
+    "slug": "annabel-benny"
+  },
+  {
+    "name": "Roshan Mahadik",
+    "sortKey": "Roshan Mahadik",
+    "initials": "RM",
+    "affiliation": "IISc Bengaluru",
+    "slug": "roshan-mahadik"
   }
 ]
