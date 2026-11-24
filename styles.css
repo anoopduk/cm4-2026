@@ -1562,6 +1562,42 @@ h2 {
   gap: 0.8rem;
 }
 
+.participant-directory-group {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.participant-student-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 0 1.25rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.participant-student-list li {
+  display: grid;
+  align-content: start;
+  gap: 0.2rem;
+  min-width: 0;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: calc(var(--header-height) + 1.5rem);
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.participant-student-list li:target {
+  outline: 2px solid var(--lime-strong);
+  outline-offset: 3px;
+}
+
+.participant-student-list span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
 .participant-directory-card {
   min-width: 0;
   min-height: 104px;

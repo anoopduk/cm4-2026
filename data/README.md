@@ -5,7 +5,7 @@ homepage and the full participant directory.
 
 To add or update a participant:
 
-1. Add the 4:5 WebP portrait to `assets/people/`.
+1. When available, add the 4:5 WebP portrait to `assets/people/`. Without a portrait, use an explicit `slug`.
 2. Add or edit the participant entry in `participants.json`.
 3. Use an explicit `sortKey` beginning with the displayed first name. Put
    leading initials after the name in the displayed `name`; the generator
@@ -16,4 +16,7 @@ To add or update a participant:
 6. Run `node scripts/check-site.mjs` to confirm that local assets, profile
    links, page anchors and image metadata remain valid.
 
-Both generated sections retain equal portrait treatment and the same ordering.
+Use `"group": "research"` for postdocs and technical contributors and
+`"group": "student"` for students. Leave the field unset for the first
+group. The directory sorts each group alphabetically, and the homepage
+shows available portraits while counting everyone.

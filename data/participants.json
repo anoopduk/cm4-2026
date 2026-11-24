@@ -58,6 +58,7 @@
   },
   {
     "name": "Sandeep Kumar",
+    "group": "research",
     "sortKey": "Sandeep Kumar",
     "initials": "SK",
     "affiliation": "Applied Materials",
@@ -339,6 +340,7 @@
   },
   {
     "name": "Saikat Roy",
+    "group": "research",
     "sortKey": "Saikat Roy",
     "initials": "SR",
     "affiliation": "University of Warsaw, Poland",
@@ -346,6 +348,7 @@
   },
   {
     "name": "Souvik Sinha",
+    "group": "research",
     "sortKey": "Souvik Sinha",
     "initials": "SS",
     "affiliation": "Prescience Insilico",
@@ -353,6 +356,7 @@
   },
   {
     "name": "Sayan Paul",
+    "group": "student",
     "sortKey": "Sayan Paul",
     "initials": "SP",
     "affiliation": "IIT Kharagpur",
@@ -360,6 +364,7 @@
   },
   {
     "name": "Govinddas M. Vaishnav",
+    "group": "student",
     "sortKey": "Govinddas M. Vaishnav",
     "initials": "GMV",
     "affiliation": "NIPER Mohali",
@@ -367,6 +372,7 @@
   },
   {
     "name": "Poulami Paul",
+    "group": "student",
     "sortKey": "Poulami Paul",
     "initials": "PP",
     "affiliation": "IIT Indore",
@@ -374,6 +380,7 @@
   },
   {
     "name": "Dipti Maurya",
+    "group": "student",
     "sortKey": "Dipti Maurya",
     "initials": "DM",
     "affiliation": "IIT Indore",
@@ -381,6 +388,7 @@
   },
   {
     "name": "Bhrigu Chakraborty",
+    "group": "student",
     "sortKey": "Bhrigu Chakraborty",
     "initials": "BC",
     "affiliation": "IIT Kharagpur",
@@ -388,6 +396,7 @@
   },
   {
     "name": "Sanjeev Ranjan",
+    "group": "student",
     "sortKey": "Sanjeev Ranjan",
     "initials": "SR",
     "affiliation": "NIPER Mohali",
@@ -395,6 +404,7 @@
   },
   {
     "name": "Mithu Kumari",
+    "group": "student",
     "sortKey": "Mithu Kumari",
     "initials": "MK",
     "affiliation": "IISER Mohali",
@@ -402,6 +412,7 @@
   },
   {
     "name": "Jitesh Sharma",
+    "group": "student",
     "sortKey": "Jitesh Sharma",
     "initials": "JS",
     "affiliation": "IISER Mohali",
@@ -409,6 +420,7 @@
   },
   {
     "name": "Anjalin Joy",
+    "group": "student",
     "sortKey": "Anjalin Joy",
     "initials": "AJ",
     "affiliation": "IIT Palakkad",
@@ -416,6 +428,7 @@
   },
   {
     "name": "Keerthana V.",
+    "group": "student",
     "sortKey": "Keerthana V.",
     "initials": "KV",
     "affiliation": "NIT Calicut",
@@ -423,6 +436,7 @@
   },
   {
     "name": "Athira P.",
+    "group": "student",
     "sortKey": "Athira P.",
     "initials": "AP",
     "affiliation": "IIT Hyderabad",
@@ -430,6 +444,7 @@
   },
   {
     "name": "Krishnapriya A. U.",
+    "group": "student",
     "sortKey": "Krishnapriya A. U.",
     "initials": "KAU",
     "affiliation": "IIT Palakkad",
@@ -437,6 +452,7 @@
   },
   {
     "name": "Palak",
+    "group": "student",
     "sortKey": "Palak",
     "initials": "P",
     "affiliation": "IIT Hyderabad",
@@ -444,6 +460,7 @@
   },
   {
     "name": "Vishnu Suresh M. S.",
+    "group": "student",
     "sortKey": "Vishnu Suresh M. S.",
     "initials": "VSMS",
     "affiliation": "IIT Palakkad",
@@ -451,6 +468,7 @@
   },
   {
     "name": "R. S. Malavika",
+    "group": "student",
     "sortKey": "Malavika R. S.",
     "initials": "RSM",
     "affiliation": "IIT Palakkad",
@@ -458,6 +476,7 @@
   },
   {
     "name": "Balineni Prasad",
+    "group": "student",
     "sortKey": "Balineni Prasad",
     "initials": "BP",
     "affiliation": "IIT Palakkad",
@@ -465,6 +484,7 @@
   },
   {
     "name": "Nikhil Mondal",
+    "group": "student",
     "sortKey": "Nikhil Mondal",
     "initials": "NM",
     "affiliation": "IIT Palakkad",
@@ -472,6 +492,7 @@
   },
   {
     "name": "Surya K.",
+    "group": "research",
     "sortKey": "Surya K.",
     "initials": "SK",
     "affiliation": "IIT Palakkad",
@@ -479,6 +500,7 @@
   },
   {
     "name": "Pritam Chakraborty",
+    "group": "student",
     "sortKey": "Pritam Chakraborty",
     "initials": "PC",
     "affiliation": "IIT Palakkad",
@@ -493,6 +515,7 @@
   },
   {
     "name": "Blessy Elsa Joseph",
+    "group": "student",
     "sortKey": "Blessy Elsa Joseph",
     "initials": "BEJ",
     "affiliation": "University of Calicut",
@@ -500,6 +523,7 @@
   },
   {
     "name": "I. V. Krishnendu",
+    "group": "student",
     "sortKey": "Krishnendu I. V.",
     "initials": "IVK",
     "affiliation": "University of Calicut",
@@ -507,6 +531,7 @@
   },
   {
     "name": "Anjali N. M.",
+    "group": "student",
     "sortKey": "Anjali N. M.",
     "initials": "ANM",
     "affiliation": "University of Calicut",
@@ -514,6 +539,7 @@
   },
   {
     "name": "Harsha K. Sasidharan",
+    "group": "research",
     "sortKey": "Harsha K. Sasidharan",
     "initials": "HKS",
     "affiliation": "IISc Bengaluru",
@@ -521,6 +547,7 @@
   },
   {
     "name": "Annabel Benny",
+    "group": "research",
     "sortKey": "Annabel Benny",
     "initials": "AB",
     "affiliation": "IISc Bengaluru",
@@ -528,6 +555,7 @@
   },
   {
     "name": "Roshan Mahadik",
+    "group": "research",
     "sortKey": "Roshan Mahadik",
     "initials": "RM",
     "affiliation": "IISc Bengaluru",
