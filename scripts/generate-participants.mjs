@@ -57,7 +57,7 @@ const portrait = (participant, prefix) => participant.image
 const initials = (participant) => `<span class="person-mark" aria-hidden="true">${escapeHtml(participant.initials)}</span>`;
 
 const preview = `<div class="section-heading participant-preview-heading">
-    <div><h2>Confirmed participants</h2><p class="participant-count"><strong>${ordered.length}</strong> participants</p></div>
+    <div><h2>Participants</h2><p class="participant-count"><strong>${ordered.length}</strong> participants</p></div>
     <p>Official or institutional profile links are provided where verified.</p>
   </div>
   <div class="participant-preview-row">
@@ -81,7 +81,7 @@ const directoryCard = (participant) => {
 const studentRow = (participant) => `    <li id="${escapeHtml(slug(participant))}"><strong>${escapeHtml(participant.name)}</strong><span>${escapeHtml(participant.affiliation)}</span></li>`;
 
 const directory = `<div class="directory-heading">
-    <div><p class="eyebrow">CM4 2026</p><h1>Confirmed participants</h1></div>
+    <div><p class="eyebrow">CM4 2026</p><h1>Participants</h1></div>
   </div>
   <div class="participant-directory-grid">
 ${faculty.map(directoryCard).join("\n")}
