@@ -75,6 +75,19 @@
 <link rel="stylesheet" href="styles.css?v=20261125">
 <link rel="preload" as="image" href="assets/poovar-hero.webp" type="image/webp" media="(min-width: 701px)" fetchpriority="high">
 <script src="theme.js?v=20261108-1" defer></script>
+<style id="programme-slot-layout">
+#programme .programme-grid { align-items:start; }
+#programme .programme-items { grid-template-rows:none; grid-auto-rows:auto; }
+#programme .programme-items > li { height:auto; min-height:54px; justify-content:flex-start; }
+#programme .programme-slots { margin-top:.16rem; min-width:0; }
+#programme .programme-slots > summary { cursor:pointer; color:var(--teal); font-size:.72rem; font-weight:700; line-height:1.45; padding-block:.3rem; }
+#programme .programme-slots > summary:focus-visible { outline:2px solid currentColor; outline-offset:2px; border-radius:.15rem; }
+#programme .programme-slot-list { margin:.25rem 0 0; padding:0; list-style:none; }
+#programme .programme-slot-list > li { display:grid; grid-template-columns:auto minmax(0,1fr); gap:.38rem; height:auto; padding:.36rem 0; border:0; border-top:1px solid var(--line); border-radius:0; align-items:baseline; font-size:.74rem; line-height:1.3; }
+#programme .programme-slot-list time { font-variant-numeric:tabular-nums; white-space:nowrap; }
+#programme .programme-slot-list span { min-width:0; overflow-wrap:anywhere; }
+#programme .programme-speaker { font-size:.74rem; line-height:1.3; }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -190,7 +203,7 @@
   <div class="programme-head">
     <div><p class="section-overline">Tentative programme</p><h2>Four days at CM4</h2></div>
     <div class="programme-intro">
-      <p>The programme below is tentative and subject to change. Ten scientific sessions and two poster sessions are planned across the meeting; the detailed talk schedule will be added as speaker assignments are finalised.</p>
+      <p>The programme is subject to change. Expand a session’s talk slots to see individual speaker timings.</p>
       <p>All times are in Indian Standard Time (IST).</p>
     </div>
   </div>
@@ -198,57 +211,139 @@
     <details class="programme-day" open>
       <summary class="programme-day-head"><span class="programme-day-title"><span class="programme-day-name">Thursday</span><span class="programme-day-date">3 December</span></span><span>Arrival day</span></summary>
       <ol class="programme-items">
-        <li class="programme-empty" aria-hidden="true"></li>
-        <li class="programme-empty" aria-hidden="true"></li>
-        <li class="programme-empty" aria-hidden="true"></li>
-        <li class="programme-meal"><time>13:00–14:00</time><strong>Lunch</strong></li>
-        <li class="programme-session"><time>14:15–15:30</time><strong>Inauguration and Session 1</strong></li>
-        <li class="programme-break"><time>15:30–16:00</time><strong>Tea Break</strong></li>
-        <li class="programme-session"><time>16:00–17:30</time><strong>Session 2</strong></li>
-        <li class="programme-special"><time>17:30–18:30</time><strong>Poster Session I</strong></li>
+        <li class="programme-session"><time>13:00–14:00</time><strong>Registration</strong></li>
+        <li class="programme-special"><time>14:15–14:45</time><strong>Inaugural Session</strong></li>
+        <li class="programme-session"><time>14:45–16:15</time><strong>Opening lectures</strong>
+          <details class="programme-slots"><summary>Talk slots</summary>
+            <ol class="programme-slot-list">
+              <li><time>14:45–15:30</time><span>Sason Shaik</span></li>
+              <li><time>15:30–16:15</time><span>Henry F. Schaefer III</span></li>
+            </ol>
+          </details>
+        </li>
+        <li class="programme-break"><time>16:15–16:45</time><strong>Tea</strong></li>
+        <li class="programme-session"><time>16:45–17:40</time><strong>Scientific session</strong>
+          <details class="programme-slots"><summary>Talk slots</summary>
+            <ol class="programme-slot-list">
+              <li><time>16:45–17:00</time><span>N. Arul Murugan</span></li>
+              <li><time>17:00–17:25</time><span>Arjun Ray</span></li>
+              <li><time>17:25–17:40</time><span>Anjalin Joy</span></li>
+            </ol>
+          </details>
+        </li>
+        <li class="programme-special"><time>17:40–18:40</time><strong>Poster Session I</strong></li>
         <li class="programme-meal"><time>19:00–21:00</time><strong>Dinner</strong></li>
       </ol>
     </details>
     <details class="programme-day" open>
       <summary class="programme-day-head"><span class="programme-day-title"><span class="programme-day-name">Friday</span><span class="programme-day-date">4 December</span></span><span>Science and excursion</span></summary>
       <ol class="programme-items">
-        <li class="programme-session"><time>09:00–10:30</time><strong>Session 3</strong></li>
-        <li class="programme-break"><time>10:30–11:00</time><strong>Tea Break</strong></li>
-        <li class="programme-session"><time>11:00–13:00</time><strong>Session 4</strong></li>
-        <li class="programme-meal"><time>13:00–14:00</time><strong>Lunch</strong></li>
-        <li class="programme-session"><time>14:00–15:30</time><strong>Session 5</strong></li>
-        <li class="programme-break"><time>15:30–16:00</time><strong>Tea Break</strong></li>
-        <li class="programme-special"><time>16:00–18:30</time><strong>Poovar Backwaters &amp; Estuary Excursion</strong></li>
-        <li class="programme-empty" aria-hidden="true"></li>
-        <li class="programme-meal"><time>19:00–21:00</time><strong>Dinner</strong></li>
+        <li class="programme-session"><time>09:00–10:30</time><strong>Scientific session</strong>
+          <details class="programme-slots"><summary>Talk and discussion slots</summary>
+            <ol class="programme-slot-list">
+              <li><time>09:00–09:45</time><span>V. Subramanian</span></li>
+              <li><time>09:45–10:10</time><span>Ashim Nandi</span></li>
+              <li><time>10:10–10:25</time><span>Saikat Roy</span></li>
+              <li><time>10:25–10:30</time><span>Discussion</span></li>
+            </ol>
+          </details>
+        </li>
+        <li class="programme-break"><time>10:30–11:00</time><strong>Tea</strong></li>
+        <li class="programme-session"><time>11:00–13:05</time><strong>Scientific session</strong>
+          <details class="programme-slots"><summary>Talk slots</summary>
+            <ol class="programme-slot-list">
+              <li><time>11:00–11:45</time><span>Satoshi Maeda</span></li>
+              <li><time>11:45–12:10</time><span>Akhil S. Nair</span></li>
+              <li><time>12:10–12:35</time><span>Étienne Derat</span></li>
+              <li><time>12:35–12:50</time><span>Sandeep Kumar</span></li>
+            </ol>
+          </details>
+        </li>
+        <li class="programme-break"><time>12:50–13:05</time><strong>Break before lunch</strong></li>
+        <li class="programme-meal"><time>13:05–14:00</time><strong>Lunch</strong></li>
+        <li class="programme-session"><time>14:00–15:50</time><strong>Scientific session</strong>
+          <details class="programme-slots"><summary>Talk slots</summary>
+            <ol class="programme-slot-list">
+              <li><time>14:00–14:45</time><span>Odile Eisenstein</span></li>
+              <li><time>14:45–15:10</time><span>R. S. Swathi</span></li>
+              <li><time>15:10–15:25</time><span>Sagar Ghorai</span></li>
+              <li><time>15:25–15:50</time><span>Amitabha Das</span></li>
+            </ol>
+          </details>
+        </li>
+        <li class="programme-break"><time>15:50–16:15</time><strong>Tea</strong></li>
+        <li class="programme-special"><time>16:15–18:45</time><strong>Poovar Backwaters and Estuary Excursion</strong></li>
+        <li class="programme-meal"><time>19:15–21:00</time><strong>Dinner</strong></li>
       </ol>
     </details>
     <details class="programme-day" open>
       <summary class="programme-day-head"><span class="programme-day-title"><span class="programme-day-name">Saturday</span><span class="programme-day-date">5 December</span></span><span>Science and celebration</span></summary>
       <ol class="programme-items">
-        <li class="programme-session"><time>09:00–10:30</time><strong>Session 6</strong></li>
-        <li class="programme-break"><time>10:30–11:00</time><strong>Tea Break</strong></li>
-        <li class="programme-session"><time>11:00–13:00</time><strong>Session 7</strong></li>
-        <li class="programme-meal"><time>13:00–14:00</time><strong>Lunch</strong></li>
-        <li class="programme-session"><time>14:00–15:30</time><strong>Session 8</strong></li>
-        <li class="programme-break"><time>15:30–16:00</time><strong>Tea Break</strong></li>
-        <li class="programme-special"><time>16:00–17:30</time><strong>Poster Session II</strong></li>
+        <li class="programme-session"><time>09:00–11:00</time><strong>Scientific session</strong>
+          <details class="programme-slots"><summary>Talk slots</summary>
+            <ol class="programme-slot-list">
+              <li><time>09:00–09:45</time><span>Krishnan Raghavachari</span></li>
+              <li><time>09:45–10:10</time><span>Arup Mahata</span></li>
+              <li><time>10:10–10:35</time><span>Subhendu Roy</span></li>
+              <li><time>10:35–10:50</time><span>Dr. Surya K.</span></li>
+            </ol>
+          </details>
+        </li>
+        <li class="programme-break"><time>11:00–11:30</time><strong>Tea Break</strong></li>
+        <li class="programme-session"><time>11:30–13:30</time><strong>Scientific session</strong>
+          <details class="programme-slots"><summary>Talk and discussion slots</summary>
+            <ol class="programme-slot-list">
+              <li><time>11:30–12:15</time><span>Martin Zacharias</span></li>
+              <li><time>12:15–12:40</time><span>Abhishek Sirohiwal</span></li>
+              <li><time>12:40–13:05</time><span>Padmesh Anjukandi</span></li>
+              <li><time>13:05–13:20</time><span>Souvik Sinha</span></li>
+              <li><time>13:20–13:30</time><span>Discussion</span></li>
+            </ol>
+          </details>
+        </li>
+        <li class="programme-meal"><time>13:30–14:00</time><strong>Lunch</strong></li>
+        <li class="programme-session"><time>14:00–15:30</time><strong>Scientific session</strong>
+          <details class="programme-slots"><summary>Talk and discussion slots</summary>
+            <ol class="programme-slot-list">
+              <li><time>14:00–14:45</time><span>Peter Comba</span></li>
+              <li><time>14:45–15:10</time><span>Upakarasamy Lourderaj</span></li>
+              <li><time>15:10–15:25</time><span>Pritam Chakraborty</span></li>
+              <li><time>15:25–15:30</time><span>Discussion</span></li>
+            </ol>
+          </details>
+        </li>
+        <li class="programme-special"><time>15:30–17:00</time><strong>Poster Session II</strong></li>
+        <li class="programme-special"><time>17:00–17:45</time><strong>Special Scientific Lecture</strong><span class="programme-speaker">E. D. Jemmis</span></li>
+        <li class="programme-break"><time>17:45–18:30</time><strong>Tea break and preparation for felicitation</strong></li>
         <li class="programme-special"><time>18:30–20:00</time><strong>Felicitation Session</strong></li>
-        <li class="programme-special"><time>20:00–22:00</time><strong>Gala Dinner</strong></li>
+        <li class="programme-break"><time>20:00–20:20</time><strong>Break before gala dinner</strong></li>
+        <li class="programme-special"><time>20:20–22:00</time><strong>Gala Dinner</strong></li>
       </ol>
     </details>
     <details class="programme-day" open>
       <summary class="programme-day-head"><span class="programme-day-title"><span class="programme-day-name">Sunday</span><span class="programme-day-date">6 December</span></span><span>Closing day</span></summary>
       <ol class="programme-items">
-        <li class="programme-session"><time>09:00–10:30</time><strong>Session 9</strong></li>
-        <li class="programme-break"><time>10:30–11:00</time><strong>Tea Break</strong></li>
-        <li class="programme-session"><time>11:00–12:30</time><strong>Session 10</strong></li>
-        <li class="programme-meal"><time>13:00 onwards</time><strong>Lunch and Departure</strong></li>
-        <li class="programme-empty" aria-hidden="true"></li>
-        <li class="programme-empty" aria-hidden="true"></li>
-        <li class="programme-empty" aria-hidden="true"></li>
-        <li class="programme-empty" aria-hidden="true"></li>
-        <li class="programme-empty" aria-hidden="true"></li>
+        <li class="programme-session"><time>09:00–10:35</time><strong>Scientific session</strong>
+          <details class="programme-slots"><summary>Talk slots</summary>
+            <ol class="programme-slot-list">
+              <li><time>09:00–09:45</time><span>T. P. Radhakrishnan</span></li>
+              <li><time>09:45–10:10</time><span>Rositha Kuniyil</span></li>
+              <li><time>10:10–10:35</time><span>Subhas Ghosal</span></li>
+            </ol>
+          </details>
+        </li>
+        <li class="programme-break"><time>10:35–11:00</time><strong>Tea</strong></li>
+        <li class="programme-session"><time>11:00–11:50</time><strong>Scientific session (continued)</strong>
+          <details class="programme-slots"><summary>Talk slots</summary>
+            <ol class="programme-slot-list">
+              <li><time>11:00–11:25</time><span>Deb Ranjan Banerjee</span></li>
+              <li><time>11:25–11:50</time><span>Parthasarathi Ramakrishnan</span></li>
+            </ol>
+          </details>
+        </li>
+        <li class="programme-special"><time>11:50–11:55</time><strong>Poster Awards</strong></li>
+        <li class="programme-special"><time>11:55–12:10</time><strong>Valedictory and closing remarks</strong></li>
+        <li class="programme-break"><time>12:15 onwards</time><strong>Departure</strong></li>
       </ol>
     </details>
   </section>
