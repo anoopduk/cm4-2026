@@ -1,7 +1,7 @@
 # Participant updates
 
-`participants.json` is the single source for the participant preview on the
-homepage and the full participant directory.
+`participants.json` is the single source for the participant directory in the
+Participants section of the one-page site (`index.html`).
 
 To add or update a participant:
 
@@ -18,5 +18,4 @@ To add or update a participant:
 
 Use `"group": "research"` for postdocs and technical contributors and
 `"group": "student"` for students. Leave the field unset for the first
-group. The directory sorts each group alphabetically, and the homepage
-shows available portraits while counting everyone.
+group. The directory sorts each group alphabetically and shows the total count.

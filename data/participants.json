@@ -241,15 +241,6 @@
     "profile": "https://duk.ac.in/personnel/anoop-ayyappan/"
   },
   {
-    "name": "Mahesh Hariharan",
-    "sortKey": "Mahesh Hariharan",
-    "initials": "MH",
-    "affiliation": "IISER Thiruvananthapuram",
-    "image": "mahesh-hariharan.webp",
-    "profile": "https://www.iisertvm.ac.in/pages/deputy-director",
-    "attendance": "Felicitation only"
-  },
-  {
     "name": "Susmita De",
     "sortKey": "Susmita De",
     "initials": "SD",
@@ -258,9 +249,9 @@
     "profile": "https://chemistry.uoc.ac.in/CCMSwebpage/CCMS.html"
   },
   {
-    "name": "Prasad V. Bharatam",
-    "sortKey": "Prasad V. Bharatam",
-    "initials": "BP",
+    "name": "Bharatam V. Prasad",
+    "sortKey": "Bharatam V. Prasad",
+    "initials": "BVP",
     "affiliation": "NIPER Mohali",
     "image": "bharatam-v-prasad.webp",
     "profile": "https://www.niper.gov.in/faculty/prof-p-v-bharatam"
@@ -279,7 +270,7 @@
     "initials": "DU",
     "affiliation": "CSIR-CFTRI",
     "image": "dandamudi-usharani.webp",
-    "profile": "../assets/cv/Usha-CV-2Page.pdf"
+    "profile": "/assets/cv/Usha-CV-2Page.pdf"
   },
   {
     "name": "Jayasree E. G.",
@@ -451,10 +442,10 @@
     "slug": "krishnapriya-a-u"
   },
   {
-    "name": "Palak",
+    "name": "Palak Chugh",
     "group": "student",
-    "sortKey": "Palak",
-    "initials": "P",
+    "sortKey": "Palak Chugh",
+    "initials": "PC",
     "affiliation": "IIT Hyderabad",
     "slug": "palak"
   },
@@ -560,5 +551,20 @@
     "initials": "RM",
     "affiliation": "IISc Bengaluru",
     "slug": "roshan-mahadik"
+  },
+  {
+    "name": "Subhendu Roy",
+    "sortKey": "Subhendu Roy",
+    "initials": "SR",
+    "affiliation": "Saha Institute of Nuclear Physics, Kolkata",
+    "image": "subhendu-roy.webp",
+    "profile": "https://www.saha.ac.in/web/cmbd-personal-page?mid=1063&tab=tab3"
+  },
+  {
+    "name": "Madhavi Sastry",
+    "sortKey": "Madhavi Sastry",
+    "initials": "MS",
+    "affiliation": "Schrödinger, India",
+    "slug": "madhavi-sastry"
   }
 ]

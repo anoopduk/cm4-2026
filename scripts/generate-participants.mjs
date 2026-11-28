@@ -55,8 +55,6 @@ const portrait = (participant, prefix) => participant.image
   : "";
 const initials = (participant) => `<span class="person-mark" aria-hidden="true">${escapeHtml(participant.initials)}</span>`;
 
-const preview = `<h2>Participants</h2><p>${ordered.length} participants</p><a href="/participants/">Browse the participant directory</a>`;
-
 const directoryCard = (participant) => {
   const tag = participant.profile ? "a" : "article";
   const link = participant.profile
@@ -64,14 +62,12 @@ const directoryCard = (participant) => {
     : "";
   const arrow = participant.profile ? '<span class="profile-arrow" aria-hidden="true">↗</span>' : "";
   const attendance = participant.attendance ? `<p>${escapeHtml(participant.attendance)}</p>` : "";
-  return `    <${tag} class="participant-directory-card" id="${escapeHtml(slug(participant))}"${link}><span class="participant-directory-portrait">${initials(participant)}${portrait(participant, "../assets/people/")}</span><div class="participant-directory-copy"><h2>${escapeHtml(participant.name)}</h2><p>${escapeHtml(participant.affiliation)}</p>${attendance}</div>${arrow}</${tag}>`;
+  return `    <${tag} class="participant-directory-card" id="${escapeHtml(slug(participant))}"${link}><span class="participant-directory-portrait">${initials(participant)}${portrait(participant, "assets/people/")}</span><div class="participant-directory-copy"><h3>${escapeHtml(participant.name)}</h3><p>${escapeHtml(participant.affiliation)}</p>${attendance}</div>${arrow}</${tag}>`;
 };
 
 const studentRow = (participant) => `    <li id="${escapeHtml(slug(participant))}"><strong>${escapeHtml(participant.name)}</strong><span>${escapeHtml(participant.affiliation)}</span></li>`;
 
-const directory = `<div class="directory-heading">
-    <div><p class="eyebrow">CM4 2026</p><h1>Participants</h1></div>
-  </div>
+const directory = `<p class="section-note">${ordered.length} participants</p>
   <div class="directory-search" hidden><label for="people-search">Search participants</label><input id="people-search" type="search" placeholder="Name or affiliation"><p id="people-results" role="status"></p></div>
   <div class="participant-directory-grid">
 ${faculty.map(directoryCard).join("\n")}
@@ -86,12 +82,6 @@ ${students.map(studentRow).join("\n")}
 const blocks = [
   {
     path: "index.html",
-    start: "<!-- GENERATED: PARTICIPANT_PREVIEW_START -->",
-    end: "<!-- GENERATED: PARTICIPANT_PREVIEW_END -->",
-    content: preview
-  },
-  {
-    path: "participants/index.html",
     start: "<!-- GENERATED: PARTICIPANT_DIRECTORY_START -->",
     end: "<!-- GENERATED: PARTICIPANT_DIRECTORY_END -->",
     content: directory
