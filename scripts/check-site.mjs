@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const htmlFiles = [
-  "index.html",
+  "index.html", "about/index.html", "programme/index.html", "programme.html", "venue/index.html",
   "participants/index.html",
   "committees/index.html",
   "payment/index.html",
@@ -38,7 +38,7 @@ for (const file of htmlFiles) {
 const resolveLocalTarget = (file, rawUrl) => {
   const [pathPart, fragment = ""] = rawUrl.split("#", 2);
   const cleanPath = pathPart.split("?")[0];
-  let target = normalize(join(dirname(file), cleanPath || ""));
+  let target = cleanPath.startsWith("/") ? normalize(cleanPath.slice(1) || ".") : normalize(join(dirname(file), cleanPath || ""));
   if (!cleanPath || cleanPath.endsWith("/")) target = join(target, "index.html");
   if (!extname(target) && !existsSync(join(root, target))) target = join(target, "index.html");
   return { target, fragment };
