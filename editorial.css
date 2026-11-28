@@ -43,7 +43,9 @@ h1,h2,h3,h4,h5{font-family:var(--serif);line-height:1.1;margin:0 0 .4em} h2{font
 
 /* Logo */
 .brand{display:block;line-height:0;flex:none}
-.brand img{width:6.2rem;height:3.6rem;object-fit:cover}
+.brand img{width:4.5rem;height:4.5rem;object-fit:contain}
+.page-section .participant-group>h3{border-bottom:2px solid var(--ink);padding-bottom:.45rem;margin:0}
+.page-section .participant-directory-copy h4{margin:0 0 .25rem;font-size:clamp(1rem,2.3vw,1.4rem)}
 
 /* Front-page highlights */
 .section-links{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1.5rem;margin:1.4rem 0 0}

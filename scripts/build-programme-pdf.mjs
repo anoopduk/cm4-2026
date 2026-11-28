@@ -16,7 +16,7 @@ const asset = (path) => `data:image/png;base64,${readFileSync(join(root, path)).
 const esc = (value) => String(value ?? "")
   .replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 
-const browser = await chromium.launch();
+const browser = await chromium.launch(process.env.CM4_CHROMIUM ? { executablePath: process.env.CM4_CHROMIUM } : {});
 const page = await browser.newPage();
 await page.goto(pathToFileURL(join(root, "programme/index.html")).href);
 
