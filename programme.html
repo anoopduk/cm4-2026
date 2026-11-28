@@ -1,10 +1,56 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="description" content="CM4 2026 detailed programme, 3–6 December 2026, Poovar, Kerala."><title>Programme | CM4 2026</title><link rel="icon" href="logo.webp"><link rel="stylesheet" href="styles.css?v=20261125">
 <style>
-*{box-sizing:border-box}body{margin:0}.site-header{position:sticky;top:0;z-index:5}.site-header nav a[href]{text-decoration:none}.programme-page{max-width:1180px;margin:auto;padding:clamp(1rem,4vw,3rem) clamp(1rem,3vw,2rem) 4rem}.page-heading{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1rem;margin:1rem 0 2rem}.page-heading h1{font-size:clamp(2rem,5vw,3.5rem);margin:.2rem 0}.page-heading p{max-width:60ch}.download{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;background:#11375b;color:#fff;padding:.9rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;min-height:48px}.download:hover,.download:focus-visible{background:#0b2743;outline:3px solid #e6b94f;outline-offset:2px}.days{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}.day{border:1px solid #cbd5df;border-radius:16px;overflow:hidden;background:var(--surface,#fff);box-shadow:0 4px 16px #172b3a12}.day h2{margin:0;padding:1rem 1.2rem;background:#153b60;color:white;font-size:1.25rem}.day h2 small{display:block;font-size:.9rem;font-weight:500;opacity:.85;margin-top:.2rem}.items{list-style:none;margin:0;padding:.4rem 1.1rem 1rem}.items li{display:grid;grid-template-columns:minmax(6.8rem,8.5rem) 1fr;gap:.8rem;padding:.72rem .15rem;border-bottom:1px solid #e1e7ec;line-height:1.4}.items li:last-child{border-bottom:0}.items time{font-variant-numeric:tabular-nums;font-weight:700;color:#194d77}.items strong{display:block}.items span{display:block;color:#5b6873;font-size:.94rem;margin-top:.12rem}.kind-break{background:#f7f5ed}.kind-special{background:#f2f6fa}.chair{font-size:.87rem;color:#566675;margin:.6rem 0 0}.note{margin:2rem 0 0;color:#596571;font-size:.93rem}
-@media(max-width:760px){.days{grid-template-columns:1fr}.page-heading{align-items:stretch}.download{width:100%}.items li{grid-template-columns:6.2rem 1fr;gap:.5rem;padding:.65rem .1rem}.site-header{position:relative}.site-header nav{gap:.5rem}}
-@media(max-width:380px){.items li{grid-template-columns:5.4rem 1fr;font-size:.94rem}.day h2{font-size:1.1rem}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+* { box-sizing: border-box }
+body { margin: 0 }
+.programme-page { max-width: 62rem; margin: auto; padding: clamp(1rem,4vw,3rem) clamp(1rem,3vw,2rem) 4rem; overflow-wrap: anywhere }
+.page-heading { display:flex; flex-wrap:wrap; gap:1rem 2rem; justify-content:space-between; align-items:end; margin:1rem 0 1.75rem }
+.page-heading h1 { font-size:clamp(1.75rem,5.5vw,3.25rem); margin:.25rem 0 }
+.page-heading p { max-width:64ch; margin:.5rem 0 0 }
+.download { display:inline-flex; align-items:center; padding:.7rem 1.1rem; min-height:44px; border-radius:.55rem; background:#153b60; color:#fff; font-weight:700; text-decoration:none }
+.download:hover { background:#0d2945 }
+.programme-page :focus-visible { outline:3px solid #b27808; outline-offset:3px }
+.days { display:grid; gap:.8rem }
+.day { border:1px solid var(--cm-border); border-radius:.75rem; background:var(--cm-panel) }
+.programme-page { --cm-border:#d4dce5; --cm-panel:#fff; --cm-muted:#495662; --cm-time:#194d77; --cm-soft:#f1f5fa; --cm-break:#f8f4e8; color:#162d43 }
+[data-theme="dark"] .programme-page { --cm-border:#34495c; --cm-panel:#192837; --cm-muted:#c4d1dc; --cm-time:#a9d1f2; --cm-soft:#203447; --cm-break:#313127; color:#edf4fb }
+.day > summary { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 1.2rem; min-height:56px; cursor:pointer; list-style:none; border-radius:.75rem; background:var(--cm-soft) }
+.day > summary::-webkit-details-marker { display:none }
+.day > summary::after { content:""; width:.55rem; height:.55rem; border:solid currentColor; border-width:0 2px 2px 0; transform:rotate(45deg); margin:.15rem .15rem .4rem 0; flex:none }
+.day[open] > summary::after { transform:rotate(225deg); margin:.4rem .15rem .15rem 0 }
+.day[open] > summary { border-radius:.75rem .75rem 0 0; border-bottom:1px solid var(--cm-border) }
+.day-name { display:block; font-size:clamp(1.13rem,3.2vw,1.38rem); font-weight:750 }
+.day-note, .detail, .affiliation, .programme-note { color:var(--cm-muted) }
+.day-note { display:block; margin-top:.1rem; font-size:.92rem }
+.day-body { padding:.25rem 1.2rem .8rem }
+.schedule, .talks, .poster-list { list-style:none; padding:0; margin:0 }
+.entry, .talk, .poster-list li { display:grid; grid-template-columns:8rem minmax(0,1fr); gap:.7rem; padding:.65rem .2rem; border-bottom:1px solid var(--cm-border) }
+.schedule > li:last-child, .talks > li:last-child, .poster-list > li:last-child { border-bottom:0 }
+.session { padding:.55rem 0; border-bottom:1px solid var(--cm-border) }
+.session-heading { background:var(--cm-soft); border-radius:.5rem; padding:.6rem .65rem; border-bottom:0 }
+.session-heading h3 { font-size:1rem; margin:0 }
+.talks { padding-inline:.45rem }
+.entry-break { background:var(--cm-break); border-radius:.35rem; padding-inline:.45rem }
+.programme-page time, .poster-number { font-size:.92rem; font-variant-numeric:tabular-nums; color:var(--cm-time); font-weight:700 }
+.talk-title, .detail { display:block; margin-top:.12rem }
+.talk-title { line-height:1.4 }
+.affiliation, .detail { font-size:.92rem }
+.poster-fold { margin-top:.35rem }
+.poster-fold > summary { cursor:pointer; padding:.45rem .1rem; min-height:44px; color:var(--cm-time); font-weight:650 }
+.poster-list li { grid-template-columns:2.5rem minmax(0,1fr); padding-block:.55rem }
+.programme-note { margin:1.25rem 0 0; font-size:.93rem }
+@media(max-width:540px) {
+  .day > summary { padding:.8rem .85rem }
+  .day-body { padding-inline:.65rem }
+  .entry, .talk { grid-template-columns:6.1rem minmax(0,1fr); gap:.42rem }
+  .talks { padding-inline:.14rem }
+  .programme-page time { font-size:.83rem }
+}
+@media(max-width:340px) {
+  .entry, .talk { grid-template-columns:minmax(0,1fr); gap:.16rem }
+}
+
 </style></head><body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -13,43 +59,97 @@
 <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch colour theme"><span class="theme-toggle-icon theme-toggle-sun" aria-hidden="true">☀</span><span class="theme-toggle-icon theme-toggle-moon" aria-hidden="true">☾</span><span class="theme-toggle-label">Theme</span></button>
 </header>
 <main id="main" class="programme-page">
-<div class="page-heading"><div><p class="section-overline">3–6 December 2026 · Club Mahindra Poovar</p><h1>Conference Programme</h1><p>Detailed schedule for CM4 2026. All times are Indian Standard Time (IST).</p></div><a class="download" href="CM4_2026_Programme_Print.pdf" download>↓ <span>Download programme (PDF)</span></a></div>
-<div class="days">
-<section class="day"><h2>Thursday <small>3 December · Opening</small></h2><ul class="items">
-<li><time>13:00–14:00</time><div><strong>Registration</strong></div></li>
-<li><time>14:15–14:45</time><div><strong>Inaugural Session</strong></div></li>
-<li><time>14:45–16:15</time><div><strong>Opening Session · Chair: Prof. P. V. Bharatam</strong><span>Sason Shaik · Henry F. Schaefer III</span></div></li>
-<li class="kind-break"><time>16:15–16:45</time><div><strong>Tea</strong></div></li>
-<li><time>16:45–17:40</time><div><strong>Scientific Session · Chair: Soujanya Yarasi</strong><span>N. Arul Murugan · Arjun Ray · Anjalin Joy</span></div></li>
-<li class="kind-special"><time>17:40–18:40</time><div><strong>Poster Session I · Chair: Sherin D. R.</strong></div></li>
-<li class="kind-break"><time>19:00–21:00</time><div><strong>Dinner</strong></div></li></ul></section>
-<section class="day"><h2>Friday <small>4 December · Science and excursion</small></h2><ul class="items">
-<li><time>09:00–10:30</time><div><strong>Session · Chair: Priyakumari C. P.</strong><span>V. Subramanian · Ashim Nandi · Saikat Roy</span></div></li>
-<li class="kind-break"><time>10:30–11:00</time><div><strong>Tea</strong></div></li>
-<li><time>11:00–13:05</time><div><strong>Session · Chair: Biswarup Pathak</strong><span>Satoshi Maeda · Akhil S. Nair · Étienne Derat · Sandeep Kumar</span></div></li>
-<li class="kind-break"><time>13:05–14:00</time><div><strong>Lunch</strong></div></li>
-<li><time>14:00–15:50</time><div><strong>Session · Chair: P. Parameswaran</strong><span>Odile Eisenstein · R. S. Swathi · Sagar Ghorai · Amitabha Das</span></div></li>
-<li class="kind-break"><time>15:50–16:15</time><div><strong>Tea</strong></div></li>
-<li class="kind-special"><time>16:15–18:45</time><div><strong>Poovar Backwaters and Estuary Excursion</strong></div></li>
-<li class="kind-break"><time>19:15–21:00</time><div><strong>Dinner</strong></div></li></ul></section>
-<section class="day"><h2>Saturday <small>5 December · Science and celebration</small></h2><ul class="items">
-<li><time>09:00–11:00</time><div><strong>Session · Chair: E. G. Jayasree</strong><span>Krishnan Raghavachari · Arup Mahata · Subhendu Roy · Surya K.</span></div></li>
-<li class="kind-break"><time>11:00–11:30</time><div><strong>Tea</strong></div></li>
-<li><time>11:30–13:30</time><div><strong>Session · Chair: Dr. Madhavi Sastry</strong><span>Martin Zacharias · Abhishek Sirohiwal · Padmesh Anjukandi · Souvik Sinha</span></div></li>
-<li class="kind-break"><time>13:30–14:00</time><div><strong>Lunch</strong></div></li>
-<li><time>14:00–15:30</time><div><strong>Session · Chair: P. D. Pancharatna</strong><span>Peter Comba · Upakarasamy Lourderaj · Pritam Chakraborty</span></div></li>
-<li class="kind-special"><time>15:30–17:00</time><div><strong>Poster Session II · Chair: Susmita De</strong></div></li>
-<li class="kind-special"><time>17:00–17:45</time><div><strong>Special Scientific Lecture</strong><span>E. D. Jemmis · Chair: U. Deva Priyakumar</span></div></li>
-<li class="kind-break"><time>17:45–18:30</time><div><strong>Tea and preparation for felicitation</strong></div></li>
-<li class="kind-special"><time>18:30–20:00</time><div><strong>Felicitation · Chairs: Prof. G. N. Sastry and Dr. Dandamudi Usharani</strong></div></li>
-<li class="kind-break"><time>20:00–20:20</time><div><strong>Break before gala dinner</strong></div></li>
-<li class="kind-special"><time>20:20–22:00</time><div><strong>Gala Dinner</strong></div></li></ul></section>
-<section class="day"><h2>Sunday <small>6 December · Closing</small></h2><ul class="items">
-<li><time>09:00–10:35</time><div><strong>Scientific Session · Chair: Prof. C. V. Sastri</strong><span>T. P. Radhakrishnan · Rositha Kuniyil · Subhas Ghosal</span></div></li>
-<li class="kind-break"><time>10:35–11:00</time><div><strong>Tea</strong></div></li>
-<li><time>11:00–11:50</time><div><strong>Scientific Session (continued) · Chair: Prof. C. V. Sastri</strong><span>Deb Ranjan Banerjee · Parthasarathi Ramakrishnan</span></div></li>
-<li class="kind-special"><time>11:50–11:55</time><div><strong>Poster Awards · Susmita De and Sherin D. R.</strong></div></li>
-<li><time>11:55–12:10</time><div><strong>Valedictory and closing remarks</strong></div></li>
-<li class="kind-break"><time>12:15 onwards</time><div><strong>Departure</strong></div></li></ul></section>
-</div><p class="note">Programme details and talk titles may be updated. Please use the PDF download for the print-ready programme.</p></main>
+<div class="page-heading"><div><p class="section-overline">3–6 December 2026 · Club Mahindra Poovar</p><h1>Conference Programme</h1><p>Open a day to see talk times, titles, session chairs and posters. All times are Indian Standard Time (IST).</p></div><a class="download" href="CM4_2026_Programme_Print.pdf" download>↓ <span>Download programme (PDF)</span></a></div>
+<div class="days" aria-label="Programme by day">
+<details class="day" id="thursday"><summary><span><span class="day-name">Thursday, 3 December</span><span class="day-note">Opening sessions and Poster Session I</span></span></summary>
+<div class="day-body"><ol class="schedule">
+<li class="entry"><time>13:00–14:00</time><div><strong>Registration</strong></div></li>
+<li class="entry"><time>14:15–14:45</time><div><strong>Inaugural Session</strong></div></li>
+<li class="session"><div class="entry session-heading"><time>14:45–16:15</time><div><h3>Opening lectures</h3><span class="detail">Chair: Prof. P. V. Bharatam, NIPER Mohali</span></div></div><ol class="talks">
+<li class="talk"><time>14:45–15:30</time><div><strong>Sason Shaik</strong> <span class="affiliation">· Hebrew University of Jerusalem</span><span class="talk-title">Oriented Electric Fields - Universal Catalysts (online)</span></div></li>
+<li class="talk"><time>15:30–16:15</time><div><strong>Henry F. Schaefer III</strong> <span class="affiliation">· University of Georgia</span><span class="talk-title">Professor E. D. Jemmis: A Career of Great Scientific Distinction</span></div></li>
+</ol></li>
+<li class="entry entry-break"><time>16:15–16:45</time><div><strong>Tea</strong></div></li>
+<li class="session"><div class="entry session-heading"><time>16:45–17:40</time><div><h3>Scientific session</h3><span class="detail">Chair: Soujanya Yarasi, CSIR-IICT</span></div></div><ol class="talks">
+<li class="talk"><time>16:45–17:00</time><div><strong>N. Arul Murugan</strong> <span class="affiliation">· IIIT Delhi</span><span class="talk-title">Physics-Based and Data-Driven Approaches for Drug-like Property Prediction</span></div></li>
+<li class="talk"><time>17:00–17:25</time><div><strong>Arjun Ray</strong> <span class="affiliation">· IIIT Delhi</span><span class="talk-title">Cross-family prediction of receptor agonism and antagonism with PAIR</span></div></li>
+<li class="talk"><time>17:25–17:40</time><div><strong>Anjalin Joy</strong> <span class="affiliation">· IIT Palakkad</span><span class="talk-title">Flavin-Mediated Oxidation of Cholesterol and its Subsequent Isomerization: Insights from Cholesterol Oxidase Inspired Models</span></div></li>
+</ol></li>
+<li class="entry"><time>17:40–18:40</time><div><strong>Poster Session I</strong><span class="detail">Chair: Sherin D. R., Digital University Kerala</span><details class="poster-fold"><summary>Poster list (8)</summary><ul class="poster-list"><li><span class="poster-number">P01</span><div><strong>Navigating the Gold–Thiolate Energy Landscape with Chemically Informed Metal–Ligand Pair Growth</strong><span class="detail">Sayan Paul — IIT Kharagpur</span></div></li><li><span class="poster-number">P02</span><div><strong>Decoding Voltage in Organic Dual-Ion Batteries: A Combined DFT-Machine Learning Roadmap for Anode and Cathode Design</strong><span class="detail">Poulami Paul — IIT Indore</span></div></li><li><span class="poster-number">P03</span><div><strong>Stereoselective Identification of DNA Lesions: Quantum Transport Fingerprints Meet Machine Learning</strong><span class="detail">Dipti Maurya — IIT Indore</span></div></li><li><span class="poster-number">P04</span><div><strong>Transition state model for the Manganese Based chemical hydrogen battery</strong><span class="detail">Krishnapriya A. U. — IIT Palakkad</span></div></li><li><span class="poster-number">P05</span><div><strong>Amido N-Heterocyclic Carbenes: Electronic Properties and Synthesis</strong><span class="detail">Govinddas M. Vaishnav — NIPER Mohali</span></div></li><li><span class="poster-number">P06</span><div><strong>Nitreones: Theory, Synthesis and Drug Discovery</strong><span class="detail">Sanjeev Ranjan — NIPER Mohali</span></div></li><li><span class="poster-number">P07</span><div><strong>Adsorbate-induced structural modulation controls the photocatalytic water splitting in linkage-orientation engineered covalent organic frameworks</strong><span class="detail">Palak Chugh — IIT Hyderabad</span></div></li><li><span class="poster-number">P08</span><div><strong>A Computational Study of β-C–H Bond Activation: Variations across the three rows of Transition metals</strong><span class="detail">Harsha K. Sasidharan — Indian Institute of Science, Bengaluru</span></div></li></ul></details></div></li>
+<li class="entry entry-break"><time>19:00–21:00</time><div><strong>Dinner</strong></div></li>
+</ol></div></details>
+<details class="day" id="friday"><summary><span><span class="day-name">Friday, 4 December</span><span class="day-note">Scientific sessions and Poovar excursion</span></span></summary>
+<div class="day-body"><ol class="schedule">
+<li class="session"><div class="entry session-heading"><time>09:00–10:30</time><div><h3>Scientific session</h3><span class="detail">Chair: Priyakumari C. P., IISER Mohali</span></div></div><ol class="talks">
+<li class="talk"><time>09:00–09:45</time><div><strong>V. Subramanian</strong> <span class="affiliation">· SRM Institute of Science and Technology</span><span class="talk-title">Design and Development of Carbon based Two-Dimensional Materials and their Applications</span></div></li>
+<li class="talk"><time>09:45–10:10</time><div><strong>Ashim Nandi</strong> <span class="affiliation">· IIT Goa</span><span class="talk-title">From Chemical Reactivity to Drug Design: Mechanistic Insights into Covalent Inhibition</span></div></li>
+<li class="talk"><time>10:10–10:25</time><div><strong>Saikat Roy</strong> <span class="affiliation">· University of Warsaw</span><span class="talk-title">Autoionizing Rydberg states in atoms and molecules as a stringent test of quantum-chemical theory</span></div></li>
+<li class="talk"><time>10:25–10:30</time><div><strong>Discussion</strong></div></li>
+</ol></li>
+<li class="entry entry-break"><time>10:30–11:00</time><div><strong>Tea</strong></div></li>
+<li class="session"><div class="entry session-heading"><time>11:00–13:05</time><div><h3>Scientific session</h3><span class="detail">Chair: Biswarup Pathak, IIT Indore</span></div></div><ol class="talks">
+<li class="talk"><time>11:00–11:45</time><div><strong>Satoshi Maeda</strong> <span class="affiliation">· WPI-ICReDD, Hokkaido University</span><span class="talk-title">Ab Initio Chemical Reaction Discovery via a Force-Based Algorithm</span></div></li>
+<li class="talk"><time>11:45–12:10</time><div><strong>Akhil S. Nair</strong> <span class="affiliation">· CSIR–Indian Institute of Chemical Technology, Hyderabad</span><span class="talk-title">Towards High-Fidelity General-Purpose Machine-Learning Force Fields for Materials</span></div></li>
+<li class="talk"><time>12:10–12:35</time><div><strong>Étienne Derat</strong> <span class="affiliation">· Sorbonne Université / CNRS</span><span class="talk-title">Understanding selectivities in radical reaction: the case of Truce–Smiles rearrangement</span></div></li>
+<li class="talk"><time>12:35–12:50</time><div><strong>Sandeep Kumar</strong> <span class="affiliation">· Applied Materials India, Bengaluru</span><span class="talk-title">Surface Engineering for Atomic Layer Deposition</span></div></li>
+</ol></li>
+<li class="entry entry-break"><time>12:50–13:05</time><div><strong>Break Before Lunch</strong></div></li>
+<li class="entry entry-break"><time>13:05–14:00</time><div><strong>Lunch</strong></div></li>
+<li class="session"><div class="entry session-heading"><time>14:00–15:50</time><div><h3>Scientific session</h3><span class="detail">Chair: P. Parameswaran, NIT Calicut</span></div></div><ol class="talks">
+<li class="talk"><time>14:00–14:45</time><div><strong>Odile Eisenstein</strong> <span class="affiliation">· ICGM, Université de Montpellier / CNRS / ENSCM; University of Oslo</span><span class="talk-title">Bridging Computation and Experiment for organomagnesium and organolithium complexes (online)</span></div></li>
+<li class="talk"><time>14:45–15:10</time><div><strong>R. S. Swathi</strong> <span class="affiliation">· IISER Thiruvananthapuram</span><span class="talk-title">Swarm Intelligence Guided Global Minima Search on Complex Potential Energy Surfaces</span></div></li>
+<li class="talk"><time>15:10–15:25</time><div><strong>Sagar Ghorai</strong> <span class="affiliation">· ICReDD, Hokkaido University</span><span class="talk-title">Toward Reaction Vessel Mimicry: Machine Learning Assisted Automated Exploration of Alkene Polymerization and CO Coupling Reactions</span></div></li>
+<li class="talk"><time>15:25–15:50</time><div><strong>Amitabha Das</strong> <span class="affiliation">· NIT Mizoram</span><span class="talk-title">Single Atom Doped Interface Catalyst for the Selective CO₂ Conversion to C₂ Products</span></div></li>
+</ol></li>
+<li class="entry entry-break"><time>15:50–16:15</time><div><strong>Tea</strong></div></li>
+<li class="entry"><time>16:15–18:45</time><div><strong>Poovar Backwaters and Estuary Excursion</strong></div></li>
+<li class="entry entry-break"><time>19:15–21:00</time><div><strong>Dinner</strong></div></li>
+</ol></div></details>
+<details class="day" id="saturday"><summary><span><span class="day-name">Saturday, 5 December</span><span class="day-note">Scientific sessions, Poster Session II and felicitation</span></span></summary>
+<div class="day-body"><ol class="schedule">
+<li class="session"><div class="entry session-heading"><time>09:00–11:00</time><div><h3>Scientific session</h3><span class="detail">Chair: E. G. Jayasree, CUSAT, Kochi</span></div></div><ol class="talks">
+<li class="talk"><time>09:00–09:45</time><div><strong>Krishnan Raghavachari</strong> <span class="affiliation">· Indiana University Bloomington</span><span class="talk-title">Approaching Coupled Cluster Accuracy at Density Functional Theory Cost Using Connectivity-Based Hierarchy and Machine Learning</span></div></li>
+<li class="talk"><time>09:45–10:10</time><div><strong>Arup Mahata</strong> <span class="affiliation">· IIT Hyderabad</span><span class="talk-title">TBA</span></div></li>
+<li class="talk"><time>10:10–10:35</time><div><strong>Subhendu Roy</strong> <span class="affiliation">· Saha Institute of Nuclear Physics, Kolkata</span><span class="talk-title">TBA</span></div></li>
+<li class="talk"><time>10:35–10:50</time><div><strong>Dr. Surya K.</strong> <span class="affiliation">· IIT Palakkad</span><span class="talk-title">Catalyst–Substrate–Lewis Acid Templates Govern Regioselective Alkenylation and Alkylation of Pyridines</span></div></li>
+</ol></li>
+<li class="entry entry-break"><time>11:00–11:30</time><div><strong>Tea Break</strong></div></li>
+<li class="session"><div class="entry session-heading"><time>11:30–13:30</time><div><h3>Scientific session</h3><span class="detail">Chair: Dr. Madhavi Sastry, Schrödinger, India</span></div></div><ol class="talks">
+<li class="talk"><time>11:30–12:15</time><div><strong>Martin Zacharias</strong> <span class="affiliation">· Technical University of Munich</span><span class="talk-title">Biomolecular interaction modulation studied by ligand design and molecular simulations</span></div></li>
+<li class="talk"><time>12:15–12:40</time><div><strong>Abhishek Sirohiwal</strong> <span class="affiliation">· Indian Institute of Science, Bengaluru</span><span class="talk-title">TBA</span></div></li>
+<li class="talk"><time>12:40–13:05</time><div><strong>Padmesh Anjukandi</strong> <span class="affiliation">· IIT Palakkad</span><span class="talk-title">Unfavorable Chemistry and Towards its Stabilization and Utility</span></div></li>
+<li class="talk"><time>13:05–13:20</time><div><strong>Souvik Sinha</strong> <span class="affiliation">· Prescience Insilico</span><span class="talk-title">From Computational Tools to Agentic AI: A Co-Scientist for Every Scientist</span></div></li>
+<li class="talk"><time>13:20–13:30</time><div><strong>Discussion</strong></div></li>
+</ol></li>
+<li class="entry entry-break"><time>13:30–14:00</time><div><strong>Lunch</strong></div></li>
+<li class="session"><div class="entry session-heading"><time>14:00–15:30</time><div><h3>Scientific session</h3><span class="detail">Chair: P. D. Pancharatna, Amrita Vishwa Vidyapeetham</span></div></div><ol class="talks">
+<li class="talk"><time>14:00–14:45</time><div><strong>Peter Comba</strong> <span class="affiliation">· Heidelberg University</span><span class="talk-title">Modeling Spin for Applications of Metal Complexes</span></div></li>
+<li class="talk"><time>14:45–15:10</time><div><strong>Upakarasamy Lourderaj</strong> <span class="affiliation">· NISER Bhubaneswar</span><span class="talk-title">Mechanisms and Dynamics of Bimolecular Nucleophilic Substitution Reactions at Nitrogen Centers</span></div></li>
+<li class="talk"><time>15:10–15:25</time><div><strong>Pritam Chakraborty</strong> <span class="affiliation">· IIT Palakkad</span><span class="talk-title">Rational Design of an Anti-aromatic COFs Towards the Efficient Sequestration of Environmental and Biological Harmful Oxocarbons – A Comprehensive Theoretical Study</span></div></li>
+<li class="talk"><time>15:25–15:30</time><div><strong>Discussion</strong></div></li>
+</ol></li>
+<li class="entry"><time>15:30–17:00</time><div><strong>Poster Session II</strong><span class="detail">Chair: Susmita De, University of Calicut</span><details class="poster-fold"><summary>Poster list (10)</summary><ul class="poster-list"><li><span class="poster-number">P10</span><div><strong>Incorporating Stagnation Escape Strategies into the Bonobo Optimizer for Atomic Cluster Global Optimization</strong><span class="detail">Bhrigu Chakraborty — IIT Kharagpur</span></div></li><li><span class="poster-number">P11</span><div><strong>Bonding Insights into Metavalent Materials for Next-generation Memory</strong><span class="detail">Mithu Kumari — IISER Mohali</span></div></li><li><span class="poster-number">P12</span><div><strong>Revealing the Singlet Oxygen Reactivity in Photoredox Cyclopropanation of Unactivated Alkenes with Active Methylene Compounds</strong><span class="detail">Prasad Balineni — IIT Palakkad</span></div></li><li><span class="poster-number">P13</span><div><strong>Deciphering the mechanism of chain propagation in polymerization via alkene difunctionalisation</strong><span class="detail">R. S. Malavika — IIT Palakkad</span></div></li><li><span class="poster-number">P14</span><div><strong>Manganese-Based Catalysts for Efficient CO₂ Hydrogenation and Thereby Catalyst Design</strong><span class="detail">Nikhil Mondal — IIT Palakkad</span></div></li><li><span class="poster-number">P15</span><div><strong>Overcoming the Intrinsic Ambidenticity of Enamines in SOMO Catalysis</strong><span class="detail">Vishnu Suresh M. S. — IIT Palakkad</span></div></li><li><span class="poster-number">P16</span><div><strong>Electronic Structure, Bonding and Reactivity of Stable Two-Coordinate Acyclic Silylene</strong><span class="detail">Keerthana Vazhayil — NIT Calicut</span></div></li><li><span class="poster-number">P17</span><div><strong>Dimensionality- and Halide-Driven Electronic Reorganization of Mn²⁺ Excited States in Halide Perovskites</strong><span class="detail">Athira P. — IIT Hyderabad</span></div></li><li><span class="poster-number">P18</span><div><strong>Continuum of Secondary-Primary Interactions in Antimony Complexes and Differences in the Structures in Solution and Solid State</strong><span class="detail">Annabel Benny — Indian Institute of Science, Bengaluru; IISER Thiruvananthapuram</span></div></li><li><span class="poster-number">P19</span><div><strong>Beryllium learns Kubas Chemistry: An aromatic route to dihydrogen activation</strong><span class="detail">Roshan Mahadik — Indian Institute of Science, Bengaluru</span></div></li></ul></details></div></li>
+<li class="entry"><time>17:00–17:45</time><div><strong>Special Scientific Lecture — E. D. Jemmis, Indian Institute of Science, Bengaluru</strong><span class="talk-title">Recent Developments in three membered rings</span><span class="detail">Chair: U. Deva Priyakumar, IIIT Hyderabad</span></div></li>
+<li class="entry entry-break"><time>17:45–18:30</time><div><strong>Tea Break And Preparation For Felicitation</strong></div></li>
+<li class="entry"><time>18:30–20:00</time><div><strong>Felicitation Session | Chair: Prof. G. N. Sastry (IIT Hyderabad) &amp; Dr. Dandamudi Usharani (CSIR-CFTRI)</strong></div></li>
+<li class="entry entry-break"><time>20:00–20:20</time><div><strong>Break Before Gala Dinner</strong></div></li>
+<li class="entry entry-break"><time>20:20–22:00</time><div><strong>Gala Dinner</strong></div></li>
+</ol></div></details>
+<details class="day" id="sunday"><summary><span><span class="day-name">Sunday, 6 December</span><span class="day-note">Scientific sessions, poster awards and closing</span></span></summary>
+<div class="day-body"><ol class="schedule">
+<li class="session"><div class="entry session-heading"><time>09:00–10:35</time><div><h3>Scientific session</h3><span class="detail">Chair: Prof. C. V. Sastri</span></div></div><ol class="talks">
+<li class="talk"><time>09:00–09:45</time><div><strong>T. P. Radhakrishnan</strong> <span class="affiliation">· University of Hyderabad</span><span class="talk-title">Heuristic Models for the Environment Sensitive Fluorescence Enhancement and Tuning in DADQ Molecules/Materials</span></div></li>
+<li class="talk"><time>09:45–10:10</time><div><strong>Rositha Kuniyil</strong> <span class="affiliation">· IIT Palakkad</span><span class="talk-title">On the Role of Microenvironmental Effects in Catalytic Mechanisms</span></div></li>
+<li class="talk"><time>10:10–10:35</time><div><strong>Subhas Ghosal</strong> <span class="affiliation">· NIT Durgapur</span><span class="talk-title">From Electronic Structure to Surface Protection: ML Modelling of Benzothiazole Corrosion Inhibitors</span></div></li>
+</ol></li>
+<li class="entry entry-break"><time>10:35–11:00</time><div><strong>Tea</strong></div></li>
+<li class="session"><div class="entry session-heading"><time>11:00–11:50</time><div><h3>Scientific session (continued)</h3><span class="detail">Chair: Prof. C. V. Sastri</span></div></div><ol class="talks">
+<li class="talk"><time>11:00–11:25</time><div><strong>Deb Ranjan Banerjee</strong> <span class="affiliation">· NIT Durgapur</span><span class="talk-title">3D-QSAR and Pharmacophore mapping: Two ML extensions to Anti-Alzheimer’s Lead Discovery</span></div></li>
+<li class="talk"><time>11:25–11:50</time><div><strong>Parthasarathi Ramakrishnan</strong> <span class="affiliation">· CSIR-HRDG, New Delhi</span><span class="talk-title">TBA</span></div></li>
+</ol></li>
+<li class="entry"><time>11:50–11:55</time><div><strong>Poster Awards | Susmita De and Sherin D. R.</strong></div></li>
+<li class="entry"><time>11:55–12:10</time><div><strong>Valedictory and closing remarks</strong></div></li>
+<li class="entry entry-break"><time>12:15 onwards</time><div><strong>Departure</strong></div></li>
+</ol></div></details>
+</div><p class="programme-note">Use the PDF download for the print-ready programme.</p></main>
 <script src="theme.js?v=20261125"></script></body></html>
