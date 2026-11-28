@@ -58,7 +58,6 @@ const initials = (participant) => `<span class="person-mark" aria-hidden="true">
 
 const preview = `<div class="section-heading participant-preview-heading">
     <div><h2>Participants</h2><p class="participant-count"><strong>${ordered.length}</strong> participants</p></div>
-    <p>Official or institutional profile links are provided where verified.</p>
   </div>
   <div class="participant-preview-row">
     <div class="participant-preview-label"><p>Participant portraits</p></div>

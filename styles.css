@@ -576,9 +576,18 @@ h2 {
   margin-top: 1.25rem;
 }
 
-.themes {
+.about-themes {
   grid-area: themes;
   margin: clamp(1.5rem, 3vw, 2.4rem) 0 0;
+}
+
+.about-themes h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.themes {
+  margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -586,12 +595,13 @@ h2 {
 }
 
 .themes li {
-  min-height: 78px;
+  min-height: 96px;
   padding: 0.7rem 0.78rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 0.7rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   background: color-mix(in srgb, var(--surface) 72%, transparent);
@@ -601,9 +611,12 @@ h2 {
   list-style: none;
 }
 
-.themes b {
-  color: var(--teal);
-  font-size: 0.65rem;
+.themes li img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex: none;
 }
 
 /* Abstract submission */
@@ -2230,7 +2243,7 @@ footer {
       "themes";
   }
 
-  .themes {
+  .about-themes {
     margin-top: 0.4rem;
   }
 
