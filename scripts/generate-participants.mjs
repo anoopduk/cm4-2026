@@ -62,7 +62,7 @@ const directoryCard = (participant) => {
     : "";
   const arrow = participant.profile ? '<span class="profile-arrow" aria-hidden="true">↗</span>' : "";
   const attendance = participant.attendance ? `<p>${escapeHtml(participant.attendance)}</p>` : "";
-  return `    <${tag} class="participant-directory-card" id="${escapeHtml(slug(participant))}"${link}><span class="participant-directory-portrait">${initials(participant)}${portrait(participant, "/assets/people/")}</span><div class="participant-directory-copy"><h2>${escapeHtml(participant.name)}</h2><p>${escapeHtml(participant.affiliation)}</p>${attendance}</div>${arrow}</${tag}>`;
+  return `    <${tag} class="participant-directory-card" id="${escapeHtml(slug(participant))}"${link}><span class="participant-directory-portrait">${initials(participant)}${portrait(participant, "/assets/people/")}</span><div class="participant-directory-copy"><h3>${escapeHtml(participant.name)}</h3><p>${escapeHtml(participant.affiliation)}</p>${attendance}</div>${arrow}</${tag}>`;
 };
 
 const preview = `<p class="section-note">${ordered.length} participants from India and abroad</p>
@@ -74,15 +74,18 @@ const studentRow = (participant) => `    <li id="${escapeHtml(slug(participant))
 
 const directory = `<p class="section-note">${ordered.length} participants</p>
   <div class="directory-search" hidden><label for="people-search">Search participants</label><input id="people-search" type="search" placeholder="Name or affiliation"><p id="people-results" role="status"></p></div>
+  <section class="participant-group" aria-labelledby="group-faculty"><h2 id="group-faculty">Faculty and senior scientists <span>${faculty.length}</span></h2>
   <div class="participant-directory-grid">
 ${faculty.map(directoryCard).join("\n")}
-  </div>
-  <div class="participant-directory-grid participant-directory-group">
+  </div></section>
+  <section class="participant-group participant-group-research" aria-labelledby="group-research"><h2 id="group-research">Postdocs and researchers <span>${researchers.length}</span></h2>
+  <div class="participant-directory-grid">
 ${researchers.map(directoryCard).join("\n")}
-  </div>
-  <ul class="participant-student-list participant-directory-group">
+  </div></section>
+  <section class="participant-group participant-group-students" aria-labelledby="group-students"><h2 id="group-students">Students <span>${students.length}</span></h2>
+  <ul class="participant-student-list">
 ${students.map(studentRow).join("\n")}
-  </ul>`;
+  </ul></section>`;
 
 const blocks = [
   {

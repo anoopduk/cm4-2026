@@ -20,6 +20,7 @@ if (search) {
     const terms = key(search.value).trim().split(/\s+/).filter(Boolean);
     let count = 0;
     rows.forEach((row, i) => { row.hidden = !terms.every(term => words[i].includes(term)); if (!row.hidden) count++; });
+    document.querySelectorAll('.participant-group').forEach(group => { group.hidden = !group.querySelector('.participant-directory-card:not([hidden]), .participant-student-list > li:not([hidden])'); });
     document.querySelector('#people-results').textContent = terms.length ? `${count} ${count === 1 ? 'match' : 'matches'}` : '';
   };
   search.addEventListener('input', filter);
