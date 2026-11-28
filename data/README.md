@@ -1,7 +1,7 @@
 # Participant updates
 
-`participants.json` is the single source for the participant directory in the
-Participants section of the one-page site (`index.html`).
+`participants.json` is the single source for the participant directory
+(`participants/index.html`) and the photo preview on the front page.
 
 To add or update a participant:
 

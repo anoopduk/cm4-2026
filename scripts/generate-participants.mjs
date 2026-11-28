@@ -62,8 +62,13 @@ const directoryCard = (participant) => {
     : "";
   const arrow = participant.profile ? '<span class="profile-arrow" aria-hidden="true">↗</span>' : "";
   const attendance = participant.attendance ? `<p>${escapeHtml(participant.attendance)}</p>` : "";
-  return `    <${tag} class="participant-directory-card" id="${escapeHtml(slug(participant))}"${link}><span class="participant-directory-portrait">${initials(participant)}${portrait(participant, "assets/people/")}</span><div class="participant-directory-copy"><h3>${escapeHtml(participant.name)}</h3><p>${escapeHtml(participant.affiliation)}</p>${attendance}</div>${arrow}</${tag}>`;
+  return `    <${tag} class="participant-directory-card" id="${escapeHtml(slug(participant))}"${link}><span class="participant-directory-portrait">${initials(participant)}${portrait(participant, "/assets/people/")}</span><div class="participant-directory-copy"><h2>${escapeHtml(participant.name)}</h2><p>${escapeHtml(participant.affiliation)}</p>${attendance}</div>${arrow}</${tag}>`;
 };
+
+const preview = `<p class="section-note">${ordered.length} participants from India and abroad</p>
+  <ul class="photo-strip">
+${ordered.filter((participant) => participant.image).map((participant) => `    <li><a href="/participants/#${escapeHtml(slug(participant))}" title="${escapeHtml(participant.name)}"><img src="${escapeHtml(imageSource(participant, "/assets/people/"))}" alt="${escapeHtml(participant.name)}" loading="lazy" decoding="async" width="480" height="600"></a></li>`).join("\n")}
+  </ul>`;
 
 const studentRow = (participant) => `    <li id="${escapeHtml(slug(participant))}"><strong>${escapeHtml(participant.name)}</strong><span>${escapeHtml(participant.affiliation)}</span></li>`;
 
@@ -82,6 +87,12 @@ ${students.map(studentRow).join("\n")}
 const blocks = [
   {
     path: "index.html",
+    start: "<!-- GENERATED: PARTICIPANT_PREVIEW_START -->",
+    end: "<!-- GENERATED: PARTICIPANT_PREVIEW_END -->",
+    content: preview
+  },
+  {
+    path: "participants/index.html",
     start: "<!-- GENERATED: PARTICIPANT_DIRECTORY_START -->",
     end: "<!-- GENERATED: PARTICIPANT_DIRECTORY_END -->",
     content: directory

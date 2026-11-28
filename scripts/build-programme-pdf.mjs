@@ -1,4 +1,4 @@
-// Builds CM4_2026_Programme_Print.pdf (A4 landscape) from the programme in index.html,
+// Builds CM4_2026_Programme_Print.pdf (A4 landscape) from programme/index.html,
 // so the printed programme always matches the website.
 // Requires Playwright with Chromium:  npm install playwright && npx playwright install chromium
 // Usage:  node scripts/build-programme-pdf.mjs
@@ -18,7 +18,7 @@ const esc = (value) => String(value ?? "")
 
 const browser = await chromium.launch();
 const page = await browser.newPage();
-await page.goto(pathToFileURL(join(root, "index.html")).href);
+await page.goto(pathToFileURL(join(root, "programme/index.html")).href);
 
 // Read the programme as plain data from the website markup.
 const days = await page.evaluate(() => {
@@ -30,7 +30,7 @@ const days = await page.evaluate(() => {
     affiliation: text(node, ".affiliation").replace(/^·\s*/, ""),
     title: text(node, ".talk-title")
   });
-  return [...document.querySelectorAll("#programme .day")].map((day) => {
+  return [...document.querySelectorAll(".day")].map((day) => {
     const rows = [];
     const posters = [];
     for (const item of day.querySelectorAll(":scope .schedule > li")) {
@@ -53,7 +53,7 @@ const days = await page.evaluate(() => {
         rows.push({
           kind: "session",
           time: text(heading, ":scope > time"),
-          title: text(heading, "h4"),
+          title: text(heading, "h3, h4"),
           chair: text(heading, ".detail").replace(/^Chair:\s*/, "")
         });
         item.querySelectorAll(".talk").forEach((node) => rows.push(talk(node)));
