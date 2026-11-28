@@ -17,3 +17,4 @@ participants; their source record is retained here for provenance.
 | `people/ashim-nandi.webp` | [IIT Goa faculty photograph](https://iitgoa.ac.in/wp-content/uploads/ashim.jpg) |
 | `people/krishnan-raghavachari.webp` | [Indiana University faculty photograph](https://www.chem.indiana.edu/wp-content/uploads/2017/02/Raghavachari-scaled.jpg) |
 | `people/rositha-kuniyil.webp` | [IIT Palakkad faculty photograph](https://iitpkd.ac.in/sites/default/files/styles/with_scale_/public/pictures/2024-05/Rositha.jpg?itok=iRIF2p_x) |
+| `people/parthasarathi-ramakrishnan.webp` | [CSIR-HRDG photograph](https://csirhrdg.res.in/SiteContent/ManagedContent/ContentImage/20250910113921380Dr._Parthasarathi.jpg) |
